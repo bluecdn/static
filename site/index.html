@@ -416,6 +416,9 @@
   .searchbar input{display:block;width:100%;max-width:960px;margin:0 auto;padding:10px 14px;font-size:14px;border:1px solid var(--border);border-radius:8px;outline:none;font-family:inherit;background:var(--bg-card);color:var(--text);box-sizing:border-box}
   .searchbar input:focus{border-color:var(--primary)}
   #search-count{display:block;max-width:960px;margin:6px auto 0;color:var(--text-light);font-size:12px}
+  .count{margin-left:auto;font-size:13px;color:var(--text-light);font-weight:400;font-family:"Google Sans Code",monospace;white-space:nowrap}
+  .h2link{color:inherit;text-decoration:none;border-bottom:1px dashed var(--text-light)}
+  .h2link:hover{color:var(--primary);border-color:var(--primary)}
 </style>
 </head>
 <body>
@@ -445,7 +448,7 @@
   <!-- ================= FontAwesome ================= -->
   <section>
     <h2>
-      <i class="fa-brands fa-font-awesome"></i> FontAwesome Pro
+      <i class="fa-brands fa-font-awesome"></i> <a class="h2link" href="https://fontawesome.com" target="_blank" rel="noopener">FontAwesome Pro</a>
       <select id="fa-version" class="ver-select">
 			<option value="7.3.0" selected>7.3.0 (最新)</option>
 			<option value="7.2.0">7.2.0</option>
@@ -527,7 +530,7 @@
 
   <!-- ================= 西文字体 ================= -->
   <section>
-    <h2><i class="fa-light fa-font"></i> 西文字体 (Latin Webfonts)</h2>
+    <h2><i class="fa-light fa-font"></i> 西文字体 (Latin Webfonts) <span class="count" data-fontcount></span></h2>
     <p class="lead">精选 100 款 Google 高频网页字体,独立 woff2 自托管,自行声明 @font-face 引用即可。Lighthouse 推荐 <code>font-display: swap</code>。</p>
 
     <div class="res-list">
@@ -1163,7 +1166,7 @@
 
   <!-- ================= 中文字体 ================= -->
   <section>
-    <h2><i class="fa-light fa-language"></i> 中文字体 (CJK Webfonts)</h2>
+    <h2><i class="fa-light fa-language"></i> 中文字体 (CJK Webfonts) <span class="count" data-fontcount></span></h2>
     <p class="lead">96 款中文字体(含「中文网字计划」全 80 + MiSans/阿里/OPPO/HarmonyOS 等),自托管 woff2、单文件超 2MB 自动按需切片;路径 <code>/fonts/{名称}.css</code>，引入即可使用。</p>
 
     <div class="res-list">
@@ -1834,6 +1837,9 @@ document.querySelectorAll('.copy-btn').forEach(btn => {
     cnt.textContent=q?(vis+" 个匹配"):"";
   });
 })();
+</script>
+<script>
+(function(){document.querySelectorAll("section").forEach(function(sec){var c=sec.querySelector("[data-fontcount]");if(c){c.textContent=sec.querySelectorAll(".res").length+" 款";}});})();
 </script>
 </body>
 </html>
