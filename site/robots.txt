@@ -1,0 +1,34 @@
+# BlueCDN Static — https://static.bluecdn.com
+# 公共静态资源 CDN:FontAwesome Pro / Google 西文字体 / 中文 webfont
+# 欢迎搜索引擎与 AI 引擎收录
+
+User-agent: *
+Allow: /
+
+# AI / LLM 爬虫(显式允许)
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-Web
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+User-agent: Bytespider
+Allow: /
+User-agent: Amazonbot
+Allow: /
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://static.bluecdn.com/sitemap.xml
