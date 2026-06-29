@@ -433,8 +433,31 @@
   .fa-cell .fa-cell-code{font:11px "Google Sans Code",monospace;color:var(--primary)}
   .fa-cell.copied{border-color:var(--success)}
   .fa-cell.copied i,.fa-cell.copied .fa-cell-code{color:var(--success)}
-  .fa-toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);background:var(--text);color:var(--bg);padding:9px 16px;border-radius:6px;font-size:13px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:50}
-  .fa-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+  /* toast 复刻 LiteNote(右下角) */
+  .lite-toast-stack{position:fixed;right:24px;bottom:88px;z-index:2000;display:flex;flex-direction:column;gap:10px;align-items:flex-end;max-width:calc(100vw - 48px);pointer-events:none}
+  .lite-toast{display:inline-flex;gap:8px;align-items:center;min-height:44px;padding:10px 14px;font-size:13px;font-weight:600;color:#fff;pointer-events:auto;background:#0f172a;border:1px solid rgba(15,23,42,.1);border-radius:6px;box-shadow:0 12px 28px rgba(15,23,42,.18);animation:toast-in .2s ease-out}
+  .lite-toast>i{display:inline-grid;flex:0 0 20px;place-items:center;width:20px;height:20px;font-size:16px}
+  .lite-toast>.lite-toast-msg{flex:1 1 auto;min-width:0;line-height:1.45;overflow-wrap:anywhere}
+  .lite-toast-success>i{color:#22c55e}
+  .lite-toast-error>i{color:#ef4444}
+  .lite-toast.is-leaving{animation:toast-out .18s ease-in forwards}
+  @keyframes toast-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes toast-out{to{opacity:0;transform:translateY(8px)}}
+  /* 回到顶部(右下角) */
+  .to-top{position:fixed;right:24px;bottom:24px;z-index:1900;width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:var(--primary);color:#fff;border:none;border-radius:6px;box-shadow:0 8px 20px rgba(0,82,217,.28);cursor:pointer;opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .2s,transform .2s}
+  .to-top.show{opacity:1;transform:translateY(0);pointer-events:auto}
+  .to-top:hover{filter:brightness(1.08)}
+  .to-top i{font-size:18px}
+  /* TOC 侧边栏(左侧) */
+  .toc{position:fixed;left:20px;top:96px;z-index:1500;width:204px;max-height:calc(100vh - 140px);overflow:auto;padding:10px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;box-shadow:0 6px 22px rgba(15,23,42,.08);font-size:13px}
+  .toc-sec{display:block;padding:6px 8px;border-radius:6px;color:var(--text);text-decoration:none;font-weight:600}
+  .toc-sec:hover{background:var(--bg)}
+  .toc-sec.active{color:var(--primary);background:rgba(0,82,217,.08)}
+  .toc-sub{margin:2px 0 6px}
+  .toc-sub a{display:block;padding:3px 10px;border-left:2px solid var(--border);color:var(--text-light);text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:12px}
+  .toc-sub a:hover{background:var(--bg);color:var(--text)}
+  .toc-sub a.cur{color:var(--primary);font-weight:600;border-left-color:var(--primary)}
+  @media (max-width:1200px){.toc{display:none}}
   #search-count{display:block;max-width:960px;margin:6px auto 0;color:var(--text-light);font-size:12px}
   .count{margin-left:auto;font-size:13px;color:var(--text-light);font-weight:400;font-family:"Google Sans Code",monospace;white-space:nowrap}
   .h2link{color:inherit;text-decoration:none;border-bottom:1px dashed var(--text-light)}
@@ -472,7 +495,7 @@
 <div class="container">
 
   <!-- ================= FontAwesome ================= -->
-  <section>
+  <section id="sec-fa">
     <h2>
       <i class="fa-brands fa-font-awesome"></i> <a class="h2link" href="https://fontawesome.com" target="_blank" rel="noopener">FontAwesome Pro</a>
       <select id="fa-version" class="ver-select">
@@ -560,7 +583,7 @@
 
 
   <!-- ================= 西文字体 ================= -->
-  <section>
+  <section id="sec-latin">
     <h2><i class="fa-light fa-font"></i> 西文字体 (Latin Webfonts) <span class="count" data-fontcount></span></h2>
     <p class="lead">精选 100 款 Google 高频网页字体,独立 woff2 自托管,自行声明 @font-face 引用即可。Lighthouse 推荐 <code>font-display: swap</code>。</p>
 
@@ -1196,7 +1219,7 @@
   </section>
 
   <!-- ================= 中文字体 ================= -->
-  <section>
+  <section id="sec-cjk">
     <h2><i class="fa-light fa-language"></i> 中文字体 (CJK Webfonts) <span class="count" data-fontcount></span></h2>
     <p class="lead">96 款中文字体(含「中文网字计划」全 80 + MiSans/阿里/OPPO/HarmonyOS 等),自托管 woff2、单文件超 2MB 自动按需切片;路径 <code>/fonts/{名称}.css</code>，引入即可使用。</p>
 
@@ -1856,8 +1879,10 @@ document.querySelectorAll('.copy-btn').forEach(btn => {
       btn.innerHTML = '<i class="fa-solid fa-check"></i>';
       btn.classList.add('copied');
       setTimeout(() => { btn.innerHTML = original; btn.classList.remove('copied'); }, 1500);
+      window.showToast && window.showToast('复制成功');
     } catch (e) {
       btn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+      window.showToast && window.showToast('复制失败', 'error');
     }
   });
 });
@@ -1887,8 +1912,6 @@ document.querySelectorAll('.copy-btn').forEach(btn => {
   var meta=document.getElementById('fa-icon-meta');
   if(!inp||!grid||!meta) return;
   var DATA=null, loading=false, LIMIT=200;
-  var toast=document.createElement('div'); toast.className='fa-toast'; document.body.appendChild(toast);
-  var tt; function showToast(m){toast.textContent=m;toast.classList.add('show');clearTimeout(tt);tt=setTimeout(function(){toast.classList.remove('show');},1400);}
   function styleClass(sc){
     var order=['s','r','l','t','d','b'], map={s:'fa-solid',r:'fa-regular',l:'fa-light',t:'fa-thin',d:'fa-duotone',b:'fa-brands'};
     for(var i=0;i<order.length;i++){if(sc.indexOf(order[i])>-1)return map[order[i]];}
@@ -1937,7 +1960,7 @@ document.querySelectorAll('.copy-btn').forEach(btn => {
     var b=e.target.closest('.fa-cell'); if(!b)return;
     navigator.clipboard.writeText(b.dataset.tag).then(function(){
       b.classList.add('copied'); setTimeout(function(){b.classList.remove('copied');},900);
-      showToast('已复制 '+b.dataset.tag);
+      window.showToast && window.showToast('已复制 '+b.dataset.tag);
     });
   });
 })();
@@ -1953,6 +1976,78 @@ document.querySelectorAll('.copy-btn').forEach(btn => {
     if(e.key==='/'&&!typing){e.preventDefault();inp.focus();inp.select();return;}
     if(e.key==='Escape'&&document.activeElement===inp){inp.value='';inp.dispatchEvent(new Event('input'));inp.blur();}
   });
+})();
+</script>
+<script>
+// 全局 toast(复刻 LiteNote,右下角)
+window.showToast=function(message,type){
+  var stack=document.querySelector('.lite-toast-stack');
+  if(!stack){stack=document.createElement('div');stack.className='lite-toast-stack';stack.setAttribute('aria-live','polite');document.body.appendChild(stack);}
+  var isErr=type==='error';
+  var t=document.createElement('div');
+  t.className='lite-toast '+(isErr?'lite-toast-error':'lite-toast-success');
+  t.setAttribute('role',isErr?'alert':'status');
+  t.innerHTML=(isErr?'<i class="fa-solid fa-triangle-exclamation"></i>':'<i class="fa-solid fa-circle-check"></i>')+'<span class="lite-toast-msg"></span>';
+  t.querySelector('.lite-toast-msg').textContent=message||(isErr?'操作失败':'操作成功');
+  stack.appendChild(t);
+  setTimeout(function(){if(t.classList.contains('is-leaving'))return;t.classList.add('is-leaving');setTimeout(function(){t.remove();},180);},3000);
+};
+</script>
+<script>
+// 回到顶部按钮(右下角)
+(function(){
+  var btn=document.createElement('button');
+  btn.className='to-top'; btn.type='button'; btn.title='回到顶部'; btn.setAttribute('aria-label','回到顶部');
+  btn.innerHTML='<i class="fa-solid fa-arrow-up"></i>';
+  document.body.appendChild(btn);
+  btn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+  var onScroll=function(){if(window.scrollY>400)btn.classList.add('show');else btn.classList.remove('show');};
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+})();
+</script>
+<script>
+// TOC 侧边栏 + 滚动联动(西文/中文显示当前上下各 5 个)
+(function(){
+  var secs=[{id:'sec-fa',label:'FontAwesome'},{id:'sec-latin',label:'西文字体'},{id:'sec-cjk',label:'中文字体'}]
+    .filter(function(s){return document.getElementById(s.id);});
+  if(!secs.length) return;
+  var nav=document.createElement('nav'); nav.className='toc'; nav.setAttribute('aria-label','目录');
+  secs.forEach(function(s){
+    var a=document.createElement('a'); a.className='toc-sec'; a.href='#'+s.id; a.textContent=s.label; a.dataset.id=s.id;
+    a.addEventListener('click',function(e){e.preventDefault();document.getElementById(s.id).scrollIntoView({behavior:'smooth',block:'start'});});
+    nav.appendChild(a);
+    if(s.id==='sec-latin'||s.id==='sec-cjk'){
+      s.sub=document.createElement('div'); s.sub.className='toc-sub'; nav.appendChild(s.sub);
+      s.cards=[].slice.call(document.getElementById(s.id).querySelectorAll('.res')).map(function(c){
+        var n=c.querySelector('.res-name');
+        return {el:c, name:(n&&n.childNodes[0]?n.childNodes[0].textContent.trim():'')};
+      });
+    }
+  });
+  document.body.appendChild(nav);
+  function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+  function renderSub(s){
+    var cards=s.cards||[]; if(!cards.length){s.sub.innerHTML='';return;}
+    var center=0,best=1e9;
+    for(var i=0;i<cards.length;i++){var r=cards[i].el.getBoundingClientRect();if(r.bottom>0){var d=Math.abs(r.top-130);if(d<best){best=d;center=i;}}}
+    var start=Math.max(0,center-5),end=Math.min(cards.length-1,center+5),html='';
+    for(var j=start;j<=end;j++) html+='<a href="#" data-i="'+j+'" class="'+(j===center?'cur':'')+'">'+esc(cards[j].name)+'</a>';
+    s.sub.innerHTML=html;
+    [].slice.call(s.sub.querySelectorAll('a')).forEach(function(a){
+      a.addEventListener('click',function(e){e.preventDefault();cards[+a.dataset.i].el.scrollIntoView({behavior:'smooth',block:'center'});});
+    });
+  }
+  function onScroll(){
+    var active=secs[0];
+    secs.forEach(function(s){if(document.getElementById(s.id).getBoundingClientRect().top<=170)active=s;});
+    secs.forEach(function(s){
+      var link=nav.querySelector('.toc-sec[data-id="'+s.id+'"]'), on=(s===active);
+      link.classList.toggle('active',on);
+      if(s.sub){s.sub.style.display=on?'':'none';if(on)renderSub(s);}
+    });
+  }
+  var raf; window.addEventListener('scroll',function(){if(raf)return;raf=requestAnimationFrame(function(){raf=0;onScroll();});},{passive:true});
+  onScroll();
 })();
 </script>
 </body>
