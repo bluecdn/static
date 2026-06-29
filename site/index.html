@@ -412,6 +412,10 @@
     .res-url { white-space: nowrap; }
     .copy-btn { justify-self: start; }
   }
+  .searchbar{position:sticky;top:0;z-index:20;background:var(--bg);padding:12px 20px;border-bottom:1px solid var(--border)}
+  .searchbar input{display:block;width:100%;max-width:960px;margin:0 auto;padding:10px 14px;font-size:14px;border:1px solid var(--border);border-radius:8px;outline:none;font-family:inherit;background:var(--bg-card);color:var(--text);box-sizing:border-box}
+  .searchbar input:focus{border-color:var(--primary)}
+  #search-count{display:block;max-width:960px;margin:6px auto 0;color:var(--text-light);font-size:12px}
 </style>
 </head>
 <body>
@@ -429,6 +433,12 @@
     </div>
   </div>
 </header>
+
+<div class="searchbar">
+  <input id="font-search" type="search" placeholder="🔍 搜索字体名 / family / 链接…" autocomplete="off">
+  <span id="search-count"></span>
+</div>
+
 
 <div class="container">
 
@@ -514,25 +524,6 @@
     </div>
   </section>
 
-  <!-- ================= Fancybox ================= -->
-  <section>
-    <h2><i class="fa-light fa-images"></i> Fancybox 6.1.14</h2>
-    <p class="lead">@fancyapps/ui 灯箱组件，CSS + UMD 脚本，页面直接引用即可。</p>
-
-    <div class="res-list">
-      <div class="res">
-        <div class="res-name">fancybox.css <span class="sub">主样式表</span></div>
-        <div class="res-url">https://static.bluecdn.com/libs/fancyapps/ui/6.1.14/dist/fancybox/fancybox.css</div>
-        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/libs/fancyapps/ui/6.1.14/dist/fancybox/fancybox.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/libs/fancyapps/ui/6.1.14/dist/fancybox/fancybox.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
-      </div>
-      <div class="res">
-        <div class="res-name">fancybox.umd.js <span class="sub">浏览器 UMD 包</span></div>
-        <div class="res-url">https://static.bluecdn.com/libs/fancyapps/ui/6.1.14/dist/fancybox/fancybox.umd.js</div>
-        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/libs/fancyapps/ui/6.1.14/dist/fancybox/fancybox.umd.js' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<script src="https://static.bluecdn.com/libs/fancyapps/ui/6.1.14/dist/fancybox/fancybox.umd.js"></script>
-<script>Fancybox.bind("[data-fancybox]");</script>' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
-      </div>
-    </div>
-  </section>
 
   <!-- ================= 西文字体 ================= -->
   <section>
@@ -1831,5 +1822,18 @@ document.querySelectorAll('.copy-btn').forEach(btn => {
 });
 </script>
 
+<script>
+(function(){
+  var inp=document.getElementById("font-search"); if(!inp) return;
+  var cards=[].slice.call(document.querySelectorAll(".res"));
+  var cnt=document.getElementById("search-count");
+  inp.addEventListener("input",function(){
+    var q=inp.value.trim().toLowerCase(), vis=0;
+    cards.forEach(function(c){var show=!q||c.textContent.toLowerCase().indexOf(q)>-1;c.style.display=show?"":"none";if(show)vis++;});
+    document.querySelectorAll("section").forEach(function(sec){var cs=sec.querySelectorAll(".res");if(cs.length){var any=[].slice.call(cs).some(function(c){return c.style.display!=="none";});sec.style.display=any?"":"none";}});
+    cnt.textContent=q?(vis+" 个匹配"):"";
+  });
+})();
+</script>
 </body>
 </html>
