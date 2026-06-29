@@ -1,0 +1,705 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow">
+<title>BlueCDN Static — 系统级静态资源 CDN</title>
+<meta name="description" content="BlueCDN 公共静态资源 CDN：FontAwesome Pro、Web 字体，全球 100ms 内响应，针对中国优化加速，CORS 开放。">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="preconnect" href="https://static.bluecdn.com" crossorigin>
+<link rel="stylesheet" href="https://static.bluecdn.com/libs/fontawesome/7.2.0/css/all.min.css">
+<link rel="stylesheet" href="https://static.bluecdn.com/fonts/ubuntu.css">
+<link rel="stylesheet" href="https://static.bluecdn.com/fonts/google-sans-code.css">
+<link rel="stylesheet" href="https://static.bluecdn.com/fonts/papermono.css">
+<link rel="stylesheet" href="https://static.bluecdn.com/fonts/cairo-play.css">
+<link rel="stylesheet" href="https://static.bluecdn.com/fonts/inter.css">
+<link rel="stylesheet" href="https://static.bluecdn.com/fonts/roboto.css">
+<link rel="stylesheet" href="https://static.bluecdn.com/fonts/cabin.css">
+<link rel="stylesheet" href="https://static.bluecdn.com/fonts/sora.css">
+<link rel="stylesheet" href="https://static.bluecdn.com/fonts/google-sans.css">
+<link rel="stylesheet" href="https://static.bluecdn.com/fonts/noto-sans-sc.css">
+<link rel="stylesheet" href="https://static.bluecdn.com/fonts/lxgw-wenkai.css">
+<link rel="stylesheet" href="https://static.bluecdn.com/fonts/lxgw-marker-gothic.css">
+<link rel="stylesheet" href="https://static.bluecdn.com/fonts/source-han-serif-cn.css">
+<link rel="stylesheet" href="https://static.bluecdn.com/fonts/youshe-biaotihei.css">
+<link rel="stylesheet" href="https://static.bluecdn.com/fonts/douyu-zhuiguangti.css">
+<link rel="stylesheet" href="https://static.bluecdn.com/fonts/kuaikanshijieti.css">
+<link rel="stylesheet" href="https://static.bluecdn.com/fonts/maple-mono-cn.css">
+<link rel="stylesheet" href="https://static.bluecdn.com/fonts/alimama-fangyuanti.css">
+<link rel="stylesheet" href="https://static.bluecdn.com/fonts/luo.css">
+
+<link rel="stylesheet" href="https://static.bluecdn.com/fonts/ma-shan-zheng.css">
+<link rel="stylesheet" href="https://static.bluecdn.com/fonts/zhi-mang-xing.css">
+<link rel="stylesheet" href="https://static.bluecdn.com/fonts/long-cang.css">
+<link rel="stylesheet" href="https://static.bluecdn.com/fonts/liu-jian-mao-cao.css">
+<link rel="stylesheet" href="https://static.bluecdn.com/fonts/zcool-kuaile.css">
+<link rel="stylesheet" href="https://static.bluecdn.com/fonts/zcool-qingke-huangyou.css">
+<link rel="stylesheet" href="https://static.bluecdn.com/fonts/zcool-xiaowei.css">
+<link rel="stylesheet" href="https://static.bluecdn.com/fonts/dotgothic16.css">
+<link rel="stylesheet" href="https://static.bluecdn.com/fonts/klee-one.css">
+<link rel="stylesheet" href="https://static.bluecdn.com/fonts/yuji-syuku.css">
+<link rel="stylesheet" href="https://static.bluecdn.com/fonts/lxgw-neo-xihei.css">
+<link rel="stylesheet" href="https://static.bluecdn.com/fonts/smiley-sans.css">
+<link rel="stylesheet" href="https://static.bluecdn.com/fonts/glow-sans-sc.css">
+<link rel="stylesheet" href="https://static.bluecdn.com/fonts/alibaba-puhuiti.css">
+<link rel="stylesheet" href="https://static.bluecdn.com/fonts/harmonyos-sans-sc.css">
+<link rel="stylesheet" href="https://static.bluecdn.com/fonts/oppo-sans.css">
+<link rel="stylesheet" href="https://static.bluecdn.com/fonts/yozai.css">
+<style>
+  :root {
+    --bg: #fafafa;
+    --bg-card: #fff;
+    --border: #e5e5e5;
+    --border-soft: #ececec;
+    --text: #1a1a1a;
+    --text-dim: #666;
+    --text-light: #999;
+    --primary: #0052D9;
+    --primary-soft: #e6eefb;
+    --code-bg: #f5f6f7;
+    --success: #16a34a;
+  }
+  @font-face{font-family:"Fugaz One";src:url("/fonts/fugaz-one-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: "Ubuntu", "Noto Sans SC", -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 14px;
+  }
+  code, pre, .mono { font-family: "Google Sans Code", "JetBrains Mono", monospace; }
+
+  .container { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+  /* Hero */
+  .hero {
+    padding: 48px 20px 32px;
+    border-bottom: 1px solid var(--border);
+    background: #fff;
+  }
+  .hero h1 {
+    margin: 0 0 8px;
+    font-family: "Fugaz One", sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: var(--text);
+  }
+  .hero h1 .accent { color: var(--primary); }
+  .hero .tagline { color: var(--text-dim); font-size: 15px; margin: 0 0 16px; }
+  .hero-stats { display: flex; gap: 24px; flex-wrap: wrap; font-size: 13px; color: var(--text-dim); }
+  .hero-stats span i { color: var(--primary); margin-right: 4px; }
+
+  /* Section */
+  section { padding: 32px 0; border-bottom: 1px solid var(--border); }
+  section:last-of-type { border-bottom: none; }
+  section h2 {
+    margin: 0 0 6px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  section h2 i { color: var(--primary); font-size: 16px; }
+  section h2 .ver-select {
+    margin-left: auto;
+    font-family: 'Google Sans Code', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--primary);
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 5px 30px 5px 12px;
+    cursor: pointer;
+    outline: none;
+    transition: border-color .15s, box-shadow .15s;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 320 512'><path fill='%23666' d='M151.5 347.8L3.5 201c-4.7-4.7-4.7-12.3 0-17l19.8-19.8c4.7-4.7 12.3-4.7 17 0L160 282.7l119.7-118.5c4.7-4.7 12.3-4.7 17 0l19.8 19.8c4.7 4.7 4.7 12.3 0 17l-148 146.8c-4.7 4.7-12.3 4.7-17 0z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+  }
+  section h2 .ver-select:hover { border-color: var(--primary); }
+  section h2 .ver-select:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(38,132,255,.12); }
+  section .lead { color: var(--text-dim); font-size: 13px; margin: 0 0 20px; }
+
+  /* Resource card — 2-row grid:
+       row 1: name (full width, includes family annotation)
+       row 2: URL (left) + copy button (right)
+       row 3 (optional): preview (full width) */
+  .res-list { display: flex; flex-direction: column; gap: 8px; }
+  .res {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 8px 12px;
+    align-items: center;
+    padding: 14px 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 0;
+  }
+  .res:hover { border-color: var(--primary); }
+  .res-name {
+    grid-column: 1 / -1;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.4;
+  }
+  .res-name .sub { color: var(--text-light); font-size: 12px; font-weight: 400; margin-left: 8px; font-family: "Google Sans Code", monospace; }
+  .res-url {
+    grid-column: 1;
+    font-family: "Google Sans Code", monospace;
+    font-size: 12px;
+    color: var(--text-dim);
+    background: var(--code-bg);
+    padding: 7px 10px;
+    border-radius: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: text;
+    user-select: all;
+    min-width: 0;
+  }
+  .copy-btn { grid-column: 2; }
+  .copy-btn {
+    border: 1px solid var(--border);
+    background: #fff;
+    color: var(--text-dim);
+    padding: 6px 12px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 12px;
+    border-radius: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.15s;
+    white-space: nowrap;
+  }
+  .copy-btn:hover { color: var(--primary); border-color: var(--primary); }
+  .copy-btn.copied { color: var(--success); border-color: var(--success); }
+
+  .copy-actions { display: flex; gap: 4px; grid-column: 2; }
+  .copy-btn.copy-icon { width: 32px; height: 32px; padding: 0; justify-content: center; gap: 0; }
+  .copy-btn.copy-icon i { font-size: 13px; margin: 0; }
+
+  /* Code preview */
+  .preview {
+    margin-top: 24px;
+    padding: 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+  }
+  .preview-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+  .preview-title {
+    font-size: 12px;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .preview pre {
+    margin: 0;
+    font-size: 12px;
+    color: var(--text);
+    overflow-x: auto;
+    background: var(--code-bg);
+    padding: 10px 12px;
+  }
+
+  /* Family name preview */
+  .res-preview {
+    grid-column: 1 / -1;
+    margin-top: 4px;
+    color: var(--text-dim);
+    font-size: 16px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 32px 20px;
+    text-align: center;
+    color: var(--text-light);
+    font-size: 12px;
+    border-top: 1px solid var(--border);
+    background: #fff;
+  }
+  footer a { color: var(--primary); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 720px) {
+    .res { grid-template-columns: 1fr; gap: 8px; }
+    .res-url { white-space: nowrap; }
+    .copy-btn { justify-self: start; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="container">
+    <h1>bluecdn<span class="accent">.static</span></h1>
+    <p class="tagline">FontAwesome、Web 字体与图标资源的公共 CDN — 复制链接即可使用，全球访问 100ms 内响应，针对中国网络优化加速。</p>
+    <div class="hero-stats">
+      <span><i class="fa-light fa-globe"></i> 全球 · 100ms 内</span>
+      <span><i class="fa-light fa-bolt"></i> 中国区优化加速</span>
+      <span><i class="fa-light fa-shield-check"></i> CORS 开放</span>
+      <span><i class="fa-light fa-bolt"></i> HTTP/2 · HTTP/3</span>
+      <span><i class="fa-light fa-clock"></i> 字体长期缓存</span>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- ================= FontAwesome ================= -->
+  <section>
+    <h2>
+      <i class="fa-brands fa-font-awesome"></i> FontAwesome Pro
+      <select id="fa-version" class="ver-select">
+			<option value="7.3.0" selected>7.3.0 (最新)</option>
+			<option value="7.2.0">7.2.0</option>
+			<option value="7.1.0">7.1.0</option>
+			<option value="7.0.1">7.0.1</option>
+			<option value="7.0.0">7.0.0</option>
+			<option value="6.7.2">6.7.2</option>
+			<option value="6.7.1">6.7.1</option>
+			<option value="6.7.0">6.7.0</option>
+			<option value="6.6.0">6.6.0</option>
+			<option value="6.5.2">6.5.2</option>
+			<option value="6.5.1">6.5.1</option>
+			<option value="6.5.0">6.5.0</option>
+			<option value="6.4.2">6.4.2</option>
+			<option value="6.4.1">6.4.1</option>
+			<option value="6.4.0">6.4.0</option>
+			<option value="6.3.0">6.3.0</option>
+			<option value="6.2.1">6.2.1</option>
+			<option value="6.2.0">6.2.0</option>
+			<option value="6.1.2">6.1.2</option>
+			<option value="6.1.1">6.1.1</option>
+			<option value="6.1.0">6.1.0</option>
+			<option value="6.0.0">6.0.0</option>
+			<option value="5.15.4">5.15.4</option>
+			<option value="5.15.3">5.15.3</option>
+			<option value="5.15.2">5.15.2</option>
+			<option value="5.15.1">5.15.1</option>
+			<option value="5.14.0">5.14.0</option>
+			<option value="5.13.1">5.13.1</option>
+			<option value="5.13.0">5.13.0</option>
+			<option value="5.12.1">5.12.1</option>
+			<option value="5.12.0">5.12.0</option>
+			<option value="5.11.2">5.11.2</option>
+			<option value="5.11.1">5.11.1</option>
+			<option value="5.11.0">5.11.0</option>
+			<option value="5.10.2">5.10.2</option>
+			<option value="5.10.1">5.10.1</option>
+			<option value="5.10.0">5.10.0</option>
+			<option value="5.9.0">5.9.0</option>
+			<option value="5.8.2">5.8.2</option>
+			<option value="5.8.1">5.8.1</option>
+			<option value="5.8.0">5.8.0</option>
+			<option value="5.7.2">5.7.2</option>
+			<option value="5.7.1">5.7.1</option>
+			<option value="5.7.0">5.7.0</option>
+			<option value="5.6.3">5.6.3</option>
+			<option value="5.6.1">5.6.1</option>
+			<option value="5.6.0">5.6.0</option>
+			<option value="5.5.0">5.5.0</option>
+			<option value="5.4.2">5.4.2</option>
+			<option value="5.4.1">5.4.1</option>
+			<option value="5.3.1">5.3.1</option>
+			<option value="5.2.0">5.2.0</option>
+			<option value="5.1.1">5.1.1</option>
+			<option value="5.1.0">5.1.0</option>
+			<option value="5.0.13">5.0.13</option>
+			<option value="5.0.12">5.0.12</option>
+			<option value="5.0.10">5.0.10</option>
+			<option value="5.0.9">5.0.9</option>
+			<option value="5.0.8">5.0.8</option>
+			<option value="5.0.6">5.0.6</option>
+			<option value="5.0.4">5.0.4</option>
+			<option value="5.0.3">5.0.3</option>
+			<option value="5.0.2">5.0.2</option>
+			<option value="5.0.1">5.0.1</option>
+		</select>
+    </h2>
+    <p class="lead">官方一站式样式表,单文件包含全部 9 个图标家族。</p>
+
+    <div class="res-list">
+      <div class="res">
+        <div class="res-name">all.min.css <span class="sub">主样式表</span></div>
+        <div class="res-url" id="fa-url">https://static.bluecdn.com/libs/fontawesome/7.3.0/css/all.min.css</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon fa-copy-link" data-copy='https://static.bluecdn.com/libs/fontawesome/7.3.0/css/all.min.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon fa-copy-html" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/libs/fontawesome/7.3.0/css/all.min.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Fancybox ================= -->
+  <section>
+    <h2><i class="fa-light fa-images"></i> Fancybox 6.1.14</h2>
+    <p class="lead">@fancyapps/ui 灯箱组件，CSS + UMD 脚本，页面直接引用即可。</p>
+
+    <div class="res-list">
+      <div class="res">
+        <div class="res-name">fancybox.css <span class="sub">主样式表</span></div>
+        <div class="res-url">https://static.bluecdn.com/libs/fancyapps/ui/6.1.14/dist/fancybox/fancybox.css</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/libs/fancyapps/ui/6.1.14/dist/fancybox/fancybox.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/libs/fancyapps/ui/6.1.14/dist/fancybox/fancybox.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+      </div>
+      <div class="res">
+        <div class="res-name">fancybox.umd.js <span class="sub">浏览器 UMD 包</span></div>
+        <div class="res-url">https://static.bluecdn.com/libs/fancyapps/ui/6.1.14/dist/fancybox/fancybox.umd.js</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/libs/fancyapps/ui/6.1.14/dist/fancybox/fancybox.umd.js' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<script src="https://static.bluecdn.com/libs/fancyapps/ui/6.1.14/dist/fancybox/fancybox.umd.js"></script>
+<script>Fancybox.bind("[data-fancybox]");</script>' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 西文字体 ================= -->
+  <section>
+    <h2><i class="fa-light fa-font"></i> 西文字体 (Latin Webfonts)</h2>
+    <p class="lead">独立 woff2 文件，自行声明 @font-face 引用即可。Lighthouse 推荐 <code>font-display: swap</code>。</p>
+
+    <div class="res-list">
+      <div class="res">
+        <div class="res-name">Fugaz One <span class="sub">400 / Logo / 标题</span></div>
+        <div class="res-url">https://static.bluecdn.com/fonts/fugaz-one-400.woff2</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/fonts/fugaz-one-400.woff2' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='@font-face {
+  font-family: "Fugaz One";
+  src: url("https://static.bluecdn.com/fonts/fugaz-one-400.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+        <div class="res-preview" style="font-family: 'Fugaz One', sans-serif; font-size: 24px;">Always believe that something wonderful is about to happen</div>
+      </div>
+
+      <div class="res">
+        <div class="res-name">Ubuntu <span class="sub">400 / 500 / 700 · Latin / Lat-Ext · UI 正文</span></div>
+        <div class="res-url">https://static.bluecdn.com/fonts/ubuntu.css</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/fonts/ubuntu.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/fonts/ubuntu.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+        <div class="res-preview" style="font-family: 'Ubuntu', sans-serif;">Always believe that something wonderful is about to happen</div>
+      </div>
+
+      <div class="res">
+        <div class="res-name">Google Sans Code <span class="sub">VF 400..700 · Latin / Lat-Ext · 等宽代码</span></div>
+        <div class="res-url">https://static.bluecdn.com/fonts/google-sans-code.css</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/fonts/google-sans-code.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/fonts/google-sans-code.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+        <div class="res-preview" style="font-family: 'Google Sans Code', monospace;">Always believe that something wonderful is about to happen</div>
+      </div>
+
+      <div class="res">
+        <div class="res-name">PaperMono <span class="sub">400 · 等宽代码 · 可选备用</span></div>
+        <div class="res-url">https://static.bluecdn.com/fonts/papermono.css</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/fonts/papermono.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/fonts/papermono.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+        <div class="res-preview" style="font-family: 'PaperMono', monospace;">Always believe that something wonderful is about to happen</div>
+      </div>
+
+      <div class="res">
+        <div class="res-name">Cairo Play <span class="sub">VF 200..1000 · Latin · 装饰展示</span></div>
+        <div class="res-url">https://static.bluecdn.com/fonts/cairo-play.css</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/fonts/cairo-play.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/fonts/cairo-play.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+        <div class="res-preview" style="font-family: 'Cairo Play', sans-serif; font-size: 28px; font-weight: 600;">Always believe that something wonderful is about to happen</div>
+      </div>
+
+      <div class="res">
+        <div class="res-name">Inter <span class="sub">VF 400..700 · Latin / Lat-Ext · 现代正文</span></div>
+        <div class="res-url">https://static.bluecdn.com/fonts/inter.css</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/fonts/inter.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/fonts/inter.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+        <div class="res-preview" style="font-family: 'Inter', sans-serif; font-size: 28px;">Always believe that something wonderful is about to happen</div>
+      </div>
+
+      <div class="res">
+        <div class="res-name">Roboto <span class="sub">VF 400..700 · Latin / Lat-Ext · 通用 UI</span></div>
+        <div class="res-url">https://static.bluecdn.com/fonts/roboto.css</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/fonts/roboto.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/fonts/roboto.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+        <div class="res-preview" style="font-family: 'Roboto', sans-serif; font-size: 28px;">Always believe that something wonderful is about to happen</div>
+      </div>
+
+      <div class="res">
+        <div class="res-name">Cabin <span class="sub">VF 400..700 · Latin / Lat-Ext · 圆润标题</span></div>
+        <div class="res-url">https://static.bluecdn.com/fonts/cabin.css</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/fonts/cabin.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/fonts/cabin.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+        <div class="res-preview" style="font-family: 'Cabin', sans-serif; font-size: 28px;">Always believe that something wonderful is about to happen</div>
+      </div>
+
+      <div class="res">
+        <div class="res-name">Sora <span class="sub">VF 400..700 · Latin / Lat-Ext · 几何无衬线</span></div>
+        <div class="res-url">https://static.bluecdn.com/fonts/sora.css</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/fonts/sora.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/fonts/sora.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+        <div class="res-preview" style="font-family: 'Sora', sans-serif; font-size: 28px;">Always believe that something wonderful is about to happen</div>
+      </div>
+
+      <div class="res">
+        <div class="res-name">Google Sans <span class="sub">400 / 500 / 700 · Latin / Lat-Ext · 品牌正文</span></div>
+        <div class="res-url">https://static.bluecdn.com/fonts/google-sans.css</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/fonts/google-sans.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/fonts/google-sans.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+        <div class="res-preview" style="font-family: 'Google Sans', sans-serif; font-size: 28px;">Always believe that something wonderful is about to happen</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 中文字体 ================= -->
+  <section>
+    <h2><i class="fa-light fa-language"></i> 中文字体 (CJK Webfonts)</h2>
+    <p class="lead">完整 woff2 自托管，路径 <code>/fonts/{名称}.css</code>，引入即可使用。</p>
+
+    <div class="res-list">
+      <div class="res">
+        <div class="res-name">阿里巴巴普惠体 3.0 <span class="sub">family: Alibaba PuHuiTi</span></div>
+        <div class="res-url">https://static.bluecdn.com/fonts/alibaba-puhuiti.css</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/fonts/alibaba-puhuiti.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/fonts/alibaba-puhuiti.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+        <div class="res-preview" style="font-family: 'Alibaba PuHuiTi', sans-serif;">永远相信美好的事情即将发生</div>
+      </div>
+      <div class="res">
+        <div class="res-name">HarmonyOS Sans SC <span class="sub">family: HarmonyOS Sans SC</span></div>
+        <div class="res-url">https://static.bluecdn.com/fonts/harmonyos-sans-sc.css</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/fonts/harmonyos-sans-sc.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/fonts/harmonyos-sans-sc.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+        <div class="res-preview" style="font-family: 'HarmonyOS Sans SC', sans-serif;">永远相信美好的事情即将发生</div>
+      </div>
+      <div class="res">
+        <div class="res-name">OPPO Sans <span class="sub">family: OPPO Sans</span></div>
+        <div class="res-url">https://static.bluecdn.com/fonts/oppo-sans.css</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/fonts/oppo-sans.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/fonts/oppo-sans.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+        <div class="res-preview" style="font-family: 'OPPO Sans', sans-serif;">永远相信美好的事情即将发生</div>
+      </div>
+      <div class="res">
+        <div class="res-name">悠哉字体 Yozai <span class="sub">family: Yozai</span></div>
+        <div class="res-url">https://static.bluecdn.com/fonts/yozai.css</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/fonts/yozai.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/fonts/yozai.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+        <div class="res-preview" style="font-family: 'Yozai', sans-serif;">永远相信美好的事情即将发生</div>
+      </div>
+
+      <div class="res">
+        <div class="res-name">霞鹜新晰黑 <span class="sub">family: LXGW Neo XiHei</span></div>
+        <div class="res-url">https://static.bluecdn.com/fonts/lxgw-neo-xihei.css</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/fonts/lxgw-neo-xihei.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/fonts/lxgw-neo-xihei.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+        <div class="res-preview" style="font-family: 'LXGW Neo XiHei', sans-serif;">永远相信美好的事情即将发生</div>
+      </div>
+      <div class="res">
+        <div class="res-name">得意黑 Smiley Sans <span class="sub">family: Smiley Sans</span></div>
+        <div class="res-url">https://static.bluecdn.com/fonts/smiley-sans.css</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/fonts/smiley-sans.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/fonts/smiley-sans.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+        <div class="res-preview" style="font-family: 'Smiley Sans', sans-serif;">永远相信美好的事情即将发生</div>
+      </div>
+      <div class="res">
+        <div class="res-name">未来荧黑 Glow Sans SC <span class="sub">family: Glow Sans SC</span></div>
+        <div class="res-url">https://static.bluecdn.com/fonts/glow-sans-sc.css</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/fonts/glow-sans-sc.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/fonts/glow-sans-sc.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+        <div class="res-preview" style="font-family: 'Glow Sans SC', sans-serif;">永远相信美好的事情即将发生</div>
+      </div>
+
+      <div class="res">
+        <div class="res-name">马善政毛笔楷书 <span class="sub">family: Ma Shan Zheng</span></div>
+        <div class="res-url">https://static.bluecdn.com/fonts/ma-shan-zheng.css</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/fonts/ma-shan-zheng.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/fonts/ma-shan-zheng.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+        <div class="res-preview" style="font-family: 'Ma Shan Zheng', sans-serif;">永远相信美好的事情即将发生</div>
+      </div>
+      <div class="res">
+        <div class="res-name">志莽行书 <span class="sub">family: Zhi Mang Xing</span></div>
+        <div class="res-url">https://static.bluecdn.com/fonts/zhi-mang-xing.css</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/fonts/zhi-mang-xing.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/fonts/zhi-mang-xing.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+        <div class="res-preview" style="font-family: 'Zhi Mang Xing', sans-serif;">永远相信美好的事情即将发生</div>
+      </div>
+      <div class="res">
+        <div class="res-name">龙藏体 <span class="sub">family: Long Cang</span></div>
+        <div class="res-url">https://static.bluecdn.com/fonts/long-cang.css</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/fonts/long-cang.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/fonts/long-cang.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+        <div class="res-preview" style="font-family: 'Long Cang', sans-serif;">永远相信美好的事情即将发生</div>
+      </div>
+      <div class="res">
+        <div class="res-name">柳建毛草 <span class="sub">family: Liu Jian Mao Cao</span></div>
+        <div class="res-url">https://static.bluecdn.com/fonts/liu-jian-mao-cao.css</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/fonts/liu-jian-mao-cao.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/fonts/liu-jian-mao-cao.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+        <div class="res-preview" style="font-family: 'Liu Jian Mao Cao', sans-serif;">永远相信美好的事情即将发生</div>
+      </div>
+      <div class="res">
+        <div class="res-name">站酷快乐体 <span class="sub">family: ZCOOL KuaiLe</span></div>
+        <div class="res-url">https://static.bluecdn.com/fonts/zcool-kuaile.css</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/fonts/zcool-kuaile.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/fonts/zcool-kuaile.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+        <div class="res-preview" style="font-family: 'ZCOOL KuaiLe', sans-serif;">永远相信美好的事情即将发生</div>
+      </div>
+      <div class="res">
+        <div class="res-name">站酷庆科黄油体 <span class="sub">family: ZCOOL QingKe HuangYou</span></div>
+        <div class="res-url">https://static.bluecdn.com/fonts/zcool-qingke-huangyou.css</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/fonts/zcool-qingke-huangyou.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/fonts/zcool-qingke-huangyou.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+        <div class="res-preview" style="font-family: 'ZCOOL QingKe HuangYou', sans-serif;">永远相信美好的事情即将发生</div>
+      </div>
+      <div class="res">
+        <div class="res-name">站酷小薇 LOGO 体 <span class="sub">family: ZCOOL XiaoWei</span></div>
+        <div class="res-url">https://static.bluecdn.com/fonts/zcool-xiaowei.css</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/fonts/zcool-xiaowei.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/fonts/zcool-xiaowei.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+        <div class="res-preview" style="font-family: 'ZCOOL XiaoWei', sans-serif;">永远相信美好的事情即将发生</div>
+      </div>
+      <div class="res">
+        <div class="res-name">DotGothic16 像素 <span class="sub">family: DotGothic16</span></div>
+        <div class="res-url">https://static.bluecdn.com/fonts/dotgothic16.css</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/fonts/dotgothic16.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/fonts/dotgothic16.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+        <div class="res-preview" style="font-family: 'DotGothic16', sans-serif;">永远相信美好的事情即将发生</div>
+      </div>
+      <div class="res">
+        <div class="res-name">Klee One 楷 <span class="sub">family: Klee One</span></div>
+        <div class="res-url">https://static.bluecdn.com/fonts/klee-one.css</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/fonts/klee-one.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/fonts/klee-one.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+        <div class="res-preview" style="font-family: 'Klee One', sans-serif;">永远相信美好的事情即将发生</div>
+      </div>
+      <div class="res">
+        <div class="res-name">佑字肃 <span class="sub">family: Yuji Syuku</span></div>
+        <div class="res-url">https://static.bluecdn.com/fonts/yuji-syuku.css</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/fonts/yuji-syuku.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/fonts/yuji-syuku.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+        <div class="res-preview" style="font-family: 'Yuji Syuku', sans-serif;">永远相信美好的事情即将发生</div>
+      </div>
+
+
+      <div class="res">
+        <div class="res-name">Noto Sans SC <span class="sub">主中文 · 默认启用</span></div>
+        <div class="res-url">https://static.bluecdn.com/fonts/noto-sans-sc.css</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/fonts/noto-sans-sc.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/fonts/noto-sans-sc.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+        <div class="res-preview" style="font-family: 'Noto Sans SC', sans-serif;">永远相信美好的事情即将发生</div>
+      </div>
+
+      <div class="res">
+        <div class="res-name">霞鹜文楷 <span class="sub">family: LXGW WenKai · 6 weights</span></div>
+        <div class="res-url">https://static.bluecdn.com/fonts/lxgw-wenkai.css</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/fonts/lxgw-wenkai.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/fonts/lxgw-wenkai.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+      <div class="res-preview" style="font-family: 'LXGW WenKai', sans-serif;">永远相信美好的事情即将发生</div>
+      </div>
+
+      <div class="res">
+        <div class="res-name">霞鹜漫黑 <span class="sub">family: LXGW Marker Gothic</span></div>
+        <div class="res-url">https://static.bluecdn.com/fonts/lxgw-marker-gothic.css</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/fonts/lxgw-marker-gothic.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/fonts/lxgw-marker-gothic.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+      <div class="res-preview" style="font-family: 'LXGW Marker Gothic', sans-serif;">永远相信美好的事情即将发生</div>
+      </div>
+
+      <div class="res">
+        <div class="res-name">思源宋体 <span class="sub">family: Source Han Serif CN VF</span></div>
+        <div class="res-url">https://static.bluecdn.com/fonts/source-han-serif-cn.css</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/fonts/source-han-serif-cn.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/fonts/source-han-serif-cn.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+      <div class="res-preview" style="font-family: 'Source Han Serif CN VF', sans-serif;">永远相信美好的事情即将发生</div>
+      </div>
+
+      <div class="res">
+        <div class="res-name">优设标题黑 <span class="sub">family: YouSheBiaoTiHei</span></div>
+        <div class="res-url">https://static.bluecdn.com/fonts/youshe-biaotihei.css</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/fonts/youshe-biaotihei.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/fonts/youshe-biaotihei.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+      <div class="res-preview" style="font-family: 'YouSheBiaoTiHei', sans-serif;">永远相信美好的事情即将发生</div>
+      </div>
+
+      <div class="res">
+        <div class="res-name">斗鱼追光体 <span class="sub">family: DOUYU Font</span></div>
+        <div class="res-url">https://static.bluecdn.com/fonts/douyu-zhuiguangti.css</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/fonts/douyu-zhuiguangti.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/fonts/douyu-zhuiguangti.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+      <div class="res-preview" style="font-family: 'DOUYU Font', sans-serif;">永远相信美好的事情即将发生</div>
+      </div>
+
+      <div class="res">
+        <div class="res-name">快看世界体 <span class="sub">family: 快看世界体</span></div>
+        <div class="res-url">https://static.bluecdn.com/fonts/kuaikanshijieti.css</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/fonts/kuaikanshijieti.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/fonts/kuaikanshijieti.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+      <div class="res-preview" style="font-family: '快看世界体', sans-serif;">永远相信美好的事情即将发生</div>
+      </div>
+
+      <div class="res">
+        <div class="res-name">Maple Mono CN <span class="sub">family: Maple Mono CN · 16 weights · 编程含中文</span></div>
+        <div class="res-url">https://static.bluecdn.com/fonts/maple-mono-cn.css</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/fonts/maple-mono-cn.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/fonts/maple-mono-cn.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+      <div class="res-preview" style="font-family: 'Maple Mono CN', sans-serif;">永远相信美好的事情即将发生</div>
+      </div>
+
+      <div class="res">
+        <div class="res-name">阿里妈妈方圆体 VF <span class="sub">family: Alimama FangYuanTi VF</span></div>
+        <div class="res-url">https://static.bluecdn.com/fonts/alimama-fangyuanti.css</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/fonts/alimama-fangyuanti.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/fonts/alimama-fangyuanti.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+      <div class="res-preview" style="font-family: 'Alimama FangYuanTi VF', sans-serif;">永远相信美好的事情即将发生</div>
+      </div>
+
+      <div class="res">
+        <div class="res-name">Luo <span class="sub">family: Luo · unicode-range 中文优化</span></div>
+        <div class="res-url">https://static.bluecdn.com/fonts/luo.css</div>
+        <div class="copy-actions"><button class="copy-btn copy-icon" data-copy='https://static.bluecdn.com/fonts/luo.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/fonts/luo.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
+      <div class="res-preview" style="font-family: 'Luo', sans-serif;">永远相信美好的事情即将发生</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 使用说明 ================= -->
+  <section>
+    <h2><i class="fa-light fa-circle-info"></i> 使用说明</h2>
+    <p class="lead">面向站点开发者与内容创作者，所有资源均可通过 HTTPS 直链引用。</p>
+    <ul style="color: var(--text-dim); padding-left: 20px; line-height: 1.9;">
+      <li><strong>加速体验</strong> — 全球访问目标 100ms 内响应，针对中国网络路径优化，境内外均可流畅加载字体与图标。</li>
+      <li><strong>如何接入</strong> — 点击资源旁的复制按钮，将链接写入 <code>&lt;link rel="stylesheet"&gt;</code> 或 CSS <code>@font-face</code>，无需注册或 API Key。</li>
+      <li><strong>跨域使用</strong> — 已开启 CORS，博客、文档站、静态页面与前端应用均可直接引用。</li>
+      <li><strong>缓存建议</strong> — 字体文件（woff2）适合长期缓存；样式表入口可能随版本更新，更新资源后请刷新 CDN / 浏览器缓存。</li>
+      <li><strong>图标用法</strong> — 引入 FontAwesome 样式表后，在 HTML 中使用类名，例如：<code>&lt;i class="fa-sharp fa-light fa-house"&gt;&lt;/i&gt;</code></li>
+      <li><strong>许可说明</strong> — FontAwesome Pro 与各字体遵循其原作者许可，商用前请自行确认授权范围。</li>
+    </ul>
+  </section>
+
+</div>
+
+<footer>
+  <div class="container">
+    <p>由 <a href="https://bluecdn.com">BlueCDN</a> 提供公共静态资源服务 · 各资源版权归其原作者所有</p>
+    <p>FA Pro 7.2.0 © Fonticons, Inc. · 各中文字体版权归原作者所有</p>
+    <p>版本维护 <a href="https://xifeng.net" target="_blank" rel="noopener">西风</a></p>
+  </div>
+</footer>
+
+<script>
+// FontAwesome 版本切换
+(function() {
+  var BASE = 'https://static.bluecdn.com/libs/fontawesome/';
+  var select = document.getElementById('fa-version');
+  var urlDiv = document.getElementById('fa-url');
+  var linkBtn = document.querySelector('.fa-copy-link');
+  var htmlBtn = document.querySelector('.fa-copy-html');
+  function update() {
+    var v = select.value;
+    var url = BASE + v + '/css/all.min.css';
+    urlDiv.textContent = url;
+    linkBtn.dataset.copy = url;
+    htmlBtn.dataset.copy = '<link rel="stylesheet" href="' + url + '">';
+  }
+  select.addEventListener('change', update);
+})();
+</script>
+
+<script>
+document.querySelectorAll('.copy-btn').forEach(btn => {
+  btn.addEventListener('click', async () => {
+    const text = btn.dataset.copy;
+    try {
+      await navigator.clipboard.writeText(text);
+      const original = btn.innerHTML;
+      btn.innerHTML = '<i class="fa-solid fa-check"></i>';
+      btn.classList.add('copied');
+      setTimeout(() => { btn.innerHTML = original; btn.classList.remove('copied'); }, 1500);
+    } catch (e) {
+      btn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+    }
+  });
+});
+</script>
+
+</body>
+</html>

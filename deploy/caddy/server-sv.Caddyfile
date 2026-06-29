@@ -1,0 +1,46 @@
+{
+	auto_https off
+}
+
+(common) {
+	encode gzip zstd
+	header Access-Control-Allow-Origin "*"
+	header Access-Control-Allow-Methods "GET, HEAD, OPTIONS"
+	header Access-Control-Allow-Headers "*"
+	@opt method OPTIONS
+	respond @opt 204
+
+	@jsd path /npm/* /gh/* /wp/* /combine/* /esm/*
+	handle @jsd {
+		reverse_proxy https://cdn.jsdelivr.net {
+			header_up Host cdn.jsdelivr.net
+			header_down Location "https://cdn\.jsdelivr\.net/" "https://static.bluecdn.com/"
+		}
+		header Cache-Control "public, max-age=31536000, immutable"
+	}
+	@cdnjs path /ajax/libs/*
+	handle @cdnjs {
+		reverse_proxy https://cdnjs.cloudflare.com {
+			header_up Host cdnjs.cloudflare.com
+			header_down Location "https://cdnjs\.cloudflare\.com/" "https://static.bluecdn.com/"
+		}
+		header Cache-Control "public, max-age=31536000, immutable"
+	}
+	handle {
+		root * /www/sites/static.bluecdn.com
+		@imm path *.woff2 *.woff
+		header @imm Cache-Control "public, max-age=31536000, immutable"
+		@short path *.css *.html /
+		header @short Cache-Control "public, max-age=300, must-revalidate"
+		file_server
+	}
+}
+
+:80 {
+	import common
+}
+
+:443 {
+	tls /etc/caddy/origin.crt /etc/caddy/origin.key
+	import common
+}

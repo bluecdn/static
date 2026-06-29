@@ -1,0 +1,1984 @@
+{
+  "version": 1,
+  "base": "https://static.bluecdn.com/fonts",
+  "count": {
+    "total": 147,
+    "latin": 100,
+    "cjk": 47
+  },
+  "fonts": [
+    {
+      "slug": "inter",
+      "name": "Inter",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "roboto",
+      "name": "Roboto",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "open-sans",
+      "name": "Open Sans",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        600,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "lato",
+      "name": "Lato",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "montserrat",
+      "name": "Montserrat",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        600,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "poppins",
+      "name": "Poppins",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        500,
+        600,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "source-sans-3",
+      "name": "Source Sans 3",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        600,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "noto-sans",
+      "name": "Noto Sans",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "nunito",
+      "name": "Nunito",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        600,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "nunito-sans",
+      "name": "Nunito Sans",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        600,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "work-sans",
+      "name": "Work Sans",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        500,
+        600
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "raleway",
+      "name": "Raleway",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "ubuntu",
+      "name": "Ubuntu",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "rubik",
+      "name": "Rubik",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "manrope",
+      "name": "Manrope",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "dm-sans",
+      "name": "DM Sans",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "karla",
+      "name": "Karla",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "public-sans",
+      "name": "Public Sans",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        600,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "fira-sans",
+      "name": "Fira Sans",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "pt-sans",
+      "name": "PT Sans",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "oswald",
+      "name": "Oswald",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "barlow",
+      "name": "Barlow",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        500,
+        600
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "heebo",
+      "name": "Heebo",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "mulish",
+      "name": "Mulish",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        600,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "cabin",
+      "name": "Cabin",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "quicksand",
+      "name": "Quicksand",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "josefin-sans",
+      "name": "Josefin Sans",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        600
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "kanit",
+      "name": "Kanit",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        500,
+        600
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "outfit",
+      "name": "Outfit",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "sora",
+      "name": "Sora",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "space-grotesk",
+      "name": "Space Grotesk",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "archivo",
+      "name": "Archivo",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "red-hat-display",
+      "name": "Red Hat Display",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "jost",
+      "name": "Jost",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "lexend",
+      "name": "Lexend",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "figtree",
+      "name": "Figtree",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "plus-jakarta-sans",
+      "name": "Plus Jakarta Sans",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "ibm-plex-sans",
+      "name": "IBM Plex Sans",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "assistant",
+      "name": "Assistant",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        600,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "be-vietnam-pro",
+      "name": "Be Vietnam Pro",
+      "lang": "latin",
+      "category": "sans",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "merriweather",
+      "name": "Merriweather",
+      "lang": "latin",
+      "category": "serif",
+      "weights": [
+        400,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "playfair-display",
+      "name": "Playfair Display",
+      "lang": "latin",
+      "category": "serif",
+      "weights": [
+        400,
+        600,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "pt-serif",
+      "name": "PT Serif",
+      "lang": "latin",
+      "category": "serif",
+      "weights": [
+        400,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "lora",
+      "name": "Lora",
+      "lang": "latin",
+      "category": "serif",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "noto-serif",
+      "name": "Noto Serif",
+      "lang": "latin",
+      "category": "serif",
+      "weights": [
+        400,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "roboto-slab",
+      "name": "Roboto Slab",
+      "lang": "latin",
+      "category": "serif",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "source-serif-4",
+      "name": "Source Serif 4",
+      "lang": "latin",
+      "category": "serif",
+      "weights": [
+        400,
+        600,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "bitter",
+      "name": "Bitter",
+      "lang": "latin",
+      "category": "serif",
+      "weights": [
+        400,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "crimson-pro",
+      "name": "Crimson Pro",
+      "lang": "latin",
+      "category": "serif",
+      "weights": [
+        400,
+        600,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "eb-garamond",
+      "name": "EB Garamond",
+      "lang": "latin",
+      "category": "serif",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "cormorant",
+      "name": "Cormorant",
+      "lang": "latin",
+      "category": "serif",
+      "weights": [
+        400,
+        500,
+        600
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "libre-baskerville",
+      "name": "Libre Baskerville",
+      "lang": "latin",
+      "category": "serif",
+      "weights": [
+        400,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "spectral",
+      "name": "Spectral",
+      "lang": "latin",
+      "category": "serif",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "domine",
+      "name": "Domine",
+      "lang": "latin",
+      "category": "serif",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "zilla-slab",
+      "name": "Zilla Slab",
+      "lang": "latin",
+      "category": "serif",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "dm-serif-display",
+      "name": "DM Serif Display",
+      "lang": "latin",
+      "category": "serif",
+      "weights": [
+        400
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "dm-serif-text",
+      "name": "DM Serif Text",
+      "lang": "latin",
+      "category": "serif",
+      "weights": [
+        400
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "newsreader",
+      "name": "Newsreader",
+      "lang": "latin",
+      "category": "serif",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "fraunces",
+      "name": "Fraunces",
+      "lang": "latin",
+      "category": "serif",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "vollkorn",
+      "name": "Vollkorn",
+      "lang": "latin",
+      "category": "serif",
+      "weights": [
+        400,
+        600,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "alegreya",
+      "name": "Alegreya",
+      "lang": "latin",
+      "category": "serif",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "arvo",
+      "name": "Arvo",
+      "lang": "latin",
+      "category": "serif",
+      "weights": [
+        400,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "bodoni-moda",
+      "name": "Bodoni Moda",
+      "lang": "latin",
+      "category": "serif",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "cormorant-garamond",
+      "name": "Cormorant Garamond",
+      "lang": "latin",
+      "category": "serif",
+      "weights": [
+        400,
+        500,
+        600
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "frank-ruhl-libre",
+      "name": "Frank Ruhl Libre",
+      "lang": "latin",
+      "category": "serif",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "petrona",
+      "name": "Petrona",
+      "lang": "latin",
+      "category": "serif",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "noticia-text",
+      "name": "Noticia Text",
+      "lang": "latin",
+      "category": "serif",
+      "weights": [
+        400,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "slabo-27px",
+      "name": "Slabo 27px",
+      "lang": "latin",
+      "category": "serif",
+      "weights": [
+        400
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "jetbrains-mono",
+      "name": "JetBrains Mono",
+      "lang": "latin",
+      "category": "mono",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "fira-code",
+      "name": "Fira Code",
+      "lang": "latin",
+      "category": "mono",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "source-code-pro",
+      "name": "Source Code Pro",
+      "lang": "latin",
+      "category": "mono",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "ibm-plex-mono",
+      "name": "IBM Plex Mono",
+      "lang": "latin",
+      "category": "mono",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "roboto-mono",
+      "name": "Roboto Mono",
+      "lang": "latin",
+      "category": "mono",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "space-mono",
+      "name": "Space Mono",
+      "lang": "latin",
+      "category": "mono",
+      "weights": [
+        400,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "inconsolata",
+      "name": "Inconsolata",
+      "lang": "latin",
+      "category": "mono",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "ubuntu-mono",
+      "name": "Ubuntu Mono",
+      "lang": "latin",
+      "category": "mono",
+      "weights": [
+        400,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "google-sans-code",
+      "name": "Google Sans Code",
+      "lang": "latin",
+      "category": "mono",
+      "weights": [
+        400,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "red-hat-mono",
+      "name": "Red Hat Mono",
+      "lang": "latin",
+      "category": "mono",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "dm-mono",
+      "name": "DM Mono",
+      "lang": "latin",
+      "category": "mono",
+      "weights": [
+        400,
+        500
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "spline-sans-mono",
+      "name": "Spline Sans Mono",
+      "lang": "latin",
+      "category": "mono",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "martian-mono",
+      "name": "Martian Mono",
+      "lang": "latin",
+      "category": "mono",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "pt-mono",
+      "name": "PT Mono",
+      "lang": "latin",
+      "category": "mono",
+      "weights": [
+        400
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "cousine",
+      "name": "Cousine",
+      "lang": "latin",
+      "category": "mono",
+      "weights": [
+        400,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "papermono",
+      "name": "PaperMono",
+      "lang": "latin",
+      "category": "mono",
+      "weights": [
+        400
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "bebas-neue",
+      "name": "Bebas Neue",
+      "lang": "latin",
+      "category": "display",
+      "weights": [
+        400
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "anton",
+      "name": "Anton",
+      "lang": "latin",
+      "category": "display",
+      "weights": [
+        400
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "abril-fatface",
+      "name": "Abril Fatface",
+      "lang": "latin",
+      "category": "display",
+      "weights": [
+        400
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "fugaz-one",
+      "name": "Fugaz One",
+      "lang": "latin",
+      "category": "display",
+      "weights": [
+        400
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "righteous",
+      "name": "Righteous",
+      "lang": "latin",
+      "category": "display",
+      "weights": [
+        400
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "pacifico",
+      "name": "Pacifico",
+      "lang": "latin",
+      "category": "display",
+      "weights": [
+        400
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "lobster",
+      "name": "Lobster",
+      "lang": "latin",
+      "category": "display",
+      "weights": [
+        400
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "comfortaa",
+      "name": "Comfortaa",
+      "lang": "latin",
+      "category": "display",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "fredoka",
+      "name": "Fredoka",
+      "lang": "latin",
+      "category": "display",
+      "weights": [
+        400,
+        500,
+        600
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "bricolage-grotesque",
+      "name": "Bricolage Grotesque",
+      "lang": "latin",
+      "category": "display",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "unbounded",
+      "name": "Unbounded",
+      "lang": "latin",
+      "category": "display",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "dancing-script",
+      "name": "Dancing Script",
+      "lang": "latin",
+      "category": "display",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "caveat",
+      "name": "Caveat",
+      "lang": "latin",
+      "category": "display",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "great-vibes",
+      "name": "Great Vibes",
+      "lang": "latin",
+      "category": "display",
+      "weights": [
+        400
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "kalam",
+      "name": "Kalam",
+      "lang": "latin",
+      "category": "display",
+      "weights": [
+        400,
+        700
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "satisfy",
+      "name": "Satisfy",
+      "lang": "latin",
+      "category": "display",
+      "weights": [
+        400
+      ],
+      "source": "google",
+      "license": "OFL/Apache-2.0",
+      "note": null,
+      "picked": false
+    },
+    {
+      "slug": "noto-sans-sc",
+      "name": "Noto Sans SC（思源黑体）",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "OFL",
+      "note": "Google/Adobe",
+      "picked": false
+    },
+    {
+      "slug": "noto-serif-sc",
+      "name": "Noto Serif SC（思源宋体）",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "OFL",
+      "note": "Google/Adobe",
+      "picked": false
+    },
+    {
+      "slug": "source-han-sans",
+      "name": "思源黑体 Source Han Sans",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "OFL",
+      "note": "Adobe",
+      "picked": false
+    },
+    {
+      "slug": "source-han-serif",
+      "name": "思源宋体 Source Han Serif",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "OFL",
+      "note": "Adobe",
+      "picked": false
+    },
+    {
+      "slug": "lxgw-wenkai",
+      "name": "霞鹜文楷 LXGW WenKai",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "OFL",
+      "note": "lxgw",
+      "picked": false
+    },
+    {
+      "slug": "lxgw-wenkai-screen",
+      "name": "霞鹜文楷屏幕版",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "OFL",
+      "note": "lxgw",
+      "picked": false
+    },
+    {
+      "slug": "lxgw-marker-gothic",
+      "name": "霞鹜漫黑 LXGW Marker",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "OFL",
+      "note": "lxgw",
+      "picked": false
+    },
+    {
+      "slug": "lxgw-neo-xihei",
+      "name": "霞鹜新晰黑",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "OFL",
+      "note": "lxgw",
+      "picked": false
+    },
+    {
+      "slug": "smiley-sans",
+      "name": "得意黑 Smiley Sans",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "免费商用",
+      "note": "atelierAnchor",
+      "picked": false
+    },
+    {
+      "slug": "maple-mono-cn",
+      "name": "Maple Mono CN",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "OFL",
+      "note": "subframe",
+      "picked": false
+    },
+    {
+      "slug": "ma-shan-zheng",
+      "name": "马善政毛笔楷书",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "OFL",
+      "note": "Google Fonts",
+      "picked": false
+    },
+    {
+      "slug": "zhi-mang-xing",
+      "name": "志莽行书",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "OFL",
+      "note": "Google Fonts",
+      "picked": false
+    },
+    {
+      "slug": "long-cang",
+      "name": "龙藏体",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "OFL",
+      "note": "Google Fonts",
+      "picked": false
+    },
+    {
+      "slug": "liu-jian-mao-cao",
+      "name": "柳建毛草",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "OFL",
+      "note": "Google Fonts",
+      "picked": false
+    },
+    {
+      "slug": "zcool-kuaile",
+      "name": "站酷快乐体",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "OFL",
+      "note": "站酷",
+      "picked": false
+    },
+    {
+      "slug": "zcool-qingke-huangyou",
+      "name": "站酷庆科黄油体",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "OFL",
+      "note": "站酷",
+      "picked": false
+    },
+    {
+      "slug": "zcool-xiaowei",
+      "name": "站酷小薇 LOGO 体",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "OFL",
+      "note": "站酷",
+      "picked": false
+    },
+    {
+      "slug": "zcool-gaoduanhei",
+      "name": "站酷高端黑",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "免费商用",
+      "note": "站酷",
+      "picked": false
+    },
+    {
+      "slug": "zcool-wenyiti",
+      "name": "站酷文艺体",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "免费商用",
+      "note": "站酷",
+      "picked": false
+    },
+    {
+      "slug": "alibaba-puhuiti",
+      "name": "阿里巴巴普惠体 3.0",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "免费商用",
+      "note": "阿里巴巴",
+      "picked": false
+    },
+    {
+      "slug": "alimama-fangyuanti",
+      "name": "阿里妈妈方圆体",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "免费商用",
+      "note": "阿里妈妈",
+      "picked": false
+    },
+    {
+      "slug": "alimama-dongfangdakai",
+      "name": "阿里妈妈东方大楷",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "免费商用",
+      "note": "阿里妈妈",
+      "picked": false
+    },
+    {
+      "slug": "alimama-shuheiti",
+      "name": "阿里妈妈数黑体",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "免费商用",
+      "note": "阿里妈妈",
+      "picked": false
+    },
+    {
+      "slug": "dingtalk-jinbuti",
+      "name": "钉钉进步体",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "免费商用",
+      "note": "钉钉",
+      "picked": false
+    },
+    {
+      "slug": "misans",
+      "name": "MiSans",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "免费商用",
+      "note": "小米",
+      "picked": false
+    },
+    {
+      "slug": "misans-l3",
+      "name": "MiSans L3",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "免费商用",
+      "note": "小米",
+      "picked": false
+    },
+    {
+      "slug": "harmonyos-sans-sc",
+      "name": "HarmonyOS Sans SC",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "免费商用",
+      "note": "华为",
+      "picked": false
+    },
+    {
+      "slug": "oppo-sans",
+      "name": "OPPO Sans",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "免费商用",
+      "note": "OPPO",
+      "picked": false
+    },
+    {
+      "slug": "glow-sans-sc",
+      "name": "未来荧黑 Glow Sans SC",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "OFL",
+      "note": "welai",
+      "picked": false
+    },
+    {
+      "slug": "jiangxizhuokai",
+      "name": "江西拙楷",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "免费商用",
+      "note": "个人",
+      "picked": false
+    },
+    {
+      "slug": "qiji-fallback",
+      "name": "隶书/京华老宋体",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "免费商用",
+      "note": "个人",
+      "picked": false
+    },
+    {
+      "slug": "yozai",
+      "name": "悠哉字体 Yozai",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "OFL",
+      "note": "基于源黑",
+      "picked": false
+    },
+    {
+      "slug": "huiwenmincho",
+      "name": "汇文明朝体",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "免费/古籍",
+      "note": "汇文",
+      "picked": false
+    },
+    {
+      "slug": "chillkai",
+      "name": "寒蝉锦书 ChillKai",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "OFL",
+      "note": "寒蝉",
+      "picked": false
+    },
+    {
+      "slug": "chill-round",
+      "name": "寒蝉圆黑体",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "OFL",
+      "note": "寒蝉",
+      "picked": false
+    },
+    {
+      "slug": "dotgothic16",
+      "name": "DotGothic16 像素",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "OFL",
+      "note": "Google Fonts",
+      "picked": false
+    },
+    {
+      "slug": "klee-one",
+      "name": "Klee One 楷",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "OFL",
+      "note": "Google Fonts",
+      "picked": false
+    },
+    {
+      "slug": "yuji-syuku",
+      "name": "佑字肃",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "OFL",
+      "note": "Google Fonts",
+      "picked": false
+    },
+    {
+      "slug": "youshe-biaotihei",
+      "name": "优设标题黑",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "free-conditional",
+      "note": "优设网联合厂商发布，免费商用，需署名",
+      "picked": false
+    },
+    {
+      "slug": "pangmen-zhengdao",
+      "name": "庞门正道标题体",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "free-conditional",
+      "note": "免费商用，公益字体",
+      "picked": false
+    },
+    {
+      "slug": "rei-zi-zhenyan",
+      "name": "锐字真言",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "free-conditional",
+      "note": "部分免费，注意版本",
+      "picked": false
+    },
+    {
+      "slug": "shuhei",
+      "name": "站酷系列衍生",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "free-conditional",
+      "note": "视具体版本",
+      "picked": false
+    },
+    {
+      "slug": "imitation-song",
+      "name": "仿宋 GB2312",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "free-conditional",
+      "note": "注意来源与授权",
+      "picked": false
+    },
+    {
+      "slug": "hanyi-paitong",
+      "name": "汉仪派同（免费款）",
+      "lang": "cjk",
+      "category": "sans",
+      "weights": null,
+      "source": "manual",
+      "license": "free-conditional",
+      "note": "仅汉仪明确标免费的款",
+      "picked": false
+    },
+    {
+      "slug": "kuaikan",
+      "name": "快看世界体",
+      "lang": "cjk",
+      "category": "display",
+      "weights": null,
+      "source": "manual",
+      "license": "restricted",
+      "note": "快看漫画品牌字体，授权受限",
+      "picked": false
+    },
+    {
+      "slug": "douyu-zhuiguangti",
+      "name": "斗鱼追光体",
+      "lang": "cjk",
+      "category": "display",
+      "weights": null,
+      "source": "manual",
+      "license": "restricted",
+      "note": "斗鱼品牌字体，授权受限",
+      "picked": false
+    },
+    {
+      "slug": "tencentsans",
+      "name": "腾讯体 W7",
+      "lang": "cjk",
+      "category": "display",
+      "weights": null,
+      "source": "manual",
+      "license": "restricted",
+      "note": "腾讯内部/受限，非公开授权",
+      "picked": false
+    }
+  ]
+}

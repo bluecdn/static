@@ -1,0 +1,16 @@
+# 字体二进制由脚本/R2 管理，不进 Git
+*.woff2
+*.woff
+*.ttf
+*.otf
+_fonts/
+# 密钥/敏感
+*.pem
+deploy/acme-certs/certs.env
+gha_deploy*
+# 杂项
+.DS_Store
+._*
+__pycache__/
+*.pyc
+.claude/
