@@ -1,0 +1,223 @@
+# BlueCDN Static — 完整资源清单(llms-full)
+
+> 与 llms.txt 同源,但**内联全部 196 款字体逐项清单 + 全部 64 个 FontAwesome 版本**,供 AI 直接阅读、无需再抓取 JSON。结构化版本见 https://static.bluecdn.com/manifest.json
+
+公共静态资源 CDN:自托管 FontAwesome Pro 全版本、Google 西文网页字体、中文 webfont。全球边缘加速,中国大陆优化,CORS 全开放,复制直链即用。
+
+## 使用方法
+
+- 字体:在 `<head>` 引入 `<link rel="stylesheet" href="{字体的 cssUrl}">`,然后 CSS 中 `font-family: "{family}"`。
+- FontAwesome:引入 `<link rel="stylesheet" href="https://static.bluecdn.com/libs/fontawesome/{版本}/css/all.min.css">`,用 `<i class="fa-solid fa-{图标名}"></i>`。
+
+## FontAwesome Pro(64 个版本,4344 图标)
+
+- 最新版本:**7.3.0**;CSS 模板:`https://static.bluecdn.com/libs/fontawesome/{version}/css/all.min.css`
+- 全部版本:7.3.0, 7.2.0, 7.1.0, 7.0.1, 7.0.0, 6.7.2, 6.7.1, 6.7.0, 6.6.0, 6.5.2, 6.5.1, 6.5.0, 6.4.2, 6.4.1, 6.4.0, 6.3.0, 6.2.1, 6.2.0, 6.1.2, 6.1.1, 6.1.0, 6.0.0, 5.15.4, 5.15.3, 5.15.2, 5.15.1, 5.14.0, 5.13.1, 5.13.0, 5.12.1, 5.12.0, 5.11.2, 5.11.1, 5.11.0, 5.10.2, 5.10.1, 5.10.0, 5.9.0, 5.8.2, 5.8.1, 5.8.0, 5.7.2, 5.7.1, 5.7.0, 5.6.3, 5.6.1, 5.6.0, 5.5.0, 5.4.2, 5.4.1, 5.3.1, 5.2.0, 5.1.1, 5.1.0, 5.0.13, 5.0.12, 5.0.10, 5.0.9, 5.0.8, 5.0.6, 5.0.4, 5.0.3, 5.0.2, 5.0.1
+- 图标索引(名称/4位unicode/风格/别名):https://static.bluecdn.com/libs/fontawesome/icons-index.json
+
+## 西文字体 (Latin Webfonts) — 102 款
+
+- **Abril Fatface** — family `Abril Fatface` · 字重 400 · https://static.bluecdn.com/fonts/abril-fatface.css
+- **Alegreya** — family `Alegreya` · 字重 400/500/700 · https://static.bluecdn.com/fonts/alegreya.css
+- **Anton** — family `Anton` · 字重 400 · https://static.bluecdn.com/fonts/anton.css
+- **Archivo** — family `Archivo` · 字重 400/500/700 · https://static.bluecdn.com/fonts/archivo.css
+- **Arvo** — family `Arvo` · 字重 400/700 · https://static.bluecdn.com/fonts/arvo.css
+- **Assistant** — family `Assistant` · 字重 400/600/700 · https://static.bluecdn.com/fonts/assistant.css
+- **Barlow** — family `Barlow` · 字重 400/500/600 · https://static.bluecdn.com/fonts/barlow.css
+- **Be Vietnam Pro** — family `Be Vietnam Pro` · 字重 400/500/700 · https://static.bluecdn.com/fonts/be-vietnam-pro.css
+- **Bebas Neue** — family `Bebas Neue` · 字重 400 · https://static.bluecdn.com/fonts/bebas-neue.css
+- **Bitter** — family `Bitter` · 字重 400/700 · https://static.bluecdn.com/fonts/bitter.css
+- **Bodoni Moda** — family `Bodoni Moda` · 字重 400/500/700 · https://static.bluecdn.com/fonts/bodoni-moda.css
+- **Bricolage Grotesque** — family `Bricolage Grotesque` · 字重 400/500/700 · https://static.bluecdn.com/fonts/bricolage-grotesque.css
+- **Caveat** — family `Caveat` · 字重 400/500/700 · https://static.bluecdn.com/fonts/caveat.css
+- **Comfortaa** — family `Comfortaa` · 字重 400/500/700 · https://static.bluecdn.com/fonts/comfortaa.css
+- **Cormorant** — family `Cormorant` · 字重 400/500/600 · https://static.bluecdn.com/fonts/cormorant.css
+- **Cormorant Garamond** — family `Cormorant Garamond` · 字重 400/500/600 · https://static.bluecdn.com/fonts/cormorant-garamond.css
+- **Cousine** — family `Cousine` · 字重 400/700 · https://static.bluecdn.com/fonts/cousine.css
+- **Crimson Pro** — family `Crimson Pro` · 字重 400/600/700 · https://static.bluecdn.com/fonts/crimson-pro.css
+- **Dancing Script** — family `Dancing Script` · 字重 400/500/700 · https://static.bluecdn.com/fonts/dancing-script.css
+- **DM Mono** — family `DM Mono` · 字重 400/500 · https://static.bluecdn.com/fonts/dm-mono.css
+- **DM Sans** — family `DM Sans` · 字重 400/500/700 · https://static.bluecdn.com/fonts/dm-sans.css
+- **DM Serif Display** — family `DM Serif Display` · 字重 400 · https://static.bluecdn.com/fonts/dm-serif-display.css
+- **DM Serif Text** — family `DM Serif Text` · 字重 400 · https://static.bluecdn.com/fonts/dm-serif-text.css
+- **Domine** — family `Domine` · 字重 400/500/700 · https://static.bluecdn.com/fonts/domine.css
+- **EB Garamond** — family `EB Garamond` · 字重 400/500/700 · https://static.bluecdn.com/fonts/eb-garamond.css
+- **Figtree** — family `Figtree` · 字重 400/500/700 · https://static.bluecdn.com/fonts/figtree.css
+- **Fira Code** — family `Fira Code` · 字重 400/500/700 · https://static.bluecdn.com/fonts/fira-code.css
+- **Fira Sans** — family `Fira Sans` · 字重 400/500/700 · https://static.bluecdn.com/fonts/fira-sans.css
+- **Frank Ruhl Libre** — family `Frank Ruhl Libre` · 字重 400/500/700 · https://static.bluecdn.com/fonts/frank-ruhl-libre.css
+- **Fraunces** — family `Fraunces` · 字重 400/500/700 · https://static.bluecdn.com/fonts/fraunces.css
+- **Fredoka** — family `Fredoka` · 字重 400/500/600 · https://static.bluecdn.com/fonts/fredoka.css
+- **Great Vibes** — family `Great Vibes` · 字重 400 · https://static.bluecdn.com/fonts/great-vibes.css
+- **Heebo** — family `Heebo` · 字重 400/500/700 · https://static.bluecdn.com/fonts/heebo.css
+- **IBM Plex Mono** — family `IBM Plex Mono` · 字重 400/500/700 · https://static.bluecdn.com/fonts/ibm-plex-mono.css
+- **IBM Plex Sans** — family `IBM Plex Sans` · 字重 400/500/700 · https://static.bluecdn.com/fonts/ibm-plex-sans.css
+- **Inconsolata** — family `Inconsolata` · 字重 400/500/700 · https://static.bluecdn.com/fonts/inconsolata.css
+- **JetBrains Mono** — family `JetBrains Mono` · 字重 400/500/700 · https://static.bluecdn.com/fonts/jetbrains-mono.css
+- **Josefin Sans** — family `Josefin Sans` · 字重 400/600 · https://static.bluecdn.com/fonts/josefin-sans.css
+- **Jost** — family `Jost` · 字重 400/500/700 · https://static.bluecdn.com/fonts/jost.css
+- **Kalam** — family `Kalam` · 字重 400/700 · https://static.bluecdn.com/fonts/kalam.css
+- **Kanit** — family `Kanit` · 字重 400/500/600 · https://static.bluecdn.com/fonts/kanit.css
+- **Karla** — family `Karla` · 字重 400/700 · https://static.bluecdn.com/fonts/karla.css
+- **Lato** — family `Lato` · 字重 400/700 · https://static.bluecdn.com/fonts/lato.css
+- **Lexend** — family `Lexend` · 字重 400/500/700 · https://static.bluecdn.com/fonts/lexend.css
+- **Libre Baskerville** — family `Libre Baskerville` · 字重 400/700 · https://static.bluecdn.com/fonts/libre-baskerville.css
+- **Lobster** — family `Lobster` · 字重 400 · https://static.bluecdn.com/fonts/lobster.css
+- **Lora** — family `Lora` · 字重 400/500/700 · https://static.bluecdn.com/fonts/lora.css
+- **Manrope** — family `Manrope` · 字重 400/500/700 · https://static.bluecdn.com/fonts/manrope.css
+- **Martian Mono** — family `Martian Mono` · 字重 400/500/700 · https://static.bluecdn.com/fonts/martian-mono.css
+- **Merriweather** — family `Merriweather` · 字重 400/700 · https://static.bluecdn.com/fonts/merriweather.css
+- **Montserrat** — family `Montserrat` · 字重 400/600/700 · https://static.bluecdn.com/fonts/montserrat.css
+- **Mulish** — family `Mulish` · 字重 400/600/700 · https://static.bluecdn.com/fonts/mulish.css
+- **Newsreader** — family `Newsreader` · 字重 400/500/700 · https://static.bluecdn.com/fonts/newsreader.css
+- **Noticia Text** — family `Noticia Text` · 字重 400/700 · https://static.bluecdn.com/fonts/noticia-text.css
+- **Noto Sans** — family `Noto Sans` · 字重 400/500/700 · https://static.bluecdn.com/fonts/noto-sans.css
+- **Noto Serif** — family `Noto Serif` · 字重 400/700 · https://static.bluecdn.com/fonts/noto-serif.css
+- **Nunito** — family `Nunito` · 字重 400/600/700 · https://static.bluecdn.com/fonts/nunito.css
+- **Nunito Sans** — family `Nunito Sans` · 字重 400/600/700 · https://static.bluecdn.com/fonts/nunito-sans.css
+- **Open Sans** — family `Open Sans` · 字重 400/600/700 · https://static.bluecdn.com/fonts/open-sans.css
+- **Oswald** — family `Oswald` · 字重 400/500/700 · https://static.bluecdn.com/fonts/oswald.css
+- **Outfit** — family `Outfit` · 字重 400/500/700 · https://static.bluecdn.com/fonts/outfit.css
+- **Pacifico** — family `Pacifico` · 字重 400 · https://static.bluecdn.com/fonts/pacifico.css
+- **Petrona** — family `Petrona` · 字重 400/500/700 · https://static.bluecdn.com/fonts/petrona.css
+- **Playfair Display** — family `Playfair Display` · 字重 400/600/700 · https://static.bluecdn.com/fonts/playfair-display.css
+- **Plus Jakarta Sans** — family `Plus Jakarta Sans` · 字重 400/500/700 · https://static.bluecdn.com/fonts/plus-jakarta-sans.css
+- **Poppins** — family `Poppins` · 字重 400/500/600/700 · https://static.bluecdn.com/fonts/poppins.css
+- **PT Mono** — family `PT Mono` · 字重 400 · https://static.bluecdn.com/fonts/pt-mono.css
+- **PT Sans** — family `PT Sans` · 字重 400/700 · https://static.bluecdn.com/fonts/pt-sans.css
+- **PT Serif** — family `PT Serif` · 字重 400/700 · https://static.bluecdn.com/fonts/pt-serif.css
+- **Public Sans** — family `Public Sans` · 字重 400/600/700 · https://static.bluecdn.com/fonts/public-sans.css
+- **Quicksand** — family `Quicksand` · 字重 400/500/700 · https://static.bluecdn.com/fonts/quicksand.css
+- **Raleway** — family `Raleway` · 字重 400/500/700 · https://static.bluecdn.com/fonts/raleway.css
+- **Red Hat Display** — family `Red Hat Display` · 字重 400/500/700 · https://static.bluecdn.com/fonts/red-hat-display.css
+- **Red Hat Mono** — family `Red Hat Mono` · 字重 400/500/700 · https://static.bluecdn.com/fonts/red-hat-mono.css
+- **Righteous** — family `Righteous` · 字重 400 · https://static.bluecdn.com/fonts/righteous.css
+- **Roboto Mono** — family `Roboto Mono` · 字重 400/500/700 · https://static.bluecdn.com/fonts/roboto-mono.css
+- **Roboto Slab** — family `Roboto Slab` · 字重 400/500/700 · https://static.bluecdn.com/fonts/roboto-slab.css
+- **Rubik** — family `Rubik` · 字重 400/500/700 · https://static.bluecdn.com/fonts/rubik.css
+- **Satisfy** — family `Satisfy` · 字重 400 · https://static.bluecdn.com/fonts/satisfy.css
+- **Slabo 27px** — family `Slabo 27px` · 字重 400 · https://static.bluecdn.com/fonts/slabo-27px.css
+- **Source Code Pro** — family `Source Code Pro` · 字重 400/500/700 · https://static.bluecdn.com/fonts/source-code-pro.css
+- **Source Sans 3** — family `Source Sans 3` · 字重 400/600/700 · https://static.bluecdn.com/fonts/source-sans-3.css
+- **Source Serif 4** — family `Source Serif 4` · 字重 400/600/700 · https://static.bluecdn.com/fonts/source-serif-4.css
+- **Space Grotesk** — family `Space Grotesk` · 字重 400/500/700 · https://static.bluecdn.com/fonts/space-grotesk.css
+- **Space Mono** — family `Space Mono` · 字重 400/700 · https://static.bluecdn.com/fonts/space-mono.css
+- **Spectral** — family `Spectral` · 字重 400/500/700 · https://static.bluecdn.com/fonts/spectral.css
+- **Spline Sans Mono** — family `Spline Sans Mono` · 字重 400/500/700 · https://static.bluecdn.com/fonts/spline-sans-mono.css
+- **Ubuntu Mono** — family `Ubuntu Mono` · 字重 400/700 · https://static.bluecdn.com/fonts/ubuntu-mono.css
+- **Unbounded** — family `Unbounded` · 字重 400/500/700 · https://static.bluecdn.com/fonts/unbounded.css
+- **Vollkorn** — family `Vollkorn` · 字重 400/600/700 · https://static.bluecdn.com/fonts/vollkorn.css
+- **Work Sans** — family `Work Sans` · 字重 400/500/600 · https://static.bluecdn.com/fonts/work-sans.css
+- **Zilla Slab** — family `Zilla Slab` · 字重 400/500/700 · https://static.bluecdn.com/fonts/zilla-slab.css
+- **Fugaz One** — family `Fugaz One` · 字重 400 · https://static.bluecdn.com/fonts/fugaz-one.css
+- **Ubuntu** — family `Ubuntu` · 字重 400/500/700 · https://static.bluecdn.com/fonts/ubuntu.css
+- **Google Sans Code** — family `Google Sans Code` · 字重 400/700 · https://static.bluecdn.com/fonts/google-sans-code.css
+- **PaperMono** — family `PaperMono` · 字重 400 · https://static.bluecdn.com/fonts/papermono.css
+- **Cairo Play** — family `Cairo Play` · 字重 200–1000 · https://static.bluecdn.com/fonts/cairo-play.css
+- **Inter** — family `Inter` · 字重 400/500/700 · https://static.bluecdn.com/fonts/inter.css
+- **Roboto** — family `Roboto` · 字重 400/500/700 · https://static.bluecdn.com/fonts/roboto.css
+- **Cabin** — family `Cabin` · 字重 400/500/700 · https://static.bluecdn.com/fonts/cabin.css
+- **Sora** — family `Sora` · 字重 400/500/700 · https://static.bluecdn.com/fonts/sora.css
+- **Google Sans** — family `Google Sans` · 字重 400/500/700 · https://static.bluecdn.com/fonts/google-sans.css
+
+## 中文字体 (CJK Webfonts) — 94 款
+
+- **腾讯体 W7** — family `TencentSans W7` · 字重 400 · https://static.bluecdn.com/fonts/tencentsans.css
+- **MiSans** — family `MiSans` · 字重 400/500/700 · https://static.bluecdn.com/fonts/misans.css
+- **白无常可可体** — family `BWCKKT` · 字重 400 · https://static.bluecdn.com/fonts/bwckkt.css
+- **Cubic** — family `Cubic 11` · 字重 400 · https://static.bluecdn.com/fonts/cubic.css
+- **汇文明朝体** — family `Huiwen-mincho` · 字重 400 · https://static.bluecdn.com/fonts/hwmct.css
+- **江西拙楷** — family `jiangxizhuokai` · 字重 400 · https://static.bluecdn.com/fonts/jxzk.css
+- **千图笔锋手写体** — family `qiantubifengshouxieti` · 字重 400 · https://static.bluecdn.com/fonts/qtbfsxt.css
+- **瑞美加张清平硬笔行书** — family `瑞美加张清平硬笔行书` · 字重 400 · https://static.bluecdn.com/fonts/rmjzqpybxs.css
+- **鸿雷行书简体** — family `hongleixingshu` · 字重 400 · https://static.bluecdn.com/fonts/hlxsjt.css
+- **猫啃什锦黑** — family `MaokenAssortedSans` · 字重 400 · https://static.bluecdn.com/fonts/mksjh.css
+- **铁蒺藜体** — family `Tiejili` · 字重 400 · https://static.bluecdn.com/fonts/tjl.css
+- **演示悠然小楷** — family `slideyouran` · 字重 400 · https://static.bluecdn.com/fonts/ysyrxk.css
+- **标小智龙珠体** — family `LogoSC LongZhuTi` · 字重 400 · https://static.bluecdn.com/fonts/bxzlzt.css
+- **字魂扁桃体** — family `zihunbiantaoti` · 字重 400 · https://static.bluecdn.com/fonts/zhbtt.css
+- **猫啃珠圆体** — family `MaokenZhuyuanTi` · 字重 400 · https://static.bluecdn.com/fonts/mkzyt.css
+- **演示佛系体** — family `Slidefu` · 字重 400 · https://static.bluecdn.com/fonts/ysfxt.css
+- **京華老宋体** — family `KingHwa_OldSong` · 字重 400 · https://static.bluecdn.com/fonts/jhlst.css
+- **精品點陣體** — family `BoutiqueBitmap9x9 1.6 R` · 字重 400 · https://static.bluecdn.com/fonts/jpdzt.css
+- **一点颜** — family `I.Ngaan` · 字重 400 · 繁体 · https://static.bluecdn.com/fonts/yidianyan.css
+- **玄冬楷书** — family `XuandongKaishu` · 字重 400 · https://static.bluecdn.com/fonts/xuandongkaishu.css
+- **仓耳周珂正大榜书** — family `TsangerZhoukeZhengdabangshu` · 字重 400 · https://static.bluecdn.com/fonts/cezkzdbs.css
+- **抖音美好体** — family `Douyin Sans` · 字重 400 · https://static.bluecdn.com/fonts/dymh.css
+- **黄令东齐伋体** — family `QIJIFALLBACK` · 字重 400 · https://static.bluecdn.com/fonts/hldqjt.css
+- **黄引齐招牌体** — family `huangyinqi zhaopai` · 字重 400 · https://static.bluecdn.com/fonts/hyqzp.css
+- **荆南俊俊体** — family `荆南俊俊体` · 字重 400 · https://static.bluecdn.com/fonts/jnjj.css
+- **润植家康熙字典美化体** — family `nzgrKangxi` · 字重 400 · https://static.bluecdn.com/fonts/rzjkxzdmh.css
+- **润植家如印奏章楷** — family `nzgrRuYinZouZhangKai` · 字重 400 · https://static.bluecdn.com/fonts/rzjryzzk.css
+- **素材集市社会体** — family `SuCaiJiShi-SheHuiTi` · 字重 400 · https://static.bluecdn.com/fonts/scjssh.css
+- **摄图摩登小方体** — family `shetumodengxiaofangti` · 字重 400 · https://static.bluecdn.com/fonts/stmdxf.css
+- **装甲明朝体** — family `SoukouMincho` · 字重 400 · https://static.bluecdn.com/fonts/zjmc.css
+- **目哉像素体** — family `MuzaiPixel` · 字重 400 · https://static.bluecdn.com/fonts/mzxst.css
+- **全小素** — family `QuanPixel 8px` · 字重 400 · https://static.bluecdn.com/fonts/qxs.css
+- **思源屏显臻宋** — family `Source Han Serif CN for Display` · 字重 400 · https://static.bluecdn.com/fonts/sypxzs.css
+- **旁门正道细线条** — family `PangMenZhengDao-XiXian` · 字重 400 · https://static.bluecdn.com/fonts/pmzdxxt.css
+- **鲨鱼菲特健康体** — family `YouSheShaYuFeiTeJianKangTi` · 字重 400 · https://static.bluecdn.com/fonts/syftjkt.css
+- **小赖体** — family `Xiaolai SC` · 字重 400 · https://static.bluecdn.com/fonts/xiaolai.css
+- **猫啃网糖圆体** — family `MaoKenTangYuan (beta)` · 字重 400 · https://static.bluecdn.com/fonts/mkwtyt.css
+- **朱雀仿宋** — family `Zhuque Fangsong (technical preview)` · 字重 400 · https://static.bluecdn.com/fonts/zqfs.css
+- **韩契在民体** — family `Hangeuljaemin4.0` · 字重 400 · https://static.bluecdn.com/fonts/hqzmt.css
+- **也字工厂小石头** — family `YEFONTXiaoShiTou` · 字重 400 · https://static.bluecdn.com/fonts/yzgcxst.css
+- **飞波正点体** — family `Feibo Zheng Dots` · 字重 400 · https://static.bluecdn.com/fonts/fbdzt.css
+- **CEF Fonts CJK** — family `CEF Fonts CJK Mono` · 字重 400 · https://static.bluecdn.com/fonts/cef.css
+- **飞花宋体** — family `FlyFlowerSong` · 字重 400 · https://static.bluecdn.com/fonts/fhst.css
+- **平方赖江湖琅琊体** — family `平方赖江湖琅琊体` · 字重 400 · https://static.bluecdn.com/fonts/pfljhlyt.css
+- **平方公子体** — family `PING FANG GONG ZI TI` · 字重 400 · https://static.bluecdn.com/fonts/pfgzt.css
+- **平方赖江湖飞扬体** — family `平方赖江湖飞扬体` · 字重 400 · https://static.bluecdn.com/fonts/pfljhfyt.css
+- **平方萌萌哒** — family `PING FANG MENG MNEG DA` · 字重 400 · https://static.bluecdn.com/fonts/pfmmd.css
+- **峄山碑篆体** — family `峄山碑篆体` · 字重 400 · https://static.bluecdn.com/fonts/ysbzt.css
+- **字制区喜脉喜欢体** — family `FontQu Smile 常规` · 字重 400 · https://static.bluecdn.com/fonts/zzqxmxht.css
+- **白路棒棒手写体** — family `bailubangbangshouxieti` · 字重 400 · https://static.bluecdn.com/fonts/blbbsxt.css
+- **重庆山城棒棒体** — family `YunFengchongqingbangbangti` · 字重 400 · https://static.bluecdn.com/fonts/cqscbbt.css
+- **程荣光刻楷** — family `chengrongguangke` · 字重 400 · https://static.bluecdn.com/fonts/crgkk.css
+- **霞鹜文楷 Bright** — family `LXGW Bright SemiLight` · 字重 400 · https://static.bluecdn.com/fonts/lxgwwenkaibright.css
+- **游趣体** — family `Child Fun Sans Demo` · 字重 400 · https://static.bluecdn.com/fonts/yqt.css
+- **寒蝉全圆体** — family `寒蝉全圆体` · 字重 400 · https://static.bluecdn.com/fonts/hcqyt.css
+- **极影毁片文宋** — family `极影毁片文宋 Medium` · 字重 400 · https://static.bluecdn.com/fonts/jyhpws.css
+- **霞鹜文楷屏幕阅读版** — family `LXGW WenKai Screen` · 字重 400 · https://static.bluecdn.com/fonts/lywkpmydb.css
+- **月星楷** — family `Moon Stars Kai T HW` · 字重 400 · https://static.bluecdn.com/fonts/moon-stars-kai.css
+- **原俠正楷** — family `GuanKiapTsingKhai` · 字重 400 · https://static.bluecdn.com/fonts/GuanKiapTsingKhai.css
+- **小合简化体** — family `Xiaohe Simplify Serif VF` · 字重 400 · https://static.bluecdn.com/fonts/XiaoheSimplify.css
+- **就是不錯字** — family `The Write Right Font` · 字重 400 · https://static.bluecdn.com/fonts/the-write-right-font.css
+- **澳声通拼音文楷** — family `ToneOZ-Pinyin-WenKai-Regular` · 字重 400 · https://static.bluecdn.com/fonts/ToneOZ-Pinyin-WenKai.css
+- **拼音鼎楷** — family `ToneOZ-PinyinW-Kai-Simplified` · 字重 400 · https://static.bluecdn.com/fonts/ToneOZ-Pinyin-Kai.css
+- **注音多音字型庫楷** — family `ToneOZ-RadicalZ-KaiTraditional` · 字重 400 · https://static.bluecdn.com/fonts/ToneOZ-RadicalZ-Kai.css
+- **曉聲通秋茄** — family `ToneOZ-Zhuyin-Tsuipita-TC` · 字重 400 · https://static.bluecdn.com/fonts/ToneOZ-Tsuipita.css
+- **上图东观体** — family `STDongGuanTi Light` · 字重 400 · https://static.bluecdn.com/fonts/stdgt.css
+- **霞鹜新致宋** — family `LXGW Neo ZhiSong` · 字重 400 · https://static.bluecdn.com/fonts/LxgwNeoZhiSong.css
+- **阿里巴巴普惠体 3.0** — family `Alibaba PuHuiTi` · 字重 400/500/700 · https://static.bluecdn.com/fonts/alibaba-puhuiti.css
+- **HarmonyOS Sans SC** — family `HarmonyOS Sans SC` · 字重 400/500/700 · https://static.bluecdn.com/fonts/harmonyos-sans-sc.css
+- **OPPO Sans** — family `OPPO Sans` · 字重 400/500/700 · https://static.bluecdn.com/fonts/oppo-sans.css
+- **悠哉字体 Yozai** — family `Yozai` · 字重 300/400/500 · https://static.bluecdn.com/fonts/yozai.css
+- **霞鹜新晰黑** — family `LXGW Neo XiHei` · 字重 400 · https://static.bluecdn.com/fonts/lxgw-neo-xihei.css
+- **得意黑 Smiley Sans** — family `Smiley Sans` · 字重 400 · https://static.bluecdn.com/fonts/smiley-sans.css
+- **未来荧黑 Glow Sans SC** — family `Glow Sans SC` · 字重 400 · https://static.bluecdn.com/fonts/glow-sans-sc.css
+- **马善政毛笔楷书** — family `Ma Shan Zheng` · 字重 400 · https://static.bluecdn.com/fonts/ma-shan-zheng.css
+- **志莽行书** — family `Zhi Mang Xing` · 字重 400 · https://static.bluecdn.com/fonts/zhi-mang-xing.css
+- **龙藏体** — family `Long Cang` · 字重 400 · https://static.bluecdn.com/fonts/long-cang.css
+- **柳建毛草** — family `Liu Jian Mao Cao` · 字重 400 · https://static.bluecdn.com/fonts/liu-jian-mao-cao.css
+- **站酷快乐体** — family `ZCOOL KuaiLe` · 字重 400 · https://static.bluecdn.com/fonts/zcool-kuaile.css
+- **站酷庆科黄油体** — family `ZCOOL QingKe HuangYou` · 字重 400 · https://static.bluecdn.com/fonts/zcool-qingke-huangyou.css
+- **站酷小薇 LOGO 体** — family `ZCOOL XiaoWei` · 字重 400 · https://static.bluecdn.com/fonts/zcool-xiaowei.css
+- **DotGothic16 像素** — family `DotGothic16` · 字重 400 · https://static.bluecdn.com/fonts/dotgothic16.css
+- **Klee One 楷** — family `Klee One` · 字重 400/600 · https://static.bluecdn.com/fonts/klee-one.css
+- **佑字肃** — family `Yuji Syuku` · 字重 400 · https://static.bluecdn.com/fonts/yuji-syuku.css
+- **Noto Sans SC** — family `Noto Sans SC` · 字重 400/500/700 · https://static.bluecdn.com/fonts/noto-sans-sc.css
+- **霞鹜文楷** — family `LXGW WenKai` · 字重 300/400/700 · https://static.bluecdn.com/fonts/lxgw-wenkai.css
+- **霞鹜漫黑** — family `LXGW Marker Gothic` · 字重 400 · 繁体 · https://static.bluecdn.com/fonts/lxgw-marker-gothic.css
+- **思源宋体** — family `Source Han Serif CN VF` · 字重 400 · https://static.bluecdn.com/fonts/source-han-serif-cn.css
+- **优设标题黑** — family `YouSheBiaoTiHei` · 字重 400 · https://static.bluecdn.com/fonts/youshe-biaotihei.css
+- **斗鱼追光体** — family `DOUYU Font` · 字重 400 · https://static.bluecdn.com/fonts/douyu-zhuiguangti.css
+- **快看世界体** — family `快看世界体` · 字重 400 · https://static.bluecdn.com/fonts/kuaikanshijieti.css
+- **Maple Mono CN** — family `Maple Mono CN` · 字重 400 · https://static.bluecdn.com/fonts/maple-mono-cn.css
+- **阿里妈妈方圆体 VF** — family `Alimama FangYuanTi VF` · 字重 400 · https://static.bluecdn.com/fonts/alimama-fangyuanti.css
+- **落 Luo** — family `Luo` · 字重 400 · https://static.bluecdn.com/fonts/luo.css
+
+## 说明
+
+- 全球边缘加速:中国大陆走百度云,境外走 Cloudflare;HTTPS / HTTP2/3 / 长期缓存 / CORS 全开放。
+- FontAwesome Pro 与各字体遵循其原作者 / 厂商许可,商用前请自行确认授权范围。

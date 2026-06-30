@@ -4,7 +4,7 @@
 
 BlueCDN Static 是面向开发者的免费公共静态资源加速服务。所有资源支持 HTTPS、HTTP/2、HTTP/3、长期缓存与跨域(CORS)引用。中国大陆通过百度云加速,境外通过 Cloudflare,全球 100ms 内响应。
 
-**完整资源清单(机器可读)见 [manifest.json](https://static.bluecdn.com/manifest.json)** —— 列出全部 196 款字体(每款含名称、family、字重、css 链接、预览图)与全部 64 个 FontAwesome 版本。AI / 程序可直接抓取该文件获取完整目录。
+**完整资源清单**:结构化(JSON)见 [manifest.json](https://static.bluecdn.com/manifest.json);纯文本逐项(Markdown,适合直接阅读)见 [llms-full.txt](https://static.bluecdn.com/llms-full.txt)。两者都列出全部 196 款字体(名称、family、字重、css 链接)与全部 64 个 FontAwesome 版本。AI / 程序可直接抓取获取完整目录。
 
 ## 资源目录
 
