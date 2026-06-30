@@ -1,0 +1,2421 @@
+{
+  "name": "BlueCDN Static",
+  "url": "https://static.bluecdn.com/",
+  "description": "公共静态资源 CDN:自托管 FontAwesome Pro 全版本、Google 西文网页字体、中文 webfont。全球边缘加速,中国大陆优化,CORS 全开放,复制直链即用。",
+  "updated": "2026-06-30",
+  "usage": {
+    "font": "在 <head> 引入 <link rel=\"stylesheet\" href=\"{cssUrl}\">,然后 CSS 中 font-family: \"{family}\"",
+    "fontawesome": "引入 <link rel=\"stylesheet\" href=\"https://static.bluecdn.com/libs/fontawesome/{version}/css/all.min.css\">,用 <i class=\"fa-solid fa-{icon}\"></i>"
+  },
+  "fontawesome": {
+    "latest": "7.3.0",
+    "versionsCount": 64,
+    "versions": [
+      "7.3.0",
+      "7.2.0",
+      "7.1.0",
+      "7.0.1",
+      "7.0.0",
+      "6.7.2",
+      "6.7.1",
+      "6.7.0",
+      "6.6.0",
+      "6.5.2",
+      "6.5.1",
+      "6.5.0",
+      "6.4.2",
+      "6.4.1",
+      "6.4.0",
+      "6.3.0",
+      "6.2.1",
+      "6.2.0",
+      "6.1.2",
+      "6.1.1",
+      "6.1.0",
+      "6.0.0",
+      "5.15.4",
+      "5.15.3",
+      "5.15.2",
+      "5.15.1",
+      "5.14.0",
+      "5.13.1",
+      "5.13.0",
+      "5.12.1",
+      "5.12.0",
+      "5.11.2",
+      "5.11.1",
+      "5.11.0",
+      "5.10.2",
+      "5.10.1",
+      "5.10.0",
+      "5.9.0",
+      "5.8.2",
+      "5.8.1",
+      "5.8.0",
+      "5.7.2",
+      "5.7.1",
+      "5.7.0",
+      "5.6.3",
+      "5.6.1",
+      "5.6.0",
+      "5.5.0",
+      "5.4.2",
+      "5.4.1",
+      "5.3.1",
+      "5.2.0",
+      "5.1.1",
+      "5.1.0",
+      "5.0.13",
+      "5.0.12",
+      "5.0.10",
+      "5.0.9",
+      "5.0.8",
+      "5.0.6",
+      "5.0.4",
+      "5.0.3",
+      "5.0.2",
+      "5.0.1"
+    ],
+    "cssUrlTemplate": "https://static.bluecdn.com/libs/fontawesome/{version}/css/all.min.css",
+    "iconCount": 4344,
+    "iconsIndexUrl": "https://static.bluecdn.com/libs/fontawesome/icons-index.json"
+  },
+  "fonts": {
+    "total": 196,
+    "latinCount": 102,
+    "cjkCount": 94,
+    "items": [
+      {
+        "name": "Abril Fatface",
+        "family": "Abril Fatface",
+        "slug": "abril-fatface",
+        "category": "latin",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/abril-fatface.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/abril-fatface.svg"
+      },
+      {
+        "name": "Alegreya",
+        "family": "Alegreya",
+        "slug": "alegreya",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/alegreya.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/alegreya.svg"
+      },
+      {
+        "name": "Anton",
+        "family": "Anton",
+        "slug": "anton",
+        "category": "latin",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/anton.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/anton.svg"
+      },
+      {
+        "name": "Archivo",
+        "family": "Archivo",
+        "slug": "archivo",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/archivo.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/archivo.svg"
+      },
+      {
+        "name": "Arvo",
+        "family": "Arvo",
+        "slug": "arvo",
+        "category": "latin",
+        "weights": [
+          "400",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/arvo.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/arvo.svg"
+      },
+      {
+        "name": "Assistant",
+        "family": "Assistant",
+        "slug": "assistant",
+        "category": "latin",
+        "weights": [
+          "400",
+          "600",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/assistant.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/assistant.svg"
+      },
+      {
+        "name": "Barlow",
+        "family": "Barlow",
+        "slug": "barlow",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "600"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/barlow.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/barlow.svg"
+      },
+      {
+        "name": "Be Vietnam Pro",
+        "family": "Be Vietnam Pro",
+        "slug": "be-vietnam-pro",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/be-vietnam-pro.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/be-vietnam-pro.svg"
+      },
+      {
+        "name": "Bebas Neue",
+        "family": "Bebas Neue",
+        "slug": "bebas-neue",
+        "category": "latin",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/bebas-neue.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/bebas-neue.svg"
+      },
+      {
+        "name": "Bitter",
+        "family": "Bitter",
+        "slug": "bitter",
+        "category": "latin",
+        "weights": [
+          "400",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/bitter.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/bitter.svg"
+      },
+      {
+        "name": "Bodoni Moda",
+        "family": "Bodoni Moda",
+        "slug": "bodoni-moda",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/bodoni-moda.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/bodoni-moda.svg"
+      },
+      {
+        "name": "Bricolage Grotesque",
+        "family": "Bricolage Grotesque",
+        "slug": "bricolage-grotesque",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/bricolage-grotesque.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/bricolage-grotesque.svg"
+      },
+      {
+        "name": "Caveat",
+        "family": "Caveat",
+        "slug": "caveat",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/caveat.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/caveat.svg"
+      },
+      {
+        "name": "Comfortaa",
+        "family": "Comfortaa",
+        "slug": "comfortaa",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/comfortaa.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/comfortaa.svg"
+      },
+      {
+        "name": "Cormorant",
+        "family": "Cormorant",
+        "slug": "cormorant",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "600"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/cormorant.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/cormorant.svg"
+      },
+      {
+        "name": "Cormorant Garamond",
+        "family": "Cormorant Garamond",
+        "slug": "cormorant-garamond",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "600"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/cormorant-garamond.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/cormorant-garamond.svg"
+      },
+      {
+        "name": "Cousine",
+        "family": "Cousine",
+        "slug": "cousine",
+        "category": "latin",
+        "weights": [
+          "400",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/cousine.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/cousine.svg"
+      },
+      {
+        "name": "Crimson Pro",
+        "family": "Crimson Pro",
+        "slug": "crimson-pro",
+        "category": "latin",
+        "weights": [
+          "400",
+          "600",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/crimson-pro.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/crimson-pro.svg"
+      },
+      {
+        "name": "Dancing Script",
+        "family": "Dancing Script",
+        "slug": "dancing-script",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/dancing-script.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/dancing-script.svg"
+      },
+      {
+        "name": "DM Mono",
+        "family": "DM Mono",
+        "slug": "dm-mono",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/dm-mono.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/dm-mono.svg"
+      },
+      {
+        "name": "DM Sans",
+        "family": "DM Sans",
+        "slug": "dm-sans",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/dm-sans.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/dm-sans.svg"
+      },
+      {
+        "name": "DM Serif Display",
+        "family": "DM Serif Display",
+        "slug": "dm-serif-display",
+        "category": "latin",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/dm-serif-display.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/dm-serif-display.svg"
+      },
+      {
+        "name": "DM Serif Text",
+        "family": "DM Serif Text",
+        "slug": "dm-serif-text",
+        "category": "latin",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/dm-serif-text.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/dm-serif-text.svg"
+      },
+      {
+        "name": "Domine",
+        "family": "Domine",
+        "slug": "domine",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/domine.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/domine.svg"
+      },
+      {
+        "name": "EB Garamond",
+        "family": "EB Garamond",
+        "slug": "eb-garamond",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/eb-garamond.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/eb-garamond.svg"
+      },
+      {
+        "name": "Figtree",
+        "family": "Figtree",
+        "slug": "figtree",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/figtree.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/figtree.svg"
+      },
+      {
+        "name": "Fira Code",
+        "family": "Fira Code",
+        "slug": "fira-code",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/fira-code.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/fira-code.svg"
+      },
+      {
+        "name": "Fira Sans",
+        "family": "Fira Sans",
+        "slug": "fira-sans",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/fira-sans.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/fira-sans.svg"
+      },
+      {
+        "name": "Frank Ruhl Libre",
+        "family": "Frank Ruhl Libre",
+        "slug": "frank-ruhl-libre",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/frank-ruhl-libre.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/frank-ruhl-libre.svg"
+      },
+      {
+        "name": "Fraunces",
+        "family": "Fraunces",
+        "slug": "fraunces",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/fraunces.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/fraunces.svg"
+      },
+      {
+        "name": "Fredoka",
+        "family": "Fredoka",
+        "slug": "fredoka",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "600"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/fredoka.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/fredoka.svg"
+      },
+      {
+        "name": "Great Vibes",
+        "family": "Great Vibes",
+        "slug": "great-vibes",
+        "category": "latin",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/great-vibes.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/great-vibes.svg"
+      },
+      {
+        "name": "Heebo",
+        "family": "Heebo",
+        "slug": "heebo",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/heebo.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/heebo.svg"
+      },
+      {
+        "name": "IBM Plex Mono",
+        "family": "IBM Plex Mono",
+        "slug": "ibm-plex-mono",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/ibm-plex-mono.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/ibm-plex-mono.svg"
+      },
+      {
+        "name": "IBM Plex Sans",
+        "family": "IBM Plex Sans",
+        "slug": "ibm-plex-sans",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/ibm-plex-sans.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/ibm-plex-sans.svg"
+      },
+      {
+        "name": "Inconsolata",
+        "family": "Inconsolata",
+        "slug": "inconsolata",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/inconsolata.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/inconsolata.svg"
+      },
+      {
+        "name": "JetBrains Mono",
+        "family": "JetBrains Mono",
+        "slug": "jetbrains-mono",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/jetbrains-mono.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/jetbrains-mono.svg"
+      },
+      {
+        "name": "Josefin Sans",
+        "family": "Josefin Sans",
+        "slug": "josefin-sans",
+        "category": "latin",
+        "weights": [
+          "400",
+          "600"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/josefin-sans.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/josefin-sans.svg"
+      },
+      {
+        "name": "Jost",
+        "family": "Jost",
+        "slug": "jost",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/jost.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/jost.svg"
+      },
+      {
+        "name": "Kalam",
+        "family": "Kalam",
+        "slug": "kalam",
+        "category": "latin",
+        "weights": [
+          "400",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/kalam.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/kalam.svg"
+      },
+      {
+        "name": "Kanit",
+        "family": "Kanit",
+        "slug": "kanit",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "600"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/kanit.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/kanit.svg"
+      },
+      {
+        "name": "Karla",
+        "family": "Karla",
+        "slug": "karla",
+        "category": "latin",
+        "weights": [
+          "400",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/karla.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/karla.svg"
+      },
+      {
+        "name": "Lato",
+        "family": "Lato",
+        "slug": "lato",
+        "category": "latin",
+        "weights": [
+          "400",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/lato.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/lato.svg"
+      },
+      {
+        "name": "Lexend",
+        "family": "Lexend",
+        "slug": "lexend",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/lexend.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/lexend.svg"
+      },
+      {
+        "name": "Libre Baskerville",
+        "family": "Libre Baskerville",
+        "slug": "libre-baskerville",
+        "category": "latin",
+        "weights": [
+          "400",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/libre-baskerville.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/libre-baskerville.svg"
+      },
+      {
+        "name": "Lobster",
+        "family": "Lobster",
+        "slug": "lobster",
+        "category": "latin",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/lobster.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/lobster.svg"
+      },
+      {
+        "name": "Lora",
+        "family": "Lora",
+        "slug": "lora",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/lora.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/lora.svg"
+      },
+      {
+        "name": "Manrope",
+        "family": "Manrope",
+        "slug": "manrope",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/manrope.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/manrope.svg"
+      },
+      {
+        "name": "Martian Mono",
+        "family": "Martian Mono",
+        "slug": "martian-mono",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/martian-mono.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/martian-mono.svg"
+      },
+      {
+        "name": "Merriweather",
+        "family": "Merriweather",
+        "slug": "merriweather",
+        "category": "latin",
+        "weights": [
+          "400",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/merriweather.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/merriweather.svg"
+      },
+      {
+        "name": "Montserrat",
+        "family": "Montserrat",
+        "slug": "montserrat",
+        "category": "latin",
+        "weights": [
+          "400",
+          "600",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/montserrat.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/montserrat.svg"
+      },
+      {
+        "name": "Mulish",
+        "family": "Mulish",
+        "slug": "mulish",
+        "category": "latin",
+        "weights": [
+          "400",
+          "600",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/mulish.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/mulish.svg"
+      },
+      {
+        "name": "Newsreader",
+        "family": "Newsreader",
+        "slug": "newsreader",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/newsreader.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/newsreader.svg"
+      },
+      {
+        "name": "Noticia Text",
+        "family": "Noticia Text",
+        "slug": "noticia-text",
+        "category": "latin",
+        "weights": [
+          "400",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/noticia-text.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/noticia-text.svg"
+      },
+      {
+        "name": "Noto Sans",
+        "family": "Noto Sans",
+        "slug": "noto-sans",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/noto-sans.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/noto-sans.svg"
+      },
+      {
+        "name": "Noto Serif",
+        "family": "Noto Serif",
+        "slug": "noto-serif",
+        "category": "latin",
+        "weights": [
+          "400",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/noto-serif.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/noto-serif.svg"
+      },
+      {
+        "name": "Nunito",
+        "family": "Nunito",
+        "slug": "nunito",
+        "category": "latin",
+        "weights": [
+          "400",
+          "600",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/nunito.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/nunito.svg"
+      },
+      {
+        "name": "Nunito Sans",
+        "family": "Nunito Sans",
+        "slug": "nunito-sans",
+        "category": "latin",
+        "weights": [
+          "400",
+          "600",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/nunito-sans.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/nunito-sans.svg"
+      },
+      {
+        "name": "Open Sans",
+        "family": "Open Sans",
+        "slug": "open-sans",
+        "category": "latin",
+        "weights": [
+          "400",
+          "600",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/open-sans.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/open-sans.svg"
+      },
+      {
+        "name": "Oswald",
+        "family": "Oswald",
+        "slug": "oswald",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/oswald.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/oswald.svg"
+      },
+      {
+        "name": "Outfit",
+        "family": "Outfit",
+        "slug": "outfit",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/outfit.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/outfit.svg"
+      },
+      {
+        "name": "Pacifico",
+        "family": "Pacifico",
+        "slug": "pacifico",
+        "category": "latin",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/pacifico.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/pacifico.svg"
+      },
+      {
+        "name": "Petrona",
+        "family": "Petrona",
+        "slug": "petrona",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/petrona.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/petrona.svg"
+      },
+      {
+        "name": "Playfair Display",
+        "family": "Playfair Display",
+        "slug": "playfair-display",
+        "category": "latin",
+        "weights": [
+          "400",
+          "600",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/playfair-display.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/playfair-display.svg"
+      },
+      {
+        "name": "Plus Jakarta Sans",
+        "family": "Plus Jakarta Sans",
+        "slug": "plus-jakarta-sans",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/plus-jakarta-sans.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/plus-jakarta-sans.svg"
+      },
+      {
+        "name": "Poppins",
+        "family": "Poppins",
+        "slug": "poppins",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "600",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/poppins.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/poppins.svg"
+      },
+      {
+        "name": "PT Mono",
+        "family": "PT Mono",
+        "slug": "pt-mono",
+        "category": "latin",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/pt-mono.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/pt-mono.svg"
+      },
+      {
+        "name": "PT Sans",
+        "family": "PT Sans",
+        "slug": "pt-sans",
+        "category": "latin",
+        "weights": [
+          "400",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/pt-sans.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/pt-sans.svg"
+      },
+      {
+        "name": "PT Serif",
+        "family": "PT Serif",
+        "slug": "pt-serif",
+        "category": "latin",
+        "weights": [
+          "400",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/pt-serif.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/pt-serif.svg"
+      },
+      {
+        "name": "Public Sans",
+        "family": "Public Sans",
+        "slug": "public-sans",
+        "category": "latin",
+        "weights": [
+          "400",
+          "600",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/public-sans.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/public-sans.svg"
+      },
+      {
+        "name": "Quicksand",
+        "family": "Quicksand",
+        "slug": "quicksand",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/quicksand.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/quicksand.svg"
+      },
+      {
+        "name": "Raleway",
+        "family": "Raleway",
+        "slug": "raleway",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/raleway.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/raleway.svg"
+      },
+      {
+        "name": "Red Hat Display",
+        "family": "Red Hat Display",
+        "slug": "red-hat-display",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/red-hat-display.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/red-hat-display.svg"
+      },
+      {
+        "name": "Red Hat Mono",
+        "family": "Red Hat Mono",
+        "slug": "red-hat-mono",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/red-hat-mono.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/red-hat-mono.svg"
+      },
+      {
+        "name": "Righteous",
+        "family": "Righteous",
+        "slug": "righteous",
+        "category": "latin",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/righteous.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/righteous.svg"
+      },
+      {
+        "name": "Roboto Mono",
+        "family": "Roboto Mono",
+        "slug": "roboto-mono",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/roboto-mono.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/roboto-mono.svg"
+      },
+      {
+        "name": "Roboto Slab",
+        "family": "Roboto Slab",
+        "slug": "roboto-slab",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/roboto-slab.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/roboto-slab.svg"
+      },
+      {
+        "name": "Rubik",
+        "family": "Rubik",
+        "slug": "rubik",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/rubik.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/rubik.svg"
+      },
+      {
+        "name": "Satisfy",
+        "family": "Satisfy",
+        "slug": "satisfy",
+        "category": "latin",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/satisfy.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/satisfy.svg"
+      },
+      {
+        "name": "Slabo 27px",
+        "family": "Slabo 27px",
+        "slug": "slabo-27px",
+        "category": "latin",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/slabo-27px.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/slabo-27px.svg"
+      },
+      {
+        "name": "Source Code Pro",
+        "family": "Source Code Pro",
+        "slug": "source-code-pro",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/source-code-pro.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/source-code-pro.svg"
+      },
+      {
+        "name": "Source Sans 3",
+        "family": "Source Sans 3",
+        "slug": "source-sans-3",
+        "category": "latin",
+        "weights": [
+          "400",
+          "600",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/source-sans-3.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/source-sans-3.svg"
+      },
+      {
+        "name": "Source Serif 4",
+        "family": "Source Serif 4",
+        "slug": "source-serif-4",
+        "category": "latin",
+        "weights": [
+          "400",
+          "600",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/source-serif-4.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/source-serif-4.svg"
+      },
+      {
+        "name": "Space Grotesk",
+        "family": "Space Grotesk",
+        "slug": "space-grotesk",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/space-grotesk.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/space-grotesk.svg"
+      },
+      {
+        "name": "Space Mono",
+        "family": "Space Mono",
+        "slug": "space-mono",
+        "category": "latin",
+        "weights": [
+          "400",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/space-mono.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/space-mono.svg"
+      },
+      {
+        "name": "Spectral",
+        "family": "Spectral",
+        "slug": "spectral",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/spectral.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/spectral.svg"
+      },
+      {
+        "name": "Spline Sans Mono",
+        "family": "Spline Sans Mono",
+        "slug": "spline-sans-mono",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/spline-sans-mono.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/spline-sans-mono.svg"
+      },
+      {
+        "name": "Ubuntu Mono",
+        "family": "Ubuntu Mono",
+        "slug": "ubuntu-mono",
+        "category": "latin",
+        "weights": [
+          "400",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/ubuntu-mono.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/ubuntu-mono.svg"
+      },
+      {
+        "name": "Unbounded",
+        "family": "Unbounded",
+        "slug": "unbounded",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/unbounded.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/unbounded.svg"
+      },
+      {
+        "name": "Vollkorn",
+        "family": "Vollkorn",
+        "slug": "vollkorn",
+        "category": "latin",
+        "weights": [
+          "400",
+          "600",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/vollkorn.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/vollkorn.svg"
+      },
+      {
+        "name": "Work Sans",
+        "family": "Work Sans",
+        "slug": "work-sans",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "600"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/work-sans.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/work-sans.svg"
+      },
+      {
+        "name": "Zilla Slab",
+        "family": "Zilla Slab",
+        "slug": "zilla-slab",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/zilla-slab.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/zilla-slab.svg"
+      },
+      {
+        "name": "Fugaz One",
+        "family": "Fugaz One",
+        "slug": "fugaz-one",
+        "category": "latin",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/fugaz-one.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/fugaz-one.svg"
+      },
+      {
+        "name": "Ubuntu",
+        "family": "Ubuntu",
+        "slug": "ubuntu",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/ubuntu.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/ubuntu.svg"
+      },
+      {
+        "name": "Google Sans Code",
+        "family": "Google Sans Code",
+        "slug": "google-sans-code",
+        "category": "latin",
+        "weights": [
+          "400",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/google-sans-code.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/google-sans-code.svg"
+      },
+      {
+        "name": "PaperMono",
+        "family": "PaperMono",
+        "slug": "papermono",
+        "category": "latin",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/papermono.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/papermono.svg"
+      },
+      {
+        "name": "Cairo Play",
+        "family": "Cairo Play",
+        "slug": "cairo-play",
+        "category": "latin",
+        "weights": [
+          "200–1000"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/cairo-play.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/cairo-play.svg"
+      },
+      {
+        "name": "Inter",
+        "family": "Inter",
+        "slug": "inter",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/inter.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/inter.svg"
+      },
+      {
+        "name": "Roboto",
+        "family": "Roboto",
+        "slug": "roboto",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/roboto.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/roboto.svg"
+      },
+      {
+        "name": "Cabin",
+        "family": "Cabin",
+        "slug": "cabin",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/cabin.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/cabin.svg"
+      },
+      {
+        "name": "Sora",
+        "family": "Sora",
+        "slug": "sora",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/sora.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/sora.svg"
+      },
+      {
+        "name": "Google Sans",
+        "family": "Google Sans",
+        "slug": "google-sans",
+        "category": "latin",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/google-sans.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/google-sans.svg"
+      },
+      {
+        "name": "腾讯体 W7",
+        "family": "TencentSans W7",
+        "slug": "tencentsans",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/tencentsans.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/tencentsans.svg"
+      },
+      {
+        "name": "MiSans",
+        "family": "MiSans",
+        "slug": "misans",
+        "category": "cjk",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/misans.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/misans.svg"
+      },
+      {
+        "name": "白无常可可体",
+        "family": "BWCKKT",
+        "slug": "bwckkt",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/bwckkt.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/bwckkt.svg"
+      },
+      {
+        "name": "Cubic",
+        "family": "Cubic 11",
+        "slug": "cubic",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/cubic.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/cubic.svg"
+      },
+      {
+        "name": "汇文明朝体",
+        "family": "Huiwen-mincho",
+        "slug": "hwmct",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/hwmct.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/hwmct.svg"
+      },
+      {
+        "name": "江西拙楷",
+        "family": "jiangxizhuokai",
+        "slug": "jxzk",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/jxzk.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/jxzk.svg"
+      },
+      {
+        "name": "千图笔锋手写体",
+        "family": "qiantubifengshouxieti",
+        "slug": "qtbfsxt",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/qtbfsxt.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/qtbfsxt.svg"
+      },
+      {
+        "name": "瑞美加张清平硬笔行书",
+        "family": "瑞美加张清平硬笔行书",
+        "slug": "rmjzqpybxs",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/rmjzqpybxs.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/rmjzqpybxs.svg"
+      },
+      {
+        "name": "鸿雷行书简体",
+        "family": "hongleixingshu",
+        "slug": "hlxsjt",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/hlxsjt.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/hlxsjt.svg"
+      },
+      {
+        "name": "猫啃什锦黑",
+        "family": "MaokenAssortedSans",
+        "slug": "mksjh",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/mksjh.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/mksjh.svg"
+      },
+      {
+        "name": "铁蒺藜体",
+        "family": "Tiejili",
+        "slug": "tjl",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/tjl.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/tjl.svg"
+      },
+      {
+        "name": "演示悠然小楷",
+        "family": "slideyouran",
+        "slug": "ysyrxk",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/ysyrxk.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/ysyrxk.svg"
+      },
+      {
+        "name": "标小智龙珠体",
+        "family": "LogoSC LongZhuTi",
+        "slug": "bxzlzt",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/bxzlzt.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/bxzlzt.svg"
+      },
+      {
+        "name": "字魂扁桃体",
+        "family": "zihunbiantaoti",
+        "slug": "zhbtt",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/zhbtt.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/zhbtt.svg"
+      },
+      {
+        "name": "猫啃珠圆体",
+        "family": "MaokenZhuyuanTi",
+        "slug": "mkzyt",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/mkzyt.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/mkzyt.svg"
+      },
+      {
+        "name": "演示佛系体",
+        "family": "Slidefu",
+        "slug": "ysfxt",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/ysfxt.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/ysfxt.svg"
+      },
+      {
+        "name": "京華老宋体",
+        "family": "KingHwa_OldSong",
+        "slug": "jhlst",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/jhlst.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/jhlst.svg"
+      },
+      {
+        "name": "精品點陣體",
+        "family": "BoutiqueBitmap9x9 1.6 R",
+        "slug": "jpdzt",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/jpdzt.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/jpdzt.svg"
+      },
+      {
+        "name": "一点颜",
+        "family": "I.Ngaan",
+        "slug": "yidianyan",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/yidianyan.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/yidianyan.svg",
+        "script": "traditional"
+      },
+      {
+        "name": "玄冬楷书",
+        "family": "XuandongKaishu",
+        "slug": "xuandongkaishu",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/xuandongkaishu.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/xuandongkaishu.svg"
+      },
+      {
+        "name": "仓耳周珂正大榜书",
+        "family": "TsangerZhoukeZhengdabangshu",
+        "slug": "cezkzdbs",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/cezkzdbs.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/cezkzdbs.svg"
+      },
+      {
+        "name": "抖音美好体",
+        "family": "Douyin Sans",
+        "slug": "dymh",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/dymh.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/dymh.svg"
+      },
+      {
+        "name": "黄令东齐伋体",
+        "family": "QIJIFALLBACK",
+        "slug": "hldqjt",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/hldqjt.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/hldqjt.svg"
+      },
+      {
+        "name": "黄引齐招牌体",
+        "family": "huangyinqi zhaopai",
+        "slug": "hyqzp",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/hyqzp.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/hyqzp.svg"
+      },
+      {
+        "name": "荆南俊俊体",
+        "family": "荆南俊俊体",
+        "slug": "jnjj",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/jnjj.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/jnjj.svg"
+      },
+      {
+        "name": "润植家康熙字典美化体",
+        "family": "nzgrKangxi",
+        "slug": "rzjkxzdmh",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/rzjkxzdmh.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/rzjkxzdmh.svg"
+      },
+      {
+        "name": "润植家如印奏章楷",
+        "family": "nzgrRuYinZouZhangKai",
+        "slug": "rzjryzzk",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/rzjryzzk.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/rzjryzzk.svg"
+      },
+      {
+        "name": "素材集市社会体",
+        "family": "SuCaiJiShi-SheHuiTi",
+        "slug": "scjssh",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/scjssh.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/scjssh.svg"
+      },
+      {
+        "name": "摄图摩登小方体",
+        "family": "shetumodengxiaofangti",
+        "slug": "stmdxf",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/stmdxf.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/stmdxf.svg"
+      },
+      {
+        "name": "装甲明朝体",
+        "family": "SoukouMincho",
+        "slug": "zjmc",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/zjmc.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/zjmc.svg"
+      },
+      {
+        "name": "目哉像素体",
+        "family": "MuzaiPixel",
+        "slug": "mzxst",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/mzxst.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/mzxst.svg"
+      },
+      {
+        "name": "全小素",
+        "family": "QuanPixel 8px",
+        "slug": "qxs",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/qxs.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/qxs.svg"
+      },
+      {
+        "name": "思源屏显臻宋",
+        "family": "Source Han Serif CN for Display",
+        "slug": "sypxzs",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/sypxzs.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/sypxzs.svg"
+      },
+      {
+        "name": "旁门正道细线条",
+        "family": "PangMenZhengDao-XiXian",
+        "slug": "pmzdxxt",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/pmzdxxt.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/pmzdxxt.svg"
+      },
+      {
+        "name": "鲨鱼菲特健康体",
+        "family": "YouSheShaYuFeiTeJianKangTi",
+        "slug": "syftjkt",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/syftjkt.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/syftjkt.svg"
+      },
+      {
+        "name": "小赖体",
+        "family": "Xiaolai SC",
+        "slug": "xiaolai",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/xiaolai.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/xiaolai.svg"
+      },
+      {
+        "name": "猫啃网糖圆体",
+        "family": "MaoKenTangYuan (beta)",
+        "slug": "mkwtyt",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/mkwtyt.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/mkwtyt.svg"
+      },
+      {
+        "name": "朱雀仿宋",
+        "family": "Zhuque Fangsong (technical preview)",
+        "slug": "zqfs",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/zqfs.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/zqfs.svg"
+      },
+      {
+        "name": "韩契在民体",
+        "family": "Hangeuljaemin4.0",
+        "slug": "hqzmt",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/hqzmt.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/hqzmt.svg"
+      },
+      {
+        "name": "也字工厂小石头",
+        "family": "YEFONTXiaoShiTou",
+        "slug": "yzgcxst",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/yzgcxst.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/yzgcxst.svg"
+      },
+      {
+        "name": "飞波正点体",
+        "family": "Feibo Zheng Dots",
+        "slug": "fbdzt",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/fbdzt.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/fbdzt.svg"
+      },
+      {
+        "name": "CEF Fonts CJK",
+        "family": "CEF Fonts CJK Mono",
+        "slug": "cef",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/cef.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/cef.svg"
+      },
+      {
+        "name": "飞花宋体",
+        "family": "FlyFlowerSong",
+        "slug": "fhst",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/fhst.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/fhst.svg"
+      },
+      {
+        "name": "平方赖江湖琅琊体",
+        "family": "平方赖江湖琅琊体",
+        "slug": "pfljhlyt",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/pfljhlyt.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/pfljhlyt.svg"
+      },
+      {
+        "name": "平方公子体",
+        "family": "PING FANG GONG ZI TI",
+        "slug": "pfgzt",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/pfgzt.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/pfgzt.svg"
+      },
+      {
+        "name": "平方赖江湖飞扬体",
+        "family": "平方赖江湖飞扬体",
+        "slug": "pfljhfyt",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/pfljhfyt.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/pfljhfyt.svg"
+      },
+      {
+        "name": "平方萌萌哒",
+        "family": "PING FANG MENG MNEG DA",
+        "slug": "pfmmd",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/pfmmd.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/pfmmd.svg"
+      },
+      {
+        "name": "峄山碑篆体",
+        "family": "峄山碑篆体",
+        "slug": "ysbzt",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/ysbzt.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/ysbzt.svg"
+      },
+      {
+        "name": "字制区喜脉喜欢体",
+        "family": "FontQu Smile 常规",
+        "slug": "zzqxmxht",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/zzqxmxht.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/zzqxmxht.svg"
+      },
+      {
+        "name": "白路棒棒手写体",
+        "family": "bailubangbangshouxieti",
+        "slug": "blbbsxt",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/blbbsxt.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/blbbsxt.svg"
+      },
+      {
+        "name": "重庆山城棒棒体",
+        "family": "YunFengchongqingbangbangti",
+        "slug": "cqscbbt",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/cqscbbt.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/cqscbbt.svg"
+      },
+      {
+        "name": "程荣光刻楷",
+        "family": "chengrongguangke",
+        "slug": "crgkk",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/crgkk.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/crgkk.svg"
+      },
+      {
+        "name": "霞鹜文楷 Bright",
+        "family": "LXGW Bright SemiLight",
+        "slug": "lxgwwenkaibright",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/lxgwwenkaibright.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/lxgwwenkaibright.svg"
+      },
+      {
+        "name": "游趣体",
+        "family": "Child Fun Sans Demo",
+        "slug": "yqt",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/yqt.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/yqt.svg"
+      },
+      {
+        "name": "寒蝉全圆体",
+        "family": "寒蝉全圆体",
+        "slug": "hcqyt",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/hcqyt.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/hcqyt.svg"
+      },
+      {
+        "name": "极影毁片文宋",
+        "family": "极影毁片文宋 Medium",
+        "slug": "jyhpws",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/jyhpws.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/jyhpws.svg"
+      },
+      {
+        "name": "霞鹜文楷屏幕阅读版",
+        "family": "LXGW WenKai Screen",
+        "slug": "lywkpmydb",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/lywkpmydb.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/lywkpmydb.svg"
+      },
+      {
+        "name": "月星楷",
+        "family": "Moon Stars Kai T HW",
+        "slug": "moon-stars-kai",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/moon-stars-kai.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/moon-stars-kai.svg"
+      },
+      {
+        "name": "原俠正楷",
+        "family": "GuanKiapTsingKhai",
+        "slug": "GuanKiapTsingKhai",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/GuanKiapTsingKhai.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/GuanKiapTsingKhai.svg"
+      },
+      {
+        "name": "小合简化体",
+        "family": "Xiaohe Simplify Serif VF",
+        "slug": "XiaoheSimplify",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/XiaoheSimplify.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/XiaoheSimplify.svg"
+      },
+      {
+        "name": "就是不錯字",
+        "family": "The Write Right Font",
+        "slug": "the-write-right-font",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/the-write-right-font.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/the-write-right-font.svg"
+      },
+      {
+        "name": "澳声通拼音文楷",
+        "family": "ToneOZ-Pinyin-WenKai-Regular",
+        "slug": "ToneOZ-Pinyin-WenKai",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/ToneOZ-Pinyin-WenKai.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/ToneOZ-Pinyin-WenKai.svg"
+      },
+      {
+        "name": "拼音鼎楷",
+        "family": "ToneOZ-PinyinW-Kai-Simplified",
+        "slug": "ToneOZ-Pinyin-Kai",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/ToneOZ-Pinyin-Kai.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/ToneOZ-Pinyin-Kai.svg"
+      },
+      {
+        "name": "注音多音字型庫楷",
+        "family": "ToneOZ-RadicalZ-KaiTraditional",
+        "slug": "ToneOZ-RadicalZ-Kai",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/ToneOZ-RadicalZ-Kai.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/ToneOZ-RadicalZ-Kai.svg"
+      },
+      {
+        "name": "曉聲通秋茄",
+        "family": "ToneOZ-Zhuyin-Tsuipita-TC",
+        "slug": "ToneOZ-Tsuipita",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/ToneOZ-Tsuipita.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/ToneOZ-Tsuipita.svg"
+      },
+      {
+        "name": "上图东观体",
+        "family": "STDongGuanTi Light",
+        "slug": "stdgt",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/stdgt.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/stdgt.svg"
+      },
+      {
+        "name": "霞鹜新致宋",
+        "family": "LXGW Neo ZhiSong",
+        "slug": "LxgwNeoZhiSong",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/LxgwNeoZhiSong.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/LxgwNeoZhiSong.svg"
+      },
+      {
+        "name": "阿里巴巴普惠体 3.0",
+        "family": "Alibaba PuHuiTi",
+        "slug": "alibaba-puhuiti",
+        "category": "cjk",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/alibaba-puhuiti.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/alibaba-puhuiti.svg"
+      },
+      {
+        "name": "HarmonyOS Sans SC",
+        "family": "HarmonyOS Sans SC",
+        "slug": "harmonyos-sans-sc",
+        "category": "cjk",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/harmonyos-sans-sc.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/harmonyos-sans-sc.svg"
+      },
+      {
+        "name": "OPPO Sans",
+        "family": "OPPO Sans",
+        "slug": "oppo-sans",
+        "category": "cjk",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/oppo-sans.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/oppo-sans.svg"
+      },
+      {
+        "name": "悠哉字体 Yozai",
+        "family": "Yozai",
+        "slug": "yozai",
+        "category": "cjk",
+        "weights": [
+          "300",
+          "400",
+          "500"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/yozai.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/yozai.svg"
+      },
+      {
+        "name": "霞鹜新晰黑",
+        "family": "LXGW Neo XiHei",
+        "slug": "lxgw-neo-xihei",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/lxgw-neo-xihei.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/lxgw-neo-xihei.svg"
+      },
+      {
+        "name": "得意黑 Smiley Sans",
+        "family": "Smiley Sans",
+        "slug": "smiley-sans",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/smiley-sans.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/smiley-sans.svg"
+      },
+      {
+        "name": "未来荧黑 Glow Sans SC",
+        "family": "Glow Sans SC",
+        "slug": "glow-sans-sc",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/glow-sans-sc.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/glow-sans-sc.svg"
+      },
+      {
+        "name": "马善政毛笔楷书",
+        "family": "Ma Shan Zheng",
+        "slug": "ma-shan-zheng",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/ma-shan-zheng.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/ma-shan-zheng.svg"
+      },
+      {
+        "name": "志莽行书",
+        "family": "Zhi Mang Xing",
+        "slug": "zhi-mang-xing",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/zhi-mang-xing.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/zhi-mang-xing.svg"
+      },
+      {
+        "name": "龙藏体",
+        "family": "Long Cang",
+        "slug": "long-cang",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/long-cang.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/long-cang.svg"
+      },
+      {
+        "name": "柳建毛草",
+        "family": "Liu Jian Mao Cao",
+        "slug": "liu-jian-mao-cao",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/liu-jian-mao-cao.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/liu-jian-mao-cao.svg"
+      },
+      {
+        "name": "站酷快乐体",
+        "family": "ZCOOL KuaiLe",
+        "slug": "zcool-kuaile",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/zcool-kuaile.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/zcool-kuaile.svg"
+      },
+      {
+        "name": "站酷庆科黄油体",
+        "family": "ZCOOL QingKe HuangYou",
+        "slug": "zcool-qingke-huangyou",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/zcool-qingke-huangyou.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/zcool-qingke-huangyou.svg"
+      },
+      {
+        "name": "站酷小薇 LOGO 体",
+        "family": "ZCOOL XiaoWei",
+        "slug": "zcool-xiaowei",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/zcool-xiaowei.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/zcool-xiaowei.svg"
+      },
+      {
+        "name": "DotGothic16 像素",
+        "family": "DotGothic16",
+        "slug": "dotgothic16",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/dotgothic16.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/dotgothic16.svg"
+      },
+      {
+        "name": "Klee One 楷",
+        "family": "Klee One",
+        "slug": "klee-one",
+        "category": "cjk",
+        "weights": [
+          "400",
+          "600"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/klee-one.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/klee-one.svg"
+      },
+      {
+        "name": "佑字肃",
+        "family": "Yuji Syuku",
+        "slug": "yuji-syuku",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/yuji-syuku.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/yuji-syuku.svg"
+      },
+      {
+        "name": "Noto Sans SC",
+        "family": "Noto Sans SC",
+        "slug": "noto-sans-sc",
+        "category": "cjk",
+        "weights": [
+          "400",
+          "500",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/noto-sans-sc.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/noto-sans-sc.svg"
+      },
+      {
+        "name": "霞鹜文楷",
+        "family": "LXGW WenKai",
+        "slug": "lxgw-wenkai",
+        "category": "cjk",
+        "weights": [
+          "300",
+          "400",
+          "700"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/lxgw-wenkai.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/lxgw-wenkai.svg"
+      },
+      {
+        "name": "霞鹜漫黑",
+        "family": "LXGW Marker Gothic",
+        "slug": "lxgw-marker-gothic",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/lxgw-marker-gothic.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/lxgw-marker-gothic.svg",
+        "script": "traditional"
+      },
+      {
+        "name": "思源宋体",
+        "family": "Source Han Serif CN VF",
+        "slug": "source-han-serif-cn",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/source-han-serif-cn.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/source-han-serif-cn.svg"
+      },
+      {
+        "name": "优设标题黑",
+        "family": "YouSheBiaoTiHei",
+        "slug": "youshe-biaotihei",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/youshe-biaotihei.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/youshe-biaotihei.svg"
+      },
+      {
+        "name": "斗鱼追光体",
+        "family": "DOUYU Font",
+        "slug": "douyu-zhuiguangti",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/douyu-zhuiguangti.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/douyu-zhuiguangti.svg"
+      },
+      {
+        "name": "快看世界体",
+        "family": "快看世界体",
+        "slug": "kuaikanshijieti",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/kuaikanshijieti.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/kuaikanshijieti.svg"
+      },
+      {
+        "name": "Maple Mono CN",
+        "family": "Maple Mono CN",
+        "slug": "maple-mono-cn",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/maple-mono-cn.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/maple-mono-cn.svg"
+      },
+      {
+        "name": "阿里妈妈方圆体 VF",
+        "family": "Alimama FangYuanTi VF",
+        "slug": "alimama-fangyuanti",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/alimama-fangyuanti.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/alimama-fangyuanti.svg"
+      },
+      {
+        "name": "落 Luo",
+        "family": "Luo",
+        "slug": "luo",
+        "category": "cjk",
+        "weights": [
+          "400"
+        ],
+        "cssUrl": "https://static.bluecdn.com/fonts/luo.css",
+        "previewUrl": "https://static.bluecdn.com/fonts/preview/luo.svg"
+      }
+    ]
+  }
+}

@@ -4,12 +4,15 @@
 
 BlueCDN Static 是面向开发者的免费公共静态资源加速服务。所有资源支持 HTTPS、HTTP/2、HTTP/3、长期缓存与跨域(CORS)引用。中国大陆通过百度云加速,境外通过 Cloudflare,全球 100ms 内响应。
 
+**完整资源清单(机器可读)见 [manifest.json](https://static.bluecdn.com/manifest.json)** —— 列出全部 196 款字体(每款含名称、family、字重、css 链接、预览图)与全部 64 个 FontAwesome 版本。AI / 程序可直接抓取该文件获取完整目录。
+
 ## 资源目录
 
+- [完整清单 manifest.json](https://static.bluecdn.com/manifest.json): 全站资源的结构化清单(196 款字体 + 64 个 FA 版本 + 图标统计),AI 读此文件即可看到所有可用资源。
 - [FontAwesome Pro 样式表](https://static.bluecdn.com/libs/fontawesome/7.3.0/css/all.min.css): 单文件包含全部 9 个图标家族(solid/regular/light/thin/duotone/sharp 等)。提供 5.0.1 → 7.3.0 共 64 个历史版本,路径规则 `/libs/fontawesome/{版本号}/css/all.min.css`。
 - [FontAwesome 图标索引](https://static.bluecdn.com/libs/fontawesome/icons-index.json): 4344 个图标的精简元数据(名称、4 位 unicode 码、可用风格、别名),用于图标搜索。
-- [西文字体](https://static.bluecdn.com/): 100 款 Google 高频网页字体,自托管 woff2,路径规则 `/fonts/{名称}.css`。
-- [中文字体](https://static.bluecdn.com/): 93 款中文 webfont(含「中文网字计划」全集、MiSans、阿里、OPPO、HarmonyOS 等),按 unicode-range 自动切片,浏览器只下载用到的字符,路径规则 `/fonts/{名称}.css`。
+- [西文字体](https://static.bluecdn.com/): 102 款 Google 高频网页字体,自托管 woff2,路径规则 `/fonts/{名称}.css`(完整列表见 manifest.json)。
+- [中文字体](https://static.bluecdn.com/): 94 款中文 webfont(含「中文网字计划」全集、MiSans、阿里、OPPO、HarmonyOS 等,含繁体),按 unicode-range 自动切片,浏览器只下载用到的字符,路径规则 `/fonts/{名称}.css`(完整列表见 manifest.json)。
 
 ## 使用方法
 

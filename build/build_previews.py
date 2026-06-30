@@ -8,8 +8,6 @@ FB = "/www/sites/static.bluecdn.com/fonts"
 OUT = FB + "/preview"
 EN = "Always believe that something wonderful is about to happen"
 CN = "永远相信美好的事情即将发生"
-CN_TRAD = "永遠相信美好的事情即將發生"
-TRAD_SLUGS = {"lxgw-marker-gothic", "yidianyan"}  # 纯/倾向繁体字体,用繁体文案
 FILL = "#666"
 os.makedirs(OUT, exist_ok=True)
 
@@ -77,30 +75,23 @@ def build(slug):
             return f is not None and f.getBestCmap().get(cp) is not None
         except Exception:
             return False
-    text = CN_TRAD if slug in TRAD_SLUGS else (CN if has_glyph(0x6C38) else EN)
-    # 简体专有字形回退到繁/异体(部分日文/繁体/受限字体无简体「远/发/将」)
-    VAR = {'远': '遠', '发': '發発', '将': '將', '将': '將', '为': '為', '会': '會', '动': '動'}
-    def resolve(ch):
-        for c in [ch] + list(VAR.get(ch, '')):
-            cp = ord(c)
-            wf = next((nm for nm, r in faces if covers(r, cp)), None)
-            if not wf:
-                continue
-            f = load(wf)
-            if f is None:
-                continue
-            try:
-                g = f.getBestCmap().get(cp)
-            except Exception:
-                continue
-            if g:
-                return f, g
-        return None, None
+    text = CN if has_glyph(0x6C38) else EN
     upm = ascent = descent = None
     x = 0; paths = []
     for ch in text:
-        f, gname = resolve(ch)
-        if f is None or not gname:
+        cp = ord(ch)
+        wf = next((nm for nm, r in faces if covers(r, cp)), None)
+        if not wf:
+            continue
+        f = load(wf)
+        if f is None:
+            continue
+        try:
+            cmap = f.getBestCmap()
+        except Exception:
+            continue
+        gname = cmap.get(cp)
+        if not gname:
             continue
         if upm is None:
             upm = f['head'].unitsPerEm
