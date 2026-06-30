@@ -1,9 +1,9 @@
-# 字体二进制由脚本/R2 管理，不进 Git
-*.woff2
-*.woff
-*.ttf
-*.otf
-_fonts/
+# 字体资产由 Git LFS 管理（见 .gitattributes），fonts/ 目录纳入版本管理
+# 仓库根目录以外的零散字体二进制仍忽略（如临时下载）
+/*.woff2
+/*.woff
+/*.ttf
+/*.otf
 # 密钥/敏感
 *.pem
 deploy/acme-certs/certs.env
