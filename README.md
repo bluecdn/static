@@ -24,18 +24,23 @@
 
 ## 仓库结构
 
+页面与 SEO 文件直接放在仓库**根目录**(扁平结构),部署时原样 rsync 到服务器根目录。
+
 | 路径 | 说明 |
 |---|---|
-| `site/` | **部署的网页内容**(index.html + favicon + manifest + sitemap + robots + llms.txt)。GHA 推送这个目录到两台源站 |
+| `index.html` | **首页**(部署内容) |
+| `*.txt` / `robots.txt` / `sitemap.xml` / `manifest.json` | SEO 文件(llms.txt、llms-full.txt 等) |
+| `favicon.*` / `*.png` / `*.ico` | favicon 与图标(部署内容) |
 | `deploy/caddy/` | 两台服务器的 Caddyfile(二合一反代配置) |
 | `deploy/acme-certs/` | 证书自动续期 + 推百度 |
 | `fonts.json` | 字体清单(事实源)。`base: https://static.bluecdn.com/fonts` |
 | `fonts-candidates.md` | 字体候选/授权清单 |
-| `archive/_html/` | CDN 首页的多品牌模板源(Utterlog/BlueCDN/Litepic/Giantaccel 变体),非部署内容,仅供参考 |
+
+> 字体二进制本身**不入 Git**(见 `.gitignore`),由服务器 `/root/` 脚本构建到 `/www/sites/.../fonts/`。
 
 ## 自动部署 (GitHub Actions)
 
-push 到 `main` 且改动 `site/**`(或 `.github/workflows/deploy.yml`)→ 自动 rsync 到**两台源站**的 `/www/sites/static.bluecdn.com/`(仅同步页面/favicon,**不动字体目录**)。
+push 到 `main` 且改动根目录的页面/favicon/SEO 文件(或 `deploy.yml`)→ 自动 rsync 到**两台源站**的 `/www/sites/static.bluecdn.com/`。用 `--include` 白名单精确同步这些文件(`--exclude='*'`,**无 `--delete`**),**绝不动服务器上的 fonts/ 目录**。
 
 需要的仓库 Secrets:
 - `DEPLOY_SSH_KEY` — 部署私钥(对应公钥已加到两台 authorized_keys)

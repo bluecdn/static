@@ -4,7 +4,14 @@ on:
   push:
     branches: [main]
     paths:
-      - 'site/**'
+      - 'index.html'
+      - '*.txt'
+      - 'robots.txt'
+      - 'sitemap.xml'
+      - 'manifest.json'
+      - '*.png'
+      - '*.ico'
+      - '*.svg'
       - '.github/workflows/deploy.yml'
   workflow_dispatch:
 
@@ -24,14 +31,28 @@ jobs:
       - name: Deploy to Shanghai (domestic origin)
         run: |
           rsync -az --no-perms --no-owner --no-group \
+            --include='index.html' --include='llms.txt' --include='llms-full.txt' \
+            --include='robots.txt' --include='sitemap.xml' --include='manifest.json' \
+            --include='favicon.ico' --include='favicon.svg' \
+            --include='favicon-16x16.png' --include='favicon-32x32.png' \
+            --include='apple-touch-icon.png' \
+            --include='android-chrome-192x192.png' --include='android-chrome-512x512.png' \
+            --exclude='*' \
             -e "ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no" \
-            site/ root@${{ secrets.SH_HOST }}:/www/sites/static.bluecdn.com/
+            ./ root@${{ secrets.SH_HOST }}:/www/sites/static.bluecdn.com/
 
       - name: Deploy to Silicon Valley (overseas origin)
         run: |
           rsync -az --no-perms --no-owner --no-group \
+            --include='index.html' --include='llms.txt' --include='llms-full.txt' \
+            --include='robots.txt' --include='sitemap.xml' --include='manifest.json' \
+            --include='favicon.ico' --include='favicon.svg' \
+            --include='favicon-16x16.png' --include='favicon-32x32.png' \
+            --include='apple-touch-icon.png' \
+            --include='android-chrome-192x192.png' --include='android-chrome-512x512.png' \
+            --exclude='*' \
             -e "ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no" \
-            site/ root@${{ secrets.SV_HOST }}:/www/sites/static.bluecdn.com/
+            ./ root@${{ secrets.SV_HOST }}:/www/sites/static.bluecdn.com/
 
       - name: Summary
-        run: echo "Deployed site/ to Shanghai (${{ secrets.SH_HOST }}) and Silicon Valley (${{ secrets.SV_HOST }})"
+        run: echo "Deployed root files to Shanghai (${{ secrets.SH_HOST }}) and Silicon Valley (${{ secrets.SV_HOST }})"
