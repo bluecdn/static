@@ -76,22 +76,29 @@ def build(slug):
         except Exception:
             return False
     text = CN if has_glyph(0x6C38) else EN
+    # 简体专有字形回退到繁/异体(部分日文/繁体/受限字体无简体「远/发/将」)
+    VAR = {'远': '遠', '发': '發発', '将': '將', '将': '將', '为': '為', '会': '會', '动': '動'}
+    def resolve(ch):
+        for c in [ch] + list(VAR.get(ch, '')):
+            cp = ord(c)
+            wf = next((nm for nm, r in faces if covers(r, cp)), None)
+            if not wf:
+                continue
+            f = load(wf)
+            if f is None:
+                continue
+            try:
+                g = f.getBestCmap().get(cp)
+            except Exception:
+                continue
+            if g:
+                return f, g
+        return None, None
     upm = ascent = descent = None
     x = 0; paths = []
     for ch in text:
-        cp = ord(ch)
-        wf = next((nm for nm, r in faces if covers(r, cp)), None)
-        if not wf:
-            continue
-        f = load(wf)
-        if f is None:
-            continue
-        try:
-            cmap = f.getBestCmap()
-        except Exception:
-            continue
-        gname = cmap.get(cp)
-        if not gname:
+        f, gname = resolve(ch)
+        if f is None or not gname:
             continue
         if upm is None:
             upm = f['head'].unitsPerEm
