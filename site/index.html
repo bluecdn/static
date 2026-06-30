@@ -210,7 +210,8 @@
   }
 
   /* Family name preview */
-  .res-preview { grid-column: 1 / -1; margin-top: 6px; display: block; max-height: 30px; max-width: 100%; }
+  .res-preview { grid-column: 1 / -1; margin-top: 6px; display: block; max-height: 30px; max-width: 100%; opacity: 0; transition: opacity 0.28s ease; }
+  .res-preview.is-loaded { opacity: 1; }
 
   /* Footer */
   footer {
@@ -1850,6 +1851,17 @@ window.showToast=function(message,type){
   }
   var raf; window.addEventListener('scroll',function(){if(raf)return;raf=requestAnimationFrame(function(){raf=0;onScroll();});},{passive:true});
   onScroll();
+})();
+</script>
+<script>
+// 预览图淡入(参考 LiteNote:加载完成加 is-loaded 触发 opacity 过渡)
+(function(){
+  function reveal(img){ img.classList.add('is-loaded'); }
+  [].slice.call(document.querySelectorAll('img.res-preview')).forEach(function(img){
+    if(img.complete && img.naturalWidth){ reveal(img); return; }
+    img.addEventListener('load', function(){ reveal(img); }, {once:true});
+    img.addEventListener('error', function(){ reveal(img); }, {once:true});
+  });
 })();
 </script>
 </body>
