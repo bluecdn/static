@@ -1,6 +1,6 @@
 # BlueCDN Static — 完整资源清单(llms-full)
 
-> 与 llms.txt 同源,但**内联全部 196 款字体逐项清单 + 全部 64 个 FontAwesome 版本**,供 AI 直接阅读、无需再抓取 JSON。结构化版本见 https://static.bluecdn.com/manifest.json
+> 与 llms.txt 同源,但**内联全部 195 款字体逐项清单 + 全部 64 个 FontAwesome 版本**,供 AI 直接阅读、无需再抓取 JSON。结构化版本见 https://static.bluecdn.com/manifest.json
 
 公共静态资源 CDN:自托管 FontAwesome Pro 全版本、Google 西文网页字体、中文 webfont。全球边缘加速,中国大陆优化,CORS 全开放,复制直链即用。
 
@@ -120,7 +120,7 @@
 - **Sora** — family `Sora` · 字重 400/500/700 · https://static.bluecdn.com/fonts/sora.css
 - **Google Sans** — family `Google Sans` · 字重 400/500/700 · https://static.bluecdn.com/fonts/google-sans.css
 
-## 中文字体 (CJK Webfonts) — 94 款
+## 中文字体 (CJK Webfonts) — 93 款
 
 - **腾讯体 W7** — family `TencentSans W7` · 字重 400 · https://static.bluecdn.com/fonts/tencentsans.css
 - **MiSans** — family `MiSans` · 字重 400/500/700 · https://static.bluecdn.com/fonts/misans.css
@@ -180,7 +180,6 @@
 - **极影毁片文宋** — family `极影毁片文宋 Medium` · 字重 400 · https://static.bluecdn.com/fonts/jyhpws.css
 - **霞鹜文楷屏幕阅读版** — family `LXGW WenKai Screen` · 字重 400 · https://static.bluecdn.com/fonts/lywkpmydb.css
 - **月星楷** — family `Moon Stars Kai T HW` · 字重 400 · https://static.bluecdn.com/fonts/moon-stars-kai.css
-- **原俠正楷** — family `GuanKiapTsingKhai` · 字重 400 · https://static.bluecdn.com/fonts/GuanKiapTsingKhai.css
 - **小合简化体** — family `Xiaohe Simplify Serif VF` · 字重 400 · https://static.bluecdn.com/fonts/XiaoheSimplify.css
 - **就是不錯字** — family `The Write Right Font` · 字重 400 · https://static.bluecdn.com/fonts/the-write-right-font.css
 - **澳声通拼音文楷** — family `ToneOZ-Pinyin-WenKai-Regular` · 字重 400 · https://static.bluecdn.com/fonts/ToneOZ-Pinyin-WenKai.css

@@ -81,9 +81,9 @@
     "iconsIndexUrl": "https://static.bluecdn.com/libs/fontawesome/icons-index.json"
   },
   "fonts": {
-    "total": 196,
+    "total": 195,
     "latinCount": 102,
-    "cjkCount": 94,
+    "cjkCount": 93,
     "items": [
       {
         "name": "Abril Fatface",
@@ -2005,17 +2005,6 @@
         ],
         "cssUrl": "https://static.bluecdn.com/fonts/moon-stars-kai.css",
         "previewUrl": "https://static.bluecdn.com/fonts/preview/moon-stars-kai.svg"
-      },
-      {
-        "name": "原俠正楷",
-        "family": "GuanKiapTsingKhai",
-        "slug": "GuanKiapTsingKhai",
-        "category": "cjk",
-        "weights": [
-          "400"
-        ],
-        "cssUrl": "https://static.bluecdn.com/fonts/GuanKiapTsingKhai.css",
-        "previewUrl": "https://static.bluecdn.com/fonts/preview/GuanKiapTsingKhai.svg"
       },
       {
         "name": "小合简化体",
