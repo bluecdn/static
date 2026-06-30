@@ -8,6 +8,8 @@ FB = "/www/sites/static.bluecdn.com/fonts"
 OUT = FB + "/preview"
 EN = "Always believe that something wonderful is about to happen"
 CN = "永远相信美好的事情即将发生"
+CN_TRAD = "永遠相信美好的事情即將發生"
+TRAD_SLUGS = {"lxgw-marker-gothic", "yidianyan"}  # 纯/倾向繁体字体,用繁体文案
 FILL = "#666"
 os.makedirs(OUT, exist_ok=True)
 
@@ -75,7 +77,7 @@ def build(slug):
             return f is not None and f.getBestCmap().get(cp) is not None
         except Exception:
             return False
-    text = CN if has_glyph(0x6C38) else EN
+    text = CN_TRAD if slug in TRAD_SLUGS else (CN if has_glyph(0x6C38) else EN)
     # 简体专有字形回退到繁/异体(部分日文/繁体/受限字体无简体「远/发/将」)
     VAR = {'远': '遠', '发': '發発', '将': '將', '将': '將', '为': '為', '会': '會', '动': '動'}
     def resolve(ch):
