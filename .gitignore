@@ -6,7 +6,9 @@
 /*.otf
 # 密钥/敏感
 *.pem
-deploy/acme-certs/certs.env
+*.key
+*.env
+!*.env.example
 gha_deploy*
 # 杂项
 .DS_Store

@@ -97,5 +97,6 @@ FontAwesome 是第三方成品库,**不纳入 git**。原始 zip 归档在 Cloud
 | Pro | `/www/sites/static.bluecdn.com/libs/fontawesome/{版本}/` | 65 (5.0.1 → 7.3.1) | 14G | `fontawesome-pro-{版本}-web.zip` |
 | Pro+ | `/www/sites/static.bluecdn.com/libs/fontawesome-pro-plus/{版本}/` | 6 (7.0.0 → 7.3.1) | 6.2G | `fontawesome-pro-plus-{版本}-web.zip` |
 
-- 丢失可从 R2 归档重建,或用 `deploy/fetch-fontawesome.sh` 从官网重新下载(见脚本注释)。
+- 丢失可从 R2 归档重建:`rclone copy r2:fontawesome/fontawesome-pro-7.3.1-web.zip .` 后解压到对应版本目录;
+  R2 里没有的版本再去 fontawesome.com 重新下载。
 - Caddy 的 `@imm path /libs/*` 规则对两个路径都生效(`Cache-Control: public, max-age=31536000, immutable`),新增路径无需改配置。

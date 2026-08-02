@@ -121,5 +121,6 @@ API：`PurgeCaches`（`esa.cn-hangzhou.aliyuncs.com`，版本 `2024-09-10`）。
 ## 历史
 
 原本这里放的是「Cloudflare DNS-01 签发 + `push_baidu.py` 推送到百度 CDN」的方案。
-CDN 早已换成阿里云 ESA 单边缘，那套已无使用场景，`push_baidu.py` / `push_bunny.py` 于 2026-08-02 删除。
-`setup.sh` 与 `certs.env.example` 暂留作参考，但其中的 `--dns dns_cf` 步骤**已不适用**。
+CDN 早已换成阿里云 ESA 单边缘，那套已无使用场景。2026-08-02 一并删除：
+`push_baidu.py`、`push_bunny.py`、`setup.sh`（用的是已不适用的 `--dns dns_cf`）、`certs.env.example`（填的是 CF_Token / BAIDU_AK / BUNNY_API_KEY）。
+现在的配置步骤见上面「首次配置」，凭据由 acme.sh 存进 `account.conf`，不再需要 `certs.env`。
