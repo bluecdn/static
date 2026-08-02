@@ -26,8 +26,9 @@
 - **FontAwesome Pro+**:`/libs/fontawesome-pro-plus/{版本}/css/all.min.css`,6 个版本(7.0.0 → 7.3.1)。
   Pro+ 的 `all.min.css` 与 Pro **字节相同**;其价值是额外 20 个独占渲染家族,不在 `all.min.css` 内,
   须单独引 `/libs/fontawesome-pro-plus/{版本}/css/{家族名}.min.css`。图标条目数与 Pro 一致。
-- **证书**:源站 Caddy `auto_https off`,加载 acme.sh 签发的 `*.bluecdn.com` 泛域名证书
-  (`/etc/caddy/certs/`,续期钩子 `/etc/acme-certs/reload.sh` 负责 reload Caddy)。
+- **证书**:源站 Caddy `auto_https off`,加载 acme.sh 签发的 `*.bluecdn.com` 泛域名证书。
+  DNS-01 走**自建的 `dns_aliesa` 插件**(见 `deploy/acme-certs/`)——域名 NS 在阿里云 ESA,
+  记录不在 Alidns,acme.sh 自带的 `dns_ali` / `dns_dp` 都写不进去。
 
 ## 仓库结构
 
