@@ -22,6 +22,12 @@
 - 全部版本:7.3.1, 7.3.0, 7.2.0, 7.1.0, 7.0.1, 7.0.0
 - **Pro+ 的 all.min.css 与 Pro 完全一致(字节相同)**。Pro+ 的价值在于额外 20 个独占渲染家族,它们**不在 all.min.css 内**,须单独引入 `/libs/fontawesome-pro-plus/{version}/css/{家族名}.min.css`。
 - 20 个独占家族:chisel-regular, etch-solid, graphite-thin, jelly-regular, jelly-duo-regular, jelly-fill-regular, mosaic-solid, notdog-solid, notdog-duo-solid, pixel-regular, slab-regular, slab-duo-regular, slab-press-regular, slab-press-duo-regular, thumbprint-light, utility-semibold, utility-duo-semibold, utility-fill-semibold, vellum-solid, whiteboard-semibold
+- **独占家族是逐版本追加的,旧版本没有全部 20 个**,取错会 404:
+  - 7.0.0 / 7.0.1(11 个):chisel-regular, etch-solid, jelly-regular, jelly-duo-regular, jelly-fill-regular, notdog-solid, notdog-duo-solid, slab-regular, slab-press-regular, thumbprint-light, whiteboard-semibold
+  - 7.1.0(14 个):以上 + utility-semibold, utility-duo-semibold, utility-fill-semibold
+  - 7.2.0(15 个):以上 + graphite-thin
+  - 7.3.0 / 7.3.1(20 个):以上 + mosaic-solid, pixel-regular, slab-duo-regular, slab-press-duo-regular, vellum-solid
+  逐版本精确清单见 manifest.json 的 `fontawesomeProPlus.exclusiveFamiliesByVersion`。
 - 图标条目数与 Pro 相同(4344);Pro+ 增加的是风格变体,不是新增图标。
 - 用法示例:`<link rel="stylesheet" href="https://static.bluecdn.com/libs/fontawesome-pro-plus/7.3.1/css/jelly-regular.min.css">` 后 `<i class="fa-jelly fa-regular fa-house"></i>`。
 

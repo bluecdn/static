@@ -180,6 +180,36 @@
   .copy-btn.copy-icon { width: 32px; height: 32px; padding: 0; justify-content: center; gap: 0; }
   .copy-btn.copy-icon i { font-size: 13px; margin: 0; }
 
+  /* Pro+ 独占家族:20 个名字连排会糊成一片,做成可点选的标签 */
+  .fam-note { color: var(--text-dim); font-size: 13px; margin: 16px 0 8px; }
+  .fam-list { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 4px; }
+  .fam {
+    font-family: "Google Sans Code", monospace;
+    font-size: 12px;
+    line-height: 1;
+    color: var(--text-dim);
+    background: var(--code-bg);
+    border: 1px solid var(--border-soft);
+    border-radius: 6px;
+    padding: 6px 9px;
+    cursor: pointer;
+    transition: color .15s, border-color .15s, background .15s;
+  }
+  .fam:hover:not(:disabled) { color: var(--primary); border-color: var(--primary); }
+  .fam[aria-pressed="true"] {
+    color: var(--primary);
+    background: var(--primary-soft);
+    border-color: var(--primary);
+  }
+  /* 家族是逐版本追加的,当前版本没有的置灰不可点,避免给出 404 直链 */
+  .fam:disabled {
+    color: var(--text-light);
+    background: transparent;
+    border-style: dashed;
+    cursor: not-allowed;
+    text-decoration: line-through;
+  }
+
   /* Code preview */
   .preview {
     margin-top: 24px;
@@ -407,14 +437,36 @@
         <div class="copy-actions"><button class="copy-btn copy-icon fa-copy-link" data-copy='https://static.bluecdn.com/libs/fontawesome-pro-plus/7.3.1/css/all.min.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon fa-copy-html" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/libs/fontawesome-pro-plus/7.3.1/css/all.min.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
       </div>
       <div class="res" id="fa-plus-extra">
-        <div class="res-name">独占家族样式表 <span class="sub">Pro+ 专有,需单独引入</span></div>
+        <div class="res-name"><span id="fa-plus-name">jelly-regular.min.css</span> <span class="sub">Pro+ 独占家族,需单独引入</span></div>
         <div class="res-url" id="fa-plus-url">https://static.bluecdn.com/libs/fontawesome-pro-plus/7.3.1/css/jelly-regular.min.css</div>
         <div class="copy-actions"><button class="copy-btn copy-icon fa-plus-copy-link" data-copy='https://static.bluecdn.com/libs/fontawesome-pro-plus/7.3.1/css/jelly-regular.min.css' title="复制直链"><i class="fa-light fa-link"></i></button><button class="copy-btn copy-icon fa-plus-copy-html" data-copy='<link rel="stylesheet" href="https://static.bluecdn.com/libs/fontawesome-pro-plus/7.3.1/css/jelly-regular.min.css">' title="复制 HTML 代码"><i class="fa-light fa-code"></i></button></div>
       </div>
     </div>
-    <p class="lead" id="fa-plus-note" style="margin-top:12px;">Pro+ 的 <code>all.min.css</code> 与 Pro 完全一致,20 个独占家族<strong>不在其中</strong>,需按需另行引入:
-      <code>chisel-regular</code> <code>etch-solid</code> <code>graphite-thin</code> <code>jelly-regular</code> <code>jelly-duo-regular</code> <code>jelly-fill-regular</code> <code>mosaic-solid</code> <code>notdog-solid</code> <code>notdog-duo-solid</code> <code>pixel-regular</code> <code>slab-regular</code> <code>slab-duo-regular</code> <code>slab-press-regular</code> <code>slab-press-duo-regular</code> <code>thumbprint-light</code> <code>utility-semibold</code> <code>utility-duo-semibold</code> <code>utility-fill-semibold</code> <code>vellum-solid</code> <code>whiteboard-semibold</code>。
-    </p>
+    <div id="fa-plus-note">
+      <p class="fam-note">Pro+ 的 <code>all.min.css</code> 与 Pro 完全一致,下列 20 个独占家族<strong>不在其中</strong>,需按需另行引入。点击任一家族即可切换上方的直链:</p>
+      <div class="fam-list" id="fa-fam-list">
+        <button type="button" class="fam" data-fam="chisel-regular" data-since="7.0.0" aria-pressed="false">chisel-regular</button>
+        <button type="button" class="fam" data-fam="etch-solid" data-since="7.0.0" aria-pressed="false">etch-solid</button>
+        <button type="button" class="fam" data-fam="graphite-thin" data-since="7.2.0" aria-pressed="false">graphite-thin</button>
+        <button type="button" class="fam" data-fam="jelly-regular" data-since="7.0.0" aria-pressed="true">jelly-regular</button>
+        <button type="button" class="fam" data-fam="jelly-duo-regular" data-since="7.0.0" aria-pressed="false">jelly-duo-regular</button>
+        <button type="button" class="fam" data-fam="jelly-fill-regular" data-since="7.0.0" aria-pressed="false">jelly-fill-regular</button>
+        <button type="button" class="fam" data-fam="mosaic-solid" data-since="7.3.0" aria-pressed="false">mosaic-solid</button>
+        <button type="button" class="fam" data-fam="notdog-solid" data-since="7.0.0" aria-pressed="false">notdog-solid</button>
+        <button type="button" class="fam" data-fam="notdog-duo-solid" data-since="7.0.0" aria-pressed="false">notdog-duo-solid</button>
+        <button type="button" class="fam" data-fam="pixel-regular" data-since="7.3.0" aria-pressed="false">pixel-regular</button>
+        <button type="button" class="fam" data-fam="slab-regular" data-since="7.0.0" aria-pressed="false">slab-regular</button>
+        <button type="button" class="fam" data-fam="slab-duo-regular" data-since="7.3.0" aria-pressed="false">slab-duo-regular</button>
+        <button type="button" class="fam" data-fam="slab-press-regular" data-since="7.0.0" aria-pressed="false">slab-press-regular</button>
+        <button type="button" class="fam" data-fam="slab-press-duo-regular" data-since="7.3.0" aria-pressed="false">slab-press-duo-regular</button>
+        <button type="button" class="fam" data-fam="thumbprint-light" data-since="7.0.0" aria-pressed="false">thumbprint-light</button>
+        <button type="button" class="fam" data-fam="utility-semibold" data-since="7.1.0" aria-pressed="false">utility-semibold</button>
+        <button type="button" class="fam" data-fam="utility-duo-semibold" data-since="7.1.0" aria-pressed="false">utility-duo-semibold</button>
+        <button type="button" class="fam" data-fam="utility-fill-semibold" data-since="7.1.0" aria-pressed="false">utility-fill-semibold</button>
+        <button type="button" class="fam" data-fam="vellum-solid" data-since="7.3.0" aria-pressed="false">vellum-solid</button>
+        <button type="button" class="fam" data-fam="whiteboard-semibold" data-since="7.0.0" aria-pressed="false">whiteboard-semibold</button>
+      </div>
+    </div>
     <div class="fa-icons">
       <input id="fa-icon-search" type="search" placeholder="搜索 FontAwesome 图标:名称 / 别名 / 4位代码(如 house、user、f015)" autocomplete="off">
       <div class="fa-icon-meta" id="fa-icon-meta"></div>
@@ -1681,6 +1733,20 @@
   var plusUrlDiv = document.getElementById('fa-plus-url');
   var plusLinkBtn = document.querySelector('.fa-plus-copy-link');
   var plusHtmlBtn = document.querySelector('.fa-plus-copy-html');
+  var plusNameEl = document.getElementById('fa-plus-name');
+  var famList = document.getElementById('fa-fam-list');
+  var fam = 'jelly-regular';   // 当前选中的独占家族,由下方标签切换
+
+  // 版本号比较:7.10.0 要大于 7.9.0,不能按字符串比
+  function cmpVer(a, b) {
+    var x = a.split('.'), y = b.split('.');
+    for (var i = 0; i < 3; i++) {
+      var d = (parseInt(x[i], 10) || 0) - (parseInt(y[i], 10) || 0);
+      if (d) return d < 0 ? -1 : 1;
+    }
+    return 0;
+  }
+
   function update() {
     // Pro 与 Pro+ 存在同名版本号,不能用 select.value 区分,必须取选中项本身
     var opt = select.options[select.selectedIndex];
@@ -1694,13 +1760,46 @@
     var isPlus = edition === 'fontawesome-pro-plus';
     if (plusRow) plusRow.style.display = isPlus ? '' : 'none';
     if (plusNote) plusNote.style.display = isPlus ? '' : 'none';
+
+    // 独占家族是逐版本追加的:7.0.x 11 个 → 7.1.0 14 → 7.2.0 15 → 7.3.x 20。
+    // 当前版本没有的置灰,并在必要时把选中项退回到一个可用家族,免得给出 404 直链。
+    if (isPlus && famList) {
+      var chips = famList.querySelectorAll('.fam');
+      var avail = [];
+      chips.forEach(function (b) {
+        var ok = cmpVer(v, b.dataset.since) >= 0;
+        b.disabled = !ok;
+        b.title = ok ? '' : ('该家族自 ' + b.dataset.since + ' 起提供,当前版本 ' + v + ' 没有');
+        if (ok) avail.push(b.dataset.fam);
+      });
+      if (avail.indexOf(fam) === -1) fam = avail[0];
+      chips.forEach(function (b) {
+        b.setAttribute('aria-pressed', String(b.dataset.fam === fam));
+      });
+    }
+
     if (isPlus && plusUrlDiv) {
-      var pUrl = ROOT + edition + '/' + v + '/css/jelly-regular.min.css';
+      var pUrl = ROOT + edition + '/' + v + '/css/' + fam + '.min.css';
       plusUrlDiv.textContent = pUrl;
       plusLinkBtn.dataset.copy = pUrl;
       plusHtmlBtn.dataset.copy = '<link rel="stylesheet" href="' + pUrl + '">';
+      plusNameEl.textContent = fam + '.min.css';
     }
   }
+
+  // 点标签换家族;切版本时保留当前选中的家族
+  if (famList) {
+    famList.addEventListener('click', function (e) {
+      var btn = e.target.closest('.fam');
+      if (!btn) return;
+      fam = btn.dataset.fam;
+      famList.querySelectorAll('.fam').forEach(function (b) {
+        b.setAttribute('aria-pressed', String(b === btn));
+      });
+      update();
+    });
+  }
+
   select.addEventListener('change', update);
   update();
 })();
