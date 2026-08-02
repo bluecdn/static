@@ -1,56 +1,79 @@
-# 证书自动续期 + 自动同步（acme.sh）
+# 证书续期（acme.sh）
 
-目标：**一次配置，Let's Encrypt 证书自动续期，自动推送到百度 CDN，永不手动。**
-Cloudflare 和 Bunny 各自有自动方案，无需此脚本（见下）。
+> **2026-08-02 现状核对：本目录原先描述的「Cloudflare DNS-01 签发 + 推送百度 CDN」流程与线上实际情况已完全不符。**
+> 下面先写实际情况，再写待办。历史脚本（`setup.sh` / `push_baidu.py` / `push_bunny.py`）暂时保留，但**不要照着旧步骤跑**。
 
-## 三家 CDN 各自怎么办
+## 线上实际情况
 
-| CDN | 做法 | 需要这套脚本？ |
-|---|---|---|
-| **Cloudflare** | Universal SSL，CF 全自动签发+续期 | ❌ 不用，什么都不做 |
-| **Bunny** | 控制台给自定义域名点 **Load Free Certificate**，Bunny 自动签 LE + 自动续 | ❌ 不用（除非要统一一张证书 → 用 `push_bunny.py`） |
-| **百度 CDN** | 不会自动、免费证书仅 90 天 | ✅ **就它需要**：acme.sh 续期后用 `push_baidu.py` 自动推送 |
+CDN 早已从「百度 + Cloudflare 双线」换成**阿里云 ESA 单边缘**，源站也从上海/硅谷双机换成**芬兰 Hetzner 单机**。
+因此 `push_baidu.py` / `push_bunny.py` 目前**没有使用场景**。
 
-## 在哪跑
+源站 `/etc/caddy/Caddyfile` 是 `auto_https off`，Caddy 不自签、不自动续，只加载文件：
 
-跑在**服务器 B**（常开、能访问 Let's Encrypt）。用 **DNS-01 验证**，所以不要求 B 是该域名的 Web 服务器——只要能改 Cloudflare DNS 即可。
+| 域名 | 证书文件 | 签发方 | 到期 |
+|---|---|---|---|
+| `bluecdn.com` + `*.bluecdn.com` | `/etc/caddy/certs/bluecdn.com.{fullchain.pem,key}` | acme.sh → Let's Encrypt | 2026-09-28 |
+| `*.yite.net` | `/etc/caddy/certs/yite.net/` | 商业证书 | 2027-03-01 |
+| `markitdown.io` | `/etc/caddy/certs/markitdown.io/` | — | 2028-10-28 |
+| `mapcdn.io` | `/etc/caddy/certs/mapcdn.io.*` | Cloudflare Origin CA | 2041-06-27 |
 
-## 步骤
+只有第一行需要 acme.sh 续期。
+
+## 已修复（2026-08-02）
+
+1. **没有任何 cron / systemd timer 会触发 acme.sh** → 已执行 `acme.sh --install-cronjob`，
+   现在 `crontab -l` 有 `4 8 * * * "/root/.acme.sh"/acme.sh --cron --home "/root/.acme.sh"`。
+2. **续期钩子指向的脚本根本不存在** —— 证书 conf 里 `Le_ReloadCmd` 是 `bash /etc/acme-certs/reload.sh`，
+   但 `/etc/acme-certs/` 整个目录都没有。就算续期成功，Caddy 也不会加载新证书。
+   → 已重建 `/etc/acme-certs/reload.sh`（修正属主权限 + `caddy reload --force`），并实测能成功重载。
+
+## ⚠️ 仍未解决：DNS 提供商不匹配
+
+证书 conf 里 `Le_Webroot='dns_dp'`，即用 **DNSPod** 做 DNS-01 验证。但：
+
+- `bluecdn.com` 的 NS 现在是 `taurus.ns.atrustdns.com` / `baikal.ns.atrustdns.com` —— **阿里云 ESA 的 DNS**；
+- 服务器上保存的 DNSPod 凭据本身**有效**（API 返回 code 1），但该账号下只有
+  `pancn.com` / `pancn.net` / `xifeng.net`，**没有 `bluecdn.com`**。
+
+所以到 2026-08-30 触发续期时，acme.sh 无法写入 `_acme-challenge.bluecdn.com` 的 TXT 记录，
+**续期必定失败**，2026-09-28 证书过期后 bluecdn.com 全线 TLS 失效。
+
+可选修法（任选其一，都需要额外凭据或决策）：
+
+1. **切到阿里云 DNS API**：acme.sh 自带 `dns_ali`，需要 `Ali_Key` / `Ali_Secret`（阿里云 AccessKey）。
+   注意 ESA 托管的域名记录是否能由 Alidns OpenAPI 管理需先验证；若不能，要为 ESA 写自定义 hook。
+2. **把 `bluecdn.com` 的 DNS 迁回 DNSPod 或迁到 Cloudflare**，再对应换 `--dns dns_dp` / `dns_cf`。
+3. **改用 HTTP-01**：apex 与 `status.bluecdn.com` 本来就直连源站，可直接验证；
+   但 `*.bluecdn.com` 泛域名**只能**用 DNS-01，改 HTTP-01 就得逐个列出子域名签发。
+
+## 手动应急续期
+
+在拿到可用的 DNS 凭据后：
 
 ```bash
-cd deploy/acme-certs
-cp certs.env.example certs.env     # 填：DOMAINS、CF_Token、BAIDU_AK/SK（重置后的新密钥）
-bash setup.sh
+export Ali_Key="..." Ali_Secret="..."          # 或对应提供商的变量
+~/.acme.sh/acme.sh --issue --dns dns_ali -d bluecdn.com -d '*.bluecdn.com' --force
+~/.acme.sh/acme.sh --install-cert -d bluecdn.com \
+  --key-file       /etc/caddy/certs/bluecdn.com.key \
+  --fullchain-file /etc/caddy/certs/bluecdn.com.fullchain.pem \
+  --reloadcmd      "bash /etc/acme-certs/reload.sh"
 ```
 
-`setup.sh` 会：
-1. 装 acme.sh（自带每日 cron，到期前自动续）
-2. 用 Cloudflare DNS-01 签发各域名证书
-3. `--install-cert ... --reloadcmd` 绑定续期钩子：**每次续期后自动跑 `push_baidu.py`** 把新证书推到百度 CDN
+## 检查续期是否真的健康
 
-之后全自动，你不用再碰。
-
-## 证书链路回顾（一个域名多张证书是正常的）
-
-```
-用户 ─海外→ Cloudflare 边缘 (CF 自动证书)
-     ─国内→ 百度 CDN 边缘   (本脚本推送的 LE 证书，自动续)
-              ↓ 回源
-            服务器 B (Caddy 自动签的源站证书)
-```
-每个“TLS 解密点”各一张证书，互不共用——这是多 CDN 的正常形态。
-
-## Bunny（可选，API 上传）
-
-优先用 Bunny 控制台 Free SSL（自动）。若坚持用同一张证书：
 ```bash
-source certs.env
-python3 push_bunny.py <pullZoneId> <hostname> /etc/acme-certs/<domain>.fullchain.pem /etc/acme-certs/<domain>.key
+crontab -l | grep acme                                   # 1. cron 在不在
+ls -l /etc/acme-certs/reload.sh                          # 2. 钩子脚本在不在
+~/.acme.sh/acme.sh --list                                # 3. 下次续期时间
+openssl x509 -in /etc/caddy/certs/bluecdn.com.fullchain.pem -noout -enddate   # 4. 实际到期
+bash /etc/acme-certs/reload.sh                           # 5. 钩子能不能跑通
 ```
-并把这行也加进 `setup.sh` 的 `--reloadcmd` 即可一并自动推送。
+
+四项齐全 + DNS 提供商对得上，才算真的自动。**只有 cron 是不够的** —— 这次就是三处同时坏。
 
 ## 安全
 
-- 所有密钥只在 `certs.env`（已 .gitignore，不提交）。
-- ⚠️ 之前在聊天里贴过的百度 AK/SK、Bunny API Key **务必先重置**，再把新值填进 `certs.env`。
-- Cloudflare 用**限定 Zone.DNS 权限**的 API Token，别用 Global Key。
+- 所有密钥只放 `certs.env`（已 .gitignore，不提交）。
+- 用**限定权限**的 API Token（Cloudflare 用 Zone.DNS Edit，阿里云用只含 DNS 权限的 RAM 子账号），
+  不要用 Global Key / 主账号 AccessKey。
+- 在聊天或工单里贴过的任何密钥，用完立即去控制台轮换。

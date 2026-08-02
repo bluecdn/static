@@ -1,0 +1,74 @@
+# static.bluecdn.com — 源站 Caddy 配置(参考)
+#
+# 这是芬兰单源站 /etc/caddy/Caddyfile 中与 static.bluecdn.com 相关的实际片段,
+# 从服务器导出留档,不是可直接使用的完整配置(完整文件还含 bluecdn.com 主站、
+# gravatar、mapcdn、yite.net 等其它站点)。
+#
+# 关键点:
+#   - 全局 auto_https off,证书由 acme.sh 签发后手工加载(tls_wild 片段)
+#   - @imm path /libs/* 让 fontawesome 与 fontawesome-pro-plus 两个路径
+#     自动获得 max-age=31536000, immutable,新增版本路径无需改配置
+#   - jsDelivr / cdnjs 二合一反代在 @jsd 与 @cdnjs 两个 matcher 中
+#
+# 历史:2026-08 之前这里放的是 server-sh.Caddyfile / server-sv.Caddyfile
+# (上海 + 硅谷双源站),那套架构已下线,文件已删除。
+
+# static.bluecdn.com:本地静态文件 + jsDelivr/cdnjs 二合一反代 + 节点探针
+(static_site) {
+	encode gzip zstd
+	import cors
+
+	@node path /__bluecdn_node
+	handle @node {
+		header Cache-Control "no-store"
+		reverse_proxy 127.0.0.1:8099
+	}
+
+	@jsd path /npm/* /gh/* /wp/* /combine/* /esm/*
+	handle @jsd {
+		@npmScoped path_regexp npmScoped ^/npm/(@[^/]+/[^/]+)/((?:v)?[0-9][^/]*)/(.*)$
+		rewrite @npmScoped /npm/{re.npmScoped.1}@{re.npmScoped.2}/{re.npmScoped.3}
+		@npmPlain path_regexp npmPlain ^/npm/([^/@][^/@]*)/((?:v)?[0-9][^/]*)/(.*)$
+		rewrite @npmPlain /npm/{re.npmPlain.1}@{re.npmPlain.2}/{re.npmPlain.3}
+		reverse_proxy https://cdn.jsdelivr.net {
+			header_up Host cdn.jsdelivr.net
+			header_down -Access-Control-Allow-Origin
+			header_down -Access-Control-Allow-Methods
+			header_down -Access-Control-Allow-Headers
+			header_down -Cache-Control
+			header_down Location "https://cdn\.jsdelivr\.net/" "https://static.bluecdn.com/"
+		}
+		header Cache-Control "public, max-age=31536000, immutable"
+	}
+	@cdnjs path /ajax/libs/*
+	handle @cdnjs {
+		reverse_proxy https://cdnjs.cloudflare.com {
+			header_up Host cdnjs.cloudflare.com
+			header_down -Access-Control-Allow-Origin
+			header_down -Access-Control-Allow-Methods
+			header_down -Access-Control-Allow-Headers
+			header_down -Cache-Control
+			header_down Location "https://cdnjs\.cloudflare\.com/" "https://static.bluecdn.com/"
+		}
+		header Cache-Control "public, max-age=31536000, immutable"
+	}
+	handle {
+		root * /www/sites/static.bluecdn.com
+		@imm path /libs/* *.woff2 *.woff
+		header @imm Cache-Control "public, max-age=31536000, immutable"
+		@short path *.html /
+		header @short Cache-Control "public, no-cache"
+		file_server
+	}
+}
+
+# mapcdn.io / map.bluecdn.com: MapCDN homepage + map API reverse proxy
+
+# ── 站点块(引用上面的片段)────────────────────────────────
+# static.bluecdn.com, static-edge.bluecdn.com {
+# 	import tls_wild
+# 	import static_site
+# }
+# http://static.bluecdn.com, http://static-edge.bluecdn.com {
+# 	import static_site
+# }

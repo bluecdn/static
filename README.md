@@ -7,20 +7,27 @@
 ## 架构
 
 ```
-                      static.bluecdn.com  (DNS 分线, DNSPod)
-        ┌──────────────────────────┴──────────────────────────┐
-   中国大陆线                                      境外 + 默认线(含港澳台/海外)
-        ▼                                                       ▼
-   百度云 CDN                                            Cloudflare
-        ▼ 回源 http                                            ▼ 回源 https(full)
-   上海 阿里云 (101.132.147.10)                       硅谷 阿里云 (47.254.125.87)
-        └────── Caddy: 静态 + jsDelivr/cdnjs 二合一反代 ──────┘
+                      static.bluecdn.com  (DNS: 阿里云 ESA, NS = *.atrustdns.com)
+                                   │
+                            阿里云 ESA 边缘
+                                   │ 回源 https
+                                   ▼
+                      芬兰 Hetzner 单源站 (secrets.ORIGIN_HOST)
+                Caddy: 静态 + jsDelivr/cdnjs 二合一反代 + 节点探针
 ```
+
+> 2026-08 现状核对:历史上的「百度 CDN + Cloudflare 双线、上海 + 硅谷双源站」架构**已不存在**。
+> 上海 101.132.147.10 已改作他用(证书是 `fortune.gptjxt.online`),硅谷 47.254.125.87 443 不通。
+> 当前唯一源站是芬兰 Hetzner 机,CDN 是阿里云 ESA(响应头 `Server: ESA` / `EagleId`)。
 
 - **二合一反代(域名替换即用)**:`/npm /gh /wp /combine /esm` → cdn.jsdelivr.net;`/ajax/libs` → cdnjs.cloudflare.com。
 - **字体方案**:`/fonts/{slug}.css`(扁平,CSS 名=字体名)。单文件 >2MB 用 cn-font-split 切片(每块 <2MB)。
-- **FontAwesome**:`/libs/fontawesome/{版本}/css/all.min.css`,64 个版本(5.0.1 → 7.3.0)。
-- **证书**:CF Universal SSL(海外自动);百度边缘用 acme.sh 签 LE + 自动推送(见 `deploy/acme-certs`)。
+- **FontAwesome Pro**:`/libs/fontawesome/{版本}/css/all.min.css`,65 个版本(5.0.1 → 7.3.1)。
+- **FontAwesome Pro+**:`/libs/fontawesome-pro-plus/{版本}/css/all.min.css`,6 个版本(7.0.0 → 7.3.1)。
+  Pro+ 的 `all.min.css` 与 Pro **字节相同**;其价值是额外 20 个独占渲染家族,不在 `all.min.css` 内,
+  须单独引 `/libs/fontawesome-pro-plus/{版本}/css/{家族名}.min.css`。图标条目数与 Pro 一致。
+- **证书**:源站 Caddy `auto_https off`,加载 acme.sh 签发的 `*.bluecdn.com` 泛域名证书
+  (`/etc/caddy/certs/`,续期钩子 `/etc/acme-certs/reload.sh` 负责 reload Caddy)。
 
 ## 仓库结构
 
@@ -31,7 +38,7 @@
 | `index.html` | **首页**(部署内容) |
 | `*.txt` / `robots.txt` / `sitemap.xml` / `manifest.json` | SEO 文件(llms.txt、llms-full.txt 等) |
 | `favicon.*` / `*.png` / `*.ico` | favicon 与图标(部署内容) |
-| `deploy/caddy/` | 两台服务器的 Caddyfile(二合一反代配置) |
+| `deploy/caddy/` | 源站 Caddyfile 参考(二合一反代配置) |
 | `deploy/acme-certs/` | 证书自动续期 + 推百度 |
 | `fonts/` | **字体资产**(2454 文件,~567M),由 **Git LFS** 管理(见 `.gitattributes`)。clone/pull 默认只下载指针 |
 | `fonts.json` | 字体清单(事实源)。`base: https://static.bluecdn.com/fonts` |
@@ -41,14 +48,21 @@
 
 ## 自动部署 (GitHub Actions)
 
-push 到 `main` 且改动根目录的页面/favicon/SEO 文件(或 `deploy.yml`)→ 自动 rsync 到**两台源站**的 `/www/sites/static.bluecdn.com/`。用 `--include` 白名单精确同步这些文件(`--exclude='*'`,**无 `--delete`**),**绝不动服务器上的 fonts/ 目录**。
+push 到 `main` 且改动根目录的页面/favicon/SEO 文件(或 `deploy.yml`)→ 自动 rsync 到**单源站**的 `/www/sites/static.bluecdn.com/`。用 `--include` 白名单精确同步这些文件(`--exclude='*'`,**无 `--delete`**),**绝不动服务器上的 fonts/ 与 libs/ 目录**(合计约 20G)。
 
 需要的仓库 Secrets:
-- `DEPLOY_SSH_KEY` — 部署私钥(对应公钥已加到两台 authorized_keys)
-- `SH_HOST` = 101.132.147.10
-- `SV_HOST` = 47.254.125.87
+- `ORIGIN_HOST` — 源站地址(本仓库 public,故不写进代码)
+- `DEPLOY_SSH_KEY` — 部署私钥,对应公钥须已在源站 `/root/.ssh/authorized_keys`
+- `ORIGIN_USER`(可选,默认 `root`)
+- `ORIGIN_KNOWN_HOSTS`(可选)— 源站 SSH 主机公钥,填了才做主机密钥固定
+
+工作流带前置检查:Secret 缺失、源站不可达、目标目录不存在都会直接失败并给出明确报错;
+部署后会直连源站(`--resolve`,绕过边缘缓存)校验 `/`、`/llms.txt`、`/manifest.json` 均为 200。
 
 手动触发:Actions → Deploy → Run workflow。
+
+> ⚠️ 边缘缓存:阿里云 ESA 对静态文件缓存较久(实测 `X-Swift-CacheTime: 2592000`),
+> 页面推到源站后**需在 ESA 控制台刷新缓存**才会对外生效。
 
 ## 字体资产管理(Git LFS)
 
@@ -64,7 +78,7 @@ push 到 `main` 且改动根目录的页面/favicon/SEO 文件(或 `deploy.yml`)
 
 字体切片/CSS 由**服务器**上的构建脚本 + `cn-font-split` 产出:
 
-- **构建工作区**:两台服务器的 `/root/`(脚本 + `fonts.json` + 临时下载目录)。
+- **构建工作区**:源站的 `/root/`(脚本 + `fonts.json` + 临时下载目录)。
 - **关键脚本**(`/root/` 下,按用途):
   - `build_gf_cn.py` / `github_cn.py` — 从 Google Fonts / GitHub 拉取字体
   - `slice_cn.py` — 对 >2MB 的字体用 cn-font-split 切片
@@ -74,7 +88,13 @@ push 到 `main` 且改动根目录的页面/favicon/SEO 文件(或 `deploy.yml`)
 
 ## FontAwesome(不入 git)
 
-FontAwesome(**约 13G**,65 个版本)是第三方成品库,**不纳入 git**——fontawesome.com 官网可重新下载任意版本。
+FontAwesome 是第三方成品库,**不纳入 git**。原始 zip 归档在 Cloudflare R2 桶 `fontawesome`(账户 GENTPAN),
+服务器上是解压后的可直接访问版本:
 
-- 服务器常驻 `/www/sites/static.bluecdn.com/libs/fontawesome/{版本}/`。
-- 需要时用 `deploy/fetch-fontawesome.sh` 从官网拉取指定版本(见脚本注释)。
+| | 路径 | 版本数 | 占用 | R2 归档命名 |
+|---|---|---|---|---|
+| Pro | `/www/sites/static.bluecdn.com/libs/fontawesome/{版本}/` | 65 (5.0.1 → 7.3.1) | 14G | `fontawesome-pro-{版本}-web.zip` |
+| Pro+ | `/www/sites/static.bluecdn.com/libs/fontawesome-pro-plus/{版本}/` | 6 (7.0.0 → 7.3.1) | 6.2G | `fontawesome-pro-plus-{版本}-web.zip` |
+
+- 丢失可从 R2 归档重建,或用 `deploy/fetch-fontawesome.sh` 从官网重新下载(见脚本注释)。
+- Caddy 的 `@imm path /libs/*` 规则对两个路径都生效(`Cache-Control: public, max-age=31536000, immutable`),新增路径无需改配置。

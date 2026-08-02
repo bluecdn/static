@@ -1,19 +1,29 @@
 # BlueCDN Static — 完整资源清单(llms-full)
 
-> 与 llms.txt 同源,但**内联全部 195 款字体逐项清单 + 全部 64 个 FontAwesome 版本**,供 AI 直接阅读、无需再抓取 JSON。结构化版本见 https://static.bluecdn.com/manifest.json
+> 与 llms.txt 同源,但**内联全部 195 款字体逐项清单 + 全部 65 个 FontAwesome Pro 版本与 6 个 Pro+ 版本**,供 AI 直接阅读、无需再抓取 JSON。结构化版本见 https://static.bluecdn.com/manifest.json
 
-公共静态资源 CDN:自托管 FontAwesome Pro 全版本、Google 西文网页字体、中文 webfont。全球边缘加速,中国大陆优化,CORS 全开放,复制直链即用。
+公共静态资源 CDN:自托管 FontAwesome Pro / Pro+ 全版本、Google 西文网页字体、中文 webfont。由阿里云 ESA 边缘加速,中国大陆与境外统一分发,CORS 全开放,复制直链即用。
 
 ## 使用方法
 
 - 字体:在 `<head>` 引入 `<link rel="stylesheet" href="{字体的 cssUrl}">`,然后 CSS 中 `font-family: "{family}"`。
 - FontAwesome:引入 `<link rel="stylesheet" href="https://static.bluecdn.com/libs/fontawesome/{版本}/css/all.min.css">`,用 `<i class="fa-solid fa-{图标名}"></i>`。
+- FontAwesome Pro+:把路径中的 `fontawesome` 换成 `fontawesome-pro-plus`;独占家族需另引入 `/libs/fontawesome-pro-plus/{版本}/css/{家族名}.min.css`。
 
-## FontAwesome Pro(64 个版本,4344 图标)
+## FontAwesome Pro(65 个版本,4344 图标)
 
-- 最新版本:**7.3.0**;CSS 模板:`https://static.bluecdn.com/libs/fontawesome/{version}/css/all.min.css`
-- 全部版本:7.3.0, 7.2.0, 7.1.0, 7.0.1, 7.0.0, 6.7.2, 6.7.1, 6.7.0, 6.6.0, 6.5.2, 6.5.1, 6.5.0, 6.4.2, 6.4.1, 6.4.0, 6.3.0, 6.2.1, 6.2.0, 6.1.2, 6.1.1, 6.1.0, 6.0.0, 5.15.4, 5.15.3, 5.15.2, 5.15.1, 5.14.0, 5.13.1, 5.13.0, 5.12.1, 5.12.0, 5.11.2, 5.11.1, 5.11.0, 5.10.2, 5.10.1, 5.10.0, 5.9.0, 5.8.2, 5.8.1, 5.8.0, 5.7.2, 5.7.1, 5.7.0, 5.6.3, 5.6.1, 5.6.0, 5.5.0, 5.4.2, 5.4.1, 5.3.1, 5.2.0, 5.1.1, 5.1.0, 5.0.13, 5.0.12, 5.0.10, 5.0.9, 5.0.8, 5.0.6, 5.0.4, 5.0.3, 5.0.2, 5.0.1
+- 最新版本:**7.3.1**;CSS 模板:`https://static.bluecdn.com/libs/fontawesome/{version}/css/all.min.css`
+- 全部版本:7.3.1, 7.3.0, 7.2.0, 7.1.0, 7.0.1, 7.0.0, 6.7.2, 6.7.1, 6.7.0, 6.6.0, 6.5.2, 6.5.1, 6.5.0, 6.4.2, 6.4.1, 6.4.0, 6.3.0, 6.2.1, 6.2.0, 6.1.2, 6.1.1, 6.1.0, 6.0.0, 5.15.4, 5.15.3, 5.15.2, 5.15.1, 5.14.0, 5.13.1, 5.13.0, 5.12.1, 5.12.0, 5.11.2, 5.11.1, 5.11.0, 5.10.2, 5.10.1, 5.10.0, 5.9.0, 5.8.2, 5.8.1, 5.8.0, 5.7.2, 5.7.1, 5.7.0, 5.6.3, 5.6.1, 5.6.0, 5.5.0, 5.4.2, 5.4.1, 5.3.1, 5.2.0, 5.1.1, 5.1.0, 5.0.13, 5.0.12, 5.0.10, 5.0.9, 5.0.8, 5.0.6, 5.0.4, 5.0.3, 5.0.2, 5.0.1
 - 图标索引(名称/4位unicode/风格/别名):https://static.bluecdn.com/libs/fontawesome/icons-index.json
+
+## FontAwesome Pro+(6 个版本)
+
+- 最新版本:**7.3.1**;CSS 模板:`https://static.bluecdn.com/libs/fontawesome-pro-plus/{version}/css/all.min.css`
+- 全部版本:7.3.1, 7.3.0, 7.2.0, 7.1.0, 7.0.1, 7.0.0
+- **Pro+ 的 all.min.css 与 Pro 完全一致(字节相同)**。Pro+ 的价值在于额外 20 个独占渲染家族,它们**不在 all.min.css 内**,须单独引入 `/libs/fontawesome-pro-plus/{version}/css/{家族名}.min.css`。
+- 20 个独占家族:chisel-regular, etch-solid, graphite-thin, jelly-regular, jelly-duo-regular, jelly-fill-regular, mosaic-solid, notdog-solid, notdog-duo-solid, pixel-regular, slab-regular, slab-duo-regular, slab-press-regular, slab-press-duo-regular, thumbprint-light, utility-semibold, utility-duo-semibold, utility-fill-semibold, vellum-solid, whiteboard-semibold
+- 图标条目数与 Pro 相同(4344);Pro+ 增加的是风格变体,不是新增图标。
+- 用法示例:`<link rel="stylesheet" href="https://static.bluecdn.com/libs/fontawesome-pro-plus/7.3.1/css/jelly-regular.min.css">` 后 `<i class="fa-jelly fa-regular fa-house"></i>`。
 
 ## 西文字体 (Latin Webfonts) — 102 款
 

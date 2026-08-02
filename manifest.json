@@ -2,15 +2,16 @@
   "name": "BlueCDN Static",
   "url": "https://static.bluecdn.com/",
   "description": "公共静态资源 CDN:自托管 FontAwesome Pro 全版本、Google 西文网页字体、中文 webfont。全球边缘加速,中国大陆优化,CORS 全开放,复制直链即用。",
-  "updated": "2026-06-30",
+  "updated": "2026-08-02",
   "usage": {
     "font": "在 <head> 引入 <link rel=\"stylesheet\" href=\"{cssUrl}\">,然后 CSS 中 font-family: \"{family}\"",
-    "fontawesome": "引入 <link rel=\"stylesheet\" href=\"https://static.bluecdn.com/libs/fontawesome/{version}/css/all.min.css\">,用 <i class=\"fa-solid fa-{icon}\"></i>"
+    "fontawesome": "引入 <link rel=\"stylesheet\" href=\"https://static.bluecdn.com/libs/fontawesome/{version}/css/all.min.css\">,用 <i class=\"fa-solid fa-{icon}\"></i>;Pro+ 版本把路径中的 fontawesome 换成 fontawesome-pro-plus,独占家族需另引入 /css/{family}.min.css"
   },
   "fontawesome": {
-    "latest": "7.3.0",
-    "versionsCount": 64,
+    "latest": "7.3.1",
+    "versionsCount": 65,
     "versions": [
+      "7.3.1",
       "7.3.0",
       "7.2.0",
       "7.1.0",
@@ -79,6 +80,45 @@
     "cssUrlTemplate": "https://static.bluecdn.com/libs/fontawesome/{version}/css/all.min.css",
     "iconCount": 4344,
     "iconsIndexUrl": "https://static.bluecdn.com/libs/fontawesome/icons-index.json"
+  },
+  "fontawesomeProPlus": {
+    "latest": "7.3.1",
+    "versionsCount": 6,
+    "versions": [
+      "7.3.1",
+      "7.3.0",
+      "7.2.0",
+      "7.1.0",
+      "7.0.1",
+      "7.0.0"
+    ],
+    "cssUrlTemplate": "https://static.bluecdn.com/libs/fontawesome-pro-plus/{version}/css/all.min.css",
+    "note": "Pro+ 的 all.min.css 与 Pro 完全一致;下列 20 个独占家族不在其中,需按需单独引入 /css/{family}.min.css",
+    "exclusiveFamilies": [
+      "chisel-regular",
+      "etch-solid",
+      "graphite-thin",
+      "jelly-regular",
+      "jelly-duo-regular",
+      "jelly-fill-regular",
+      "mosaic-solid",
+      "notdog-solid",
+      "notdog-duo-solid",
+      "pixel-regular",
+      "slab-regular",
+      "slab-duo-regular",
+      "slab-press-regular",
+      "slab-press-duo-regular",
+      "thumbprint-light",
+      "utility-semibold",
+      "utility-duo-semibold",
+      "utility-fill-semibold",
+      "vellum-solid",
+      "whiteboard-semibold"
+    ],
+    "exclusiveCssUrlTemplate": "https://static.bluecdn.com/libs/fontawesome-pro-plus/{version}/css/{family}.min.css",
+    "iconCount": 4344,
+    "iconCountNote": "图标条目与 Pro 相同;Pro+ 增加的是渲染家族(风格变体),不是新增图标"
   },
   "fonts": {
     "total": 195,
