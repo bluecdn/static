@@ -91,13 +91,32 @@ API：`PurgeCaches`（`esa.cn-hangzhou.aliyuncs.com`，版本 `2024-09-10`）。
 注意 `Content` **必须**是 `{"Files": ["https://..."]}` 这种形式，
 直接传数组或换行分隔的字符串都会报 `InvalidContent`。
 
-## 安全
+## 凭据（RAM 子账号，最小权限）
 
-- 凭据由 acme.sh 存在 `~/.acme.sh/account.conf`（`SAVED_Ali_Key` / `SAVED_Ali_Secret`），不进 git。
-- ⚠️ **当前用的是阿里云主账号 AccessKey**（`Arn: acs:ram::…:root`），权限是全账户最高级。
-  应改为 RAM 子账号，自定义策略只给这几个动作：
-  `esa:ListSites` `esa:ListRecords` `esa:CreateRecord` `esa:DeleteRecord` `esa:PurgeCaches`。
+用 RAM 子账号 **`bluecdn-esa-bot`**，绑自定义策略 **`BlueCDN-ESA-AcmeAndStats`**，只含 6 个动作：
+
+| 动作 | 谁在用 |
+|---|---|
+| `esa:ListSites` | acme 定位站点；esa-stats 取 SiteId |
+| `esa:ListRecords` | acme 删 TXT 前按值匹配 |
+| `esa:CreateRecord` | acme 写 `_acme-challenge` TXT |
+| `esa:DeleteRecord` | acme 清理 TXT |
+| `esa:PurgeCaches` | 发布页面后刷边缘缓存 |
+| `esa:DescribeSiteLogs` | LiteAvatar 的 `esa-stats.py` 拉原始日志 |
+
+> `DescribeSiteLogs` 容易漏：`/opt/gravatar-proxy/stats/esa-stats.py` 原本和 acme 共用同一把主账号 Key，
+> 只按"acme 需要什么"配策略的话，换 Key 会把每小时的统计任务一起打挂。
+
+凭据落在两处，都不进 git：
+
+- `~/.acme.sh/account.conf` 的 `SAVED_Ali_Key` / `SAVED_Ali_Secret`（acme.sh 自己管理）
+- `/opt/gravatar-proxy/.env` 的 `ALIYUN_ACCESS_KEY_ID` / `ALIYUN_ACCESS_KEY_SECRET`（600，caddy 属主）
+
+已实测该子账号**不能**做：RAM 操作（`NoPermission`）、Alidns 操作（`Forbidden.RAM`）、
+以及未授权的 ESA 动作如 `GetSite`（`Forbidden`）。
+
 - 在聊天/工单里贴过的密钥，用完立即去控制台轮换。
+- 不要再用主账号 AccessKey 跑自动化 —— 它能动这个账号下的一切（30 个域名、4 个 ESA 站点、OSS、ECS、账单）。
 
 ## 历史
 
